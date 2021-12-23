@@ -10,9 +10,6 @@ import helperGetParents from './helpers/getParents';
 
 // Common JS
 import common from './routes/common';
-import archiveChangelog from './routes/archive-changelog';
-import singleChangelog from './routes/single-changelog';
-import singleDocument from './routes/single-document';
 
 // Attach Some Required Plugins
 wecodeart.fn.loadJs = loadjs;
@@ -44,16 +41,8 @@ wecodeart = {
 			 * This prop includes the global JS fired on every page
 			 */
 			...wecodeart.routes,
-			postTypeArchiveChangelog: {
-				complete: archiveChangelog,
-			},
-			singleChangelog: {
-				init: singleChangelog,
-				extends: ['post-type-archive-changelog'],
-			},
-			singleDocument: {
-				init: singleDocument,
-				extends: ['home']
+			someRoute: {
+				init: () => {}
 			},
 		}
 	}

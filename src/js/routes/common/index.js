@@ -19,10 +19,6 @@ export default {
 		const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
 		tooltipTriggerList.map((tooltipTriggerEl) => new Tooltip(tooltipTriggerEl));
 
-		// LazyInit Search
-		const searchPlugin = document.querySelector('[data-plugin-live-search]');
-		wecodeart.plugins.LiveSearch.init(searchPlugin);
-
 		// Icons
 		dom.watch();
 

@@ -1,15 +1,15 @@
 <?php
 /**
- * WeCodeArt Doc 
+ * WeCodeArt Honey 
  *
- * @package		WeCodeArt Doc 
+ * @package		WeCodeArt Honey 
  * @subpackage	Scripts
- * @copyright	Copyright (c) 2021, WeCodeArt Doc
+ * @copyright	Copyright (c) 2021, WeCodeArt Honey
  * @link		https://www.wecodeart.com/
  * @since		1.0.0
  */
 
-namespace WeCodeArt\Doc;
+namespace WeCodeArt\Honey;
 
 defined( 'ABSPATH' ) || exit();
 

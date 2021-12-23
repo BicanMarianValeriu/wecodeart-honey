@@ -14,7 +14,7 @@
 define( 'CHILD_THEME_NAME', 	'WeCodeArt Honey' );
 define( 'CHILD_THEME_URL', 		'https://www.wecodeart.com/' );
 define( 'CHILD_THEME_VERSION', 	'1.0.0' ); 
-define( 'CHILD_THEME_NS',       'WeCodeArt\Doc' );
+define( 'CHILD_THEME_NS',       'WeCodeArt\Honey' );
 define( 'CHILD_THEME_INC', 	    __DIR__ . '/inc' );
 
 // Start the engine

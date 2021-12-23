@@ -8,7 +8,7 @@
  * @since		1.0.0
  */
 
-namespace WeCodeArt\Doc;
+namespace WeCodeArt\Honey;
 
 defined( 'ABSPATH' ) || exit();
 
