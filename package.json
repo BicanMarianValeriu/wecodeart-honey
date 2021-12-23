@@ -1,0 +1,35 @@
+{
+	"name": "wecodeart",
+	"version": "2.0.0",
+	"main": "webpack.config.js",
+	"author": "Bican Marian Valeriu",
+	"browserslist": [
+		"extends @wordpress/browserslist-config"
+	],
+	"scripts": {
+		"build": "wp-scripts build",
+		"start": "wp-scripts start",
+		"build:custom": "wp-scripts build custom/index=./src/js/path-to/index.js --output-path=assets/minified",
+		"start:custom": "wp-scripts start custom/index=./src/js/path-to/index.js --output-path=assets/unminified",
+		"lint:css": "wp-scripts lint-style ./src/scss",
+		"lint:js": "wp-scripts lint-js ./src/js/routes ./src/js/frontend.js",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"test:e2e": "wp-scripts test-e2e",
+		"test:unit": "wp-scripts test-unit-js"
+	},
+	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^1.2.36",
+		"@fortawesome/free-brands-svg-icons": "^5.15.4",
+		"@fortawesome/free-regular-svg-icons": "^5.15.4",
+		"@fortawesome/free-solid-svg-icons": "^5.15.4",
+		"@popperjs/core": "^2.6.0",
+		"@wordpress/browserslist-config": "^4.0.0",
+		"@wordpress/icons": "^5.0.2",
+		"@wordpress/scripts": "^17.1.0",
+		"bootstrap": "^5.1.1",
+		"dploy": "^1.2.0",
+		"loadjs": "^4.2.0",
+		"scrollmagic": "^2.0.8",
+		"select2": "^4.1.0-rc.0"
+	}
+}

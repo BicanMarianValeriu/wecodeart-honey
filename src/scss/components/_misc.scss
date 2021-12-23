@@ -1,0 +1,32 @@
+.is-style-decoration {
+    position: relative;
+    padding-bottom: .25em;
+    border-bottom: 1px solid var(--wp--gray-200);
+    
+    &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        top: calc( 100% + 1px );
+        left: 0;
+        min-width: 200px;
+        height: .15em;
+        background-color: var(--wp--preset--color--primary);
+    }
+}
+
+.yoast-breadcrumbs {
+    color: var(--wp--gray-600);
+}
+
+.schema-faq-section {
+    padding-top: 1rem;
+    
+    & + .schema-faq-section {
+        border-top: 1px solid var(--wp--preset--color--light);
+    }
+}
+
+.schema-faq-question {
+    font-size: $lead-font-size;
+}

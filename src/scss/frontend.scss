@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/*!
+Theme Name: WeCodeArt Dev Skin
+Theme URI: https://www.wecodeart.com/
+Template: wecodeart
+Author: Bican Marian Valeriu
+Author URI: https://www.iambican.com/
+Description: WeCodeArt Child Theme used on main website.
+Version: 1.0.0
+License: TBA
+License URI: TBA
+Tags: light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+Text Domain: wecodeart-docs
+!*/
+
+// Required
+@import "~bootstrap/scss/functions";
+@import "./abstracts/variables";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// BS Layout & components
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/placeholders";
+@import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/popover";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/toasts";
+
+/* Vendors */
+@import 'vendor/select2';
+
+/* Custom Components */
+@import 'components/header';
+@import 'components/search';
+@import 'components/misc';
+@import 'components/footer';
+
+/* Pages */
+@import 'pages/document';
+@import 'pages/changelog';

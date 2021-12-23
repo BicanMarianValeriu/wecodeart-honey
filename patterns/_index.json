@@ -1,0 +1,40 @@
+[
+    {
+        "slug": "header-default",
+        "title": "Header (default)",
+        "description": "WeCodeArt Framework default header.",
+        "blockTypes": [
+            "core/template-part/header"
+        ]
+    },
+    {
+        "slug": "footer-default",
+        "title": "Footer (default)",
+        "description": "WeCodeArt Framework default footer.",
+        "blockTypes": [
+            "core/template-part/footer"
+        ]
+    },
+    {
+        "slug": "query-document",
+        "title": "Query (default)",
+        "description": "WeCodeArt Framework default Document query template.",
+        "blockTypes": [
+            "core/query"
+        ],
+        "categories": [
+            "wecodeart", "query"
+        ]
+    },
+    {
+        "slug": "query-changelog",
+        "title": "Query (default)",
+        "description": "WeCodeArt Framework default Changelog query template.",
+        "blockTypes": [
+            "core/query"
+        ],
+        "categories": [
+            "wecodeart", "query"
+        ]
+    }
+]

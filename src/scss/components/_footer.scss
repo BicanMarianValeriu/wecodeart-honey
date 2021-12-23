@@ -1,0 +1,31 @@
+/* 	= Footer Area
+--------------------------------------------------------------- */
+.site-footer {
+	:is(h1, h2, h3, h4, h5, h6) {
+		font-size: 1.1rem;
+		font-weight: 500;
+		text-align: left;
+		text-transform: uppercase;
+	}
+
+	.wp-block-navigation {
+		padding: 0;
+		align-items: flex-start;
+
+		.navbar-nav {
+			min-width: 180px;
+		}
+
+		.dropdown-menu {
+			position: absolute;
+            border-color: var(--wp--preset--color--light);
+            font-size: $nav-link-font-size;
+        }
+	}
+}
+
+.wp-site-toasts {
+	&:empty {
+		display: none;
+	}
+}

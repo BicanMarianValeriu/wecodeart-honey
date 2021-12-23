@@ -1,0 +1,116 @@
+.single-changelog,
+.single-document {
+    .position-sticky {
+        @include media-breakpoint-up( 'lg' ) {
+            top: 80px;
+        }
+    }
+}
+
+.product-card {
+    .card {
+        &-img {
+            object-fit: cover;
+        }
+    }
+}
+
+.category-topic {
+    &__title {
+        transition: inherit;
+    }
+    
+    a {
+        border: 1px dotted var(--wp--gray-200);
+        transition: all .3s cubic-bezier(0.215, 0.610, 0.355, 1), transform .3s ease-in-out;
+        
+        &:hover {
+            border-color: var(--wp--preset--color--primary);
+            box-shadow: 0 15px 20px rgba( #000, .1 );
+
+            .category-topic {
+                &__title {
+                    color: var(--wp--preset--color--primary);
+                }
+            }
+        }
+    }
+
+    svg {
+        max-width: 100px;
+        max-height: 100px;
+        --fa-primary-color: var(--wp--gray);
+        --fa-primary-opacity: .1;
+        --fa-secondary-opacity: .2;
+    }
+
+    .stretched-link::after {
+        z-index: 5;
+    }
+}
+
+.hierarchy-menu {
+    @include media-breakpoint-up( 'lg' ) {
+        top: 80px;
+    }
+
+    &__item {
+        position: relative;
+        
+        &--current {
+            & > .hierarchy-menu {
+                &__list {
+                    &-toggle {
+                        filter: invert(1) grayscale(100%) brightness(200%);
+                    }
+                }
+            }
+        }
+
+        &--active {
+            & > {
+                :where(.dropdown-item) {
+                    background-color: var(--wp--gray-200);
+                }
+
+                .hierarchy-menu {
+                    &__list {
+                        &-toggle {
+                            transform: rotate(0);
+                        }
+                    }
+                }
+            }
+        }
+
+        &-link {
+            font-size: $nav-link-font-size;
+            color: #555;
+        }
+    }
+
+    &__list {
+        &-toggle {
+            position: absolute;
+            top: 0.25em;
+            right: 5px;
+            display: block;
+            padding: .35em;
+            font-size: .75rem;
+            transform: rotate(45deg);
+            transform-origin: center;
+            border-radius: 100%;
+            opacity: 1;
+            
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        &--child {
+            display: none;
+            border-left: 1px solid var(--wp--light);
+            margin-left: 12px;
+        }
+    }
+}

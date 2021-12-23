@@ -1,0 +1,65 @@
+{
+	"$schema": "http://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"templateParts": [
+		{
+			"title": "Header",
+			"name": "header",
+			"area": "header"
+		},
+		{
+			"title": "Footer",
+			"name": "footer",
+			"area": "footer"
+		},
+		{
+			"title": "Document: Archive",
+			"name": "document-archive",
+			"area": "uncategorized"
+		},
+		{
+			"title": "Main Sidebar",
+			"name": "sidebar",
+			"area": "uncategorized"
+		},
+		{
+			"title": "Secondary Sidebar",
+			"name": "sidebar-secondary",
+			"area": "uncategorized"
+		},
+		{
+			"title": "Changelog Sidebar",
+			"name": "sidebar-changelog",
+			"area": "uncategorized"
+		},
+		{
+			"title": "Top Sidebar",
+			"name": "sidebar-top",
+			"area": "uncategorized"
+		},
+		{
+			"title": "Bottom Sidebar",
+			"name": "sidebar-bottom",
+			"area": "uncategorized"
+		}
+	],
+	"settings": {
+		"layout": {
+			"contentSize": "1320px",
+			"wideSize": null
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/paragraph": {
+				"typography": {
+					"lineHeight": "1.7"
+				}
+			}
+		},
+		"typography": {
+			"fontSize": "var:preset|font-size|normal",
+			"fontFamily": "var:preset|font-family|base"
+		}
+	}
+}
