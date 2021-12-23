@@ -13,23 +13,8 @@
 			"area": "footer"
 		},
 		{
-			"title": "Document: Archive",
-			"name": "document-archive",
-			"area": "uncategorized"
-		},
-		{
 			"title": "Main Sidebar",
 			"name": "sidebar",
-			"area": "uncategorized"
-		},
-		{
-			"title": "Secondary Sidebar",
-			"name": "sidebar-secondary",
-			"area": "uncategorized"
-		},
-		{
-			"title": "Changelog Sidebar",
-			"name": "sidebar-changelog",
 			"area": "uncategorized"
 		},
 		{
