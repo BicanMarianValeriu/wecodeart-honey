@@ -14,7 +14,7 @@
 defined( 'ABSPATH' ) || exit();
 
 ?>
-<div class="wp-site-credits has-light-background-color">
+<div class="wp-site-credits has-dark-background-color has-white-color">
     <div class="container">
         <div class="has-text-align-center">
             <span class="wp-site-credits__text"><?php

@@ -1,16 +1,16 @@
 @charset "UTF-8";
 /*!
-Theme Name: WeCodeArt Dev Skin
+Theme Name: WeCodeArt Honey Skin
 Theme URI: https://www.wecodeart.com/
 Template: wecodeart
 Author: Bican Marian Valeriu
-Author URI: https://www.iambican.com/
+Author URI: https://www.wecodeart.com/about/
 Description: WeCodeArt Child Theme used on main website.
 Version: 1.0.0
 License: TBA
 License URI: TBA
 Tags: light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
-Text Domain: wecodeart-docs
+Text Domain: wecodeart-honey
 !*/
 
 // Required
@@ -37,10 +37,8 @@ Text Domain: wecodeart-docs
 
 /* Custom Components */
 @import 'components/header';
-@import 'components/search';
 @import 'components/misc';
 @import 'components/footer';
 
 /* Pages */
-@import 'pages/document';
-@import 'pages/changelog';
+@import 'pages/default';

@@ -9,11 +9,16 @@ return [
     | Milascenous options.
     |
     */
-    'logo'      => [
-        'width'     => 50,
-        'height'    => 50
+    'support' => [
+        'custom-logo'   => [
+            'width'     => 235,
+            'height'    => 50
+        ],
     ],
-    'scripts'   => [
-        'footer' => true, // Load jQuery in Footer
+    'header'    => [
+        'clean' => true
+    ],
+    'footer'    => [
+        'jquery' => true, // Load jQuery in Footer
     ],
 ];

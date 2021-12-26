@@ -29,6 +29,56 @@
 		}
 	],
 	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "primary",
+					"color": "#c74817",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#d3a863",
+					"name": "Secondary"
+				},
+				{
+					"slug": "success",
+					"color": "#7dc855",
+					"name": "Success"
+				},
+				{
+					"slug": "warning",
+					"color": "#ffc107",
+					"name": "Warning"
+				},
+				{
+					"slug": "danger",
+					"color": "#dc3545",
+					"name": "Danger"
+				},
+				{
+					"slug": "info",
+					"color": "#0dcaf0",
+					"name": "Info"
+				},
+				{
+					"slug": "light",
+					"color": "#f8f9fa",
+					"name": "Light"
+				},
+				{
+					"slug": "dark",
+					"color": "#343a40",
+					"name": "Dark"
+				}
+			],
+			"gradients": [],
+			"link": true,
+			"custom": true,
+			"customGradient": true,
+			"corePalette": false,
+			"coreGradients": false
+		},
 		"layout": {
 			"contentSize": "1320px",
 			"wideSize": null
@@ -40,11 +90,37 @@
 				"typography": {
 					"lineHeight": "1.7"
 				}
+			},
+			"core/button": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|button",
+					"fontWeight": "700"
+				}
 			}
 		},
 		"typography": {
 			"fontSize": "var:preset|font-size|normal",
 			"fontFamily": "var:preset|font-family|base"
+		},
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontWeight": "700"
+				}
+			},
+			"h2": {
+				"color": {
+					"text": "#121212"
+				},
+				"typography": {
+					"fontWeight": "700"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontWeight": "700"
+				}
+			}
 		}
 	}
 }

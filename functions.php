@@ -22,4 +22,4 @@ require_once( get_parent_theme_file_path( '/inc/init.php' ) );
 new WeCodeArt\Autoloader( CHILD_THEME_NS, CHILD_THEME_INC ); 
 
 // Load Skin DEPS
-WeCodeArt\Doc\Scripts   ::get_instance(); // Assets
+WeCodeArt\Honey\Scripts   ::get_instance(); // Assets
