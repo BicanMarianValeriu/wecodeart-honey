@@ -33,12 +33,12 @@
 			"palette": [
 				{
 					"slug": "primary",
-					"color": "#c74817",
+					"color": "#EB6D2F",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#d3a863",
+					"color": "#FFD832",
 					"name": "Secondary"
 				},
 				{
@@ -63,12 +63,12 @@
 				},
 				{
 					"slug": "light",
-					"color": "#f8f9fa",
+					"color": "#F8F7F1",
 					"name": "Light"
 				},
 				{
 					"slug": "dark",
-					"color": "#343a40",
+					"color": "#5A3733",
 					"name": "Dark"
 				}
 			],
@@ -94,7 +94,20 @@
 			"core/button": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|button",
+					"fontSize": "var:preset|font-size|normal",
 					"fontWeight": "700"
+				},
+				"border": {
+					"width": "1px",
+					"radius": "50px"
+				},
+				"spacing": {
+					"padding": {
+						"top": ".8rem",
+						"bottom": ".8rem",
+						"left": "2rem",
+						"right": "2rem"
+					}
 				}
 			}
 		},
@@ -105,6 +118,7 @@
 		"elements": {
 			"h1": {
 				"typography": {
+					"fontFamily": "Signika",
 					"fontWeight": "700"
 				}
 			},
@@ -113,11 +127,13 @@
 					"text": "#121212"
 				},
 				"typography": {
+					"fontFamily": "Signika",
 					"fontWeight": "700"
 				}
 			},
 			"h3": {
 				"typography": {
+					"fontFamily": "Signika",
 					"fontWeight": "700"
 				}
 			}

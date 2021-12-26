@@ -25,7 +25,8 @@ class Scripts {
 	 * Send Construtor
 	 */
 	public function init() {
-		add_action( 'wp_enqueue_scripts', 	[ $this, 'google_font' ] );
+		add_action( 'wp_enqueue_scripts', 	[ $this, 'enqueue_font' ] );
+		add_action( 'after_setup_theme', 	[ $this, 'admin_fonts' ] );
 		add_action( 'wp_enqueue_scripts',	[ $this, 'enqueue_scripts_styles' 	], 20 );
 		
 		add_filter( 'wecodeart/filter/scripts/localize', [ $this, 'localize' ] );
@@ -90,12 +91,27 @@ class Scripts {
 	}
 
 	/**
-	 * Google Fonts
+	 * Front Fonts
 	 */
-	public function google_font() {
+	public function enqueue_font() {
+		wp_enqueue_style( 'google-fonts', $this->get_fonts_url(), [], wecodeart( 'version' ) );
+	}
+
+	/**
+	 * Admin Fonts
+	 */
+	public function admin_fonts() {
+		add_editor_style( $this->get_fonts_url() );
+	}
+
+	/**
+	 * Get Fonts URL
+	 */
+	public function get_fonts_url() {
 		$google_fonts = [
 			'opensans' 	=> 'Open+Sans:300,500,700',
-			'opensansc'	=> 'Open+Sans+Condensed:700',
+			// 'opensansc'	=> 'Open+Sans+Condensed:700',
+			'signika'	=> 'Signika:700,900',
 		];
 	  
 		$query_args = [
@@ -104,7 +120,7 @@ class Scripts {
 		];
 	
 		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
-	
-		wp_enqueue_style( 'google-fonts', esc_url( $fonts_url ), [], wecodeart( 'version' ) );
+
+		return str_replace( ',', '%2C', $fonts_url );
 	}
 }
