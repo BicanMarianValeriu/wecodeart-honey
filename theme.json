@@ -18,11 +18,6 @@
 			"area": "uncategorized"
 		},
 		{
-			"title": "Top Sidebar",
-			"name": "sidebar-top",
-			"area": "uncategorized"
-		},
-		{
 			"title": "Bottom Sidebar",
 			"name": "sidebar-bottom",
 			"area": "uncategorized"
