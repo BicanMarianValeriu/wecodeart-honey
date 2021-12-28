@@ -24,6 +24,16 @@ class Support {
 	 */
 	public function init() {
 		add_filter( 'pvc_enqueue_styles', '__return_false' );
+
+		register_block_style( 'core/list', [
+			'name'	=> 'check',
+            'label'	=> __( 'Check', 'wecodeart-honey' ),
+		] );
+
+		register_block_style( 'core/media-text', [
+			'name'	=> 'overlap',
+            'label'	=> __( 'Overlap', 'wecodeart-honey' ),
+		] );
 	}
 
 	/**

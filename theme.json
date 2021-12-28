@@ -105,8 +105,8 @@
 					"padding": {
 						"top": ".8rem",
 						"bottom": ".8rem",
-						"left": "2rem",
-						"right": "2rem"
+						"left": "2.5rem",
+						"right": "2.5rem"
 					}
 				}
 			}
@@ -132,6 +132,12 @@
 				}
 			},
 			"h3": {
+				"typography": {
+					"fontFamily": "Signika",
+					"fontWeight": "700"
+				}
+			},
+			"h4": {
 				"typography": {
 					"fontFamily": "Signika",
 					"fontWeight": "700"

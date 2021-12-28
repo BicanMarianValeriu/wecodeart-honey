@@ -23,3 +23,4 @@ new WeCodeArt\Autoloader( CHILD_THEME_NS, CHILD_THEME_INC );
 
 // Load Skin DEPS
 WeCodeArt\Honey\Scripts   ::get_instance(); // Assets
+WeCodeArt\Honey\Support   ::get_instance(); // Support
