@@ -26,7 +26,7 @@ class Scripts {
 	 */
 	public function init() {
 		add_action( 'after_setup_theme', 	[ $this, 'admin_fonts' 		] );
-		add_action( 'wp_enqueue_scripts',	[ $this, 'enqueue_assets'	], -10 );
+		add_action( 'wp_enqueue_scripts',	[ $this, 'enqueue_assets'	] );
 		
 		add_filter( 'wecodeart/filter/scripts/localize', [ $this, 'localize' ] );
 	}
