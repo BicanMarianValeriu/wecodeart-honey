@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit();
         <div class="has-text-align-center">
             <span class="wp-site-credits__text"><?php
                 
-                echo wp_kses_post( sprintf( __( 'Copyright %s - All rights reserved.', 'wecodeart' ), '&copy; ' . date( 'Y' ) ) );
+                echo wp_kses_post( sprintf( __( '%s - All rights reserved.', 'wecodeart' ), '&copy; ' . date( 'Y' ) ) );
                 
             ?></span>
             <span class="wp-site-credits__theme"><?php

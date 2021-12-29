@@ -14,5 +14,27 @@
         "blockTypes": [
             "core/template-part/footer"
         ]
+    },
+    {
+        "slug": "query-blog",
+        "title": "Query (Blog)",
+        "description": "Blog listing.",
+        "blockTypes": [
+            "core/query"
+        ],
+        "categories": [
+            "wecodeart", "query"
+        ]
+    },
+    {
+        "slug": "query-latest",
+        "title": "Query (Latest Posts)",
+        "description": "Show latest 3 posts in a section.",
+        "blockTypes": [
+            "core/query"
+        ],
+        "categories": [
+            "wecodeart", "query"
+        ]
     }
 ]

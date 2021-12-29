@@ -25,9 +25,8 @@ class Scripts {
 	 * Send Construtor
 	 */
 	public function init() {
-		add_action( 'wp_enqueue_scripts', 	[ $this, 'enqueue_font' ] );
-		add_action( 'after_setup_theme', 	[ $this, 'admin_fonts' ] );
-		add_action( 'wp_enqueue_scripts',	[ $this, 'enqueue_scripts_styles' 	], 20 );
+		add_action( 'after_setup_theme', 	[ $this, 'admin_fonts' 		] );
+		add_action( 'wp_enqueue_scripts',	[ $this, 'enqueue_assets'	], -10 );
 		
 		add_filter( 'wecodeart/filter/scripts/localize', [ $this, 'localize' ] );
 	}
@@ -44,7 +43,7 @@ class Scripts {
     /**
 	 * Skin Assets
 	 */
-	public function enqueue_scripts_styles() {
+	public function enqueue_assets() {
 		$styles = wecodeart( 'integrations' )->get( 'styles' )::get_instance();
 
 		$styles->Utilities->load( [
@@ -71,6 +70,8 @@ class Scripts {
 
 		wp_enqueue_style( $this->make_handle() );
 
+		wp_enqueue_style( $this->make_handle( 'fonts' ) , $this->get_fonts_url(), [], wecodeart( 'version' ) );
+
 		// JS
 		$deps = sprintf( '%s/assets/%s/js/%s.php', get_stylesheet_directory(), $path, '' . $name . '.asset' );
 		
@@ -91,13 +92,6 @@ class Scripts {
 	}
 
 	/**
-	 * Front Fonts
-	 */
-	public function enqueue_font() {
-		wp_enqueue_style( 'google-fonts', $this->get_fonts_url(), [], wecodeart( 'version' ) );
-	}
-
-	/**
 	 * Admin Fonts
 	 */
 	public function admin_fonts() {
@@ -110,7 +104,6 @@ class Scripts {
 	public function get_fonts_url() {
 		$google_fonts = [
 			'opensans' 	=> 'Open+Sans:300,500,700',
-			// 'opensansc'	=> 'Open+Sans+Condensed:700',
 			'signika'	=> 'Signika:700,900',
 		];
 	  

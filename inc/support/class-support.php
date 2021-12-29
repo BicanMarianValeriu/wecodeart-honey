@@ -23,8 +23,6 @@ class Support {
 	 * Send Construtor
 	 */
 	public function init() {
-		add_filter( 'pvc_enqueue_styles', '__return_false' );
-
 		register_block_style( 'core/list', [
 			'name'	=> 'check',
             'label'	=> __( 'Check', 'wecodeart-honey' ),
@@ -44,6 +42,5 @@ class Support {
 	 *
 	 * @return 	string
 	 */
-	public function render( $html, $args ) {
-	}
+	public function render( $html, $args ) {}
 }

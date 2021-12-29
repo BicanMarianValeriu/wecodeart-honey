@@ -1,5 +1,4 @@
 // Deps
-import '../../plugins/wecodeart-Search';
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import Tooltip from 'bootstrap/js/dist/tooltip';
 
@@ -23,7 +22,7 @@ export default {
 		dom.watch();
 
 		// Select2
-		const { fn: { requireJs }, lazyJs } = wecodeart;
-		requireJs(lazyJs, ['select2'], () => jQuery('select').select2());
+		// const { fn: { requireJs }, lazyJs } = wecodeart;
+		// requireJs(lazyJs, ['select2'], () => jQuery('select').select2());
 	},
 };
