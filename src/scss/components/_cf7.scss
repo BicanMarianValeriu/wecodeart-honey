@@ -1,0 +1,14 @@
+.wpcf7-response-output,
+.wpcf7-not-valid-tip {
+    color: var(--wp--preset--color--vivid-red);
+    font-size: small;
+}
+
+.wpcf7-form-control {
+    border: 2px solid var(--wp--gray-200);
+}
+
+.wpcf7-submit {
+    border-width: 1px;
+    border-color: transparent;
+}

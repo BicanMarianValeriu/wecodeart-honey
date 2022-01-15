@@ -19,7 +19,7 @@ define( 'CHILD_THEME_INC', 	    __DIR__ . '/inc' );
 
 // Start the engine
 require_once( get_parent_theme_file_path( '/inc/init.php' ) );
-new WeCodeArt\Autoloader( CHILD_THEME_NS, CHILD_THEME_INC ); 
+new WeCodeArt\Autoloader( CHILD_THEME_NS, CHILD_THEME_INC );
 
 // Load Skin DEPS
 WeCodeArt\Honey\Scripts   ::get_instance(); // Assets

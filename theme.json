@@ -1,6 +1,44 @@
 {
 	"$schema": "http://schemas.wp.org/trunk/theme.json",
 	"version": 2,
+	"customTemplates": [
+		{
+			"name": "archive-product",
+			"title": "Arhiva produs",
+			"postTypes": []
+		},
+		{
+			"name": "taxonomy-product_cat",
+			"title": "Categorie produs",
+			"postTypes": []
+		},
+		{
+			"name": "taxonomy-product_tag",
+			"title": "Eticheta produs",
+			"postTypes": []
+		},
+		{
+			"name": "single-product",
+			"title": "Produs singular",
+			"postTypes": []
+		},
+		{
+			"name": "page-sidebar",
+			"title": "Page - Sidebar",
+			"postTypes": [
+				"page",
+				"post"
+			]
+		},
+		{
+			"name": "content-only",
+			"title": "Content Only",
+			"postTypes": [
+				"page",
+				"post"
+			]
+		}
+	],
 	"templateParts": [
 		{
 			"title": "Header",

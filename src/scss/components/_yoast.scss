@@ -1,0 +1,16 @@
+// Yoast
+.yoast-breadcrumbs {
+    color: var(--wp--gray-600);
+}
+
+.schema-faq-section {
+    padding-top: 1rem;
+    
+    & + .schema-faq-section {
+        border-top: 1px solid var(--wp--preset--color--light);
+    }
+}
+
+.schema-faq-question {
+    font-size: $lead-font-size;
+}

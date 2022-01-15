@@ -1946,6 +1946,7 @@ Text Domain: wecodeart-honey
 
 .is-style-check {
   list-style: none;
+  padding-left: 0;
 }
 .is-style-check li::before {
   content: "";
@@ -1959,6 +1960,41 @@ Text Domain: wecodeart-honey
   vertical-align: middle;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' viewBox='0 0 490.05 490.05'%3E%3Cpath fill='%23FFD832' d='M418.275 418.275c95.7-95.7 95.7-250.8 0-346.5s-250.8-95.7-346.5 0-95.7 250.8 0 346.5 250.9 95.7 346.5 0zm-261.1-210.7 55.1 55.1 120.7-120.6 42.7 42.7-120.6 120.6-42.8 42.7-42.7-42.7-55.1-55.1 42.7-42.7z'/%3E%3C/svg%3E");
   background-size: contain;
+}
+
+.wpcf7-response-output,
+.wpcf7-not-valid-tip {
+  color: var(--wp--preset--color--vivid-red);
+  font-size: small;
+}
+
+.wpcf7-form-control {
+  border: 2px solid var(--wp--gray-200);
+}
+
+.wpcf7-submit {
+  border-width: 1px;
+  border-color: transparent;
+}
+
+.blog .wp-block-cover, .wp-block-cover:first-child {
+  border-bottom: 1px solid var(--wp--preset--color--secondary);
+  overflow: visible;
+}
+.blog .wp-block-cover::after, .wp-block-cover:first-child::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  max-width: calc(1320px - 2rem);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 6px;
+  transform: translateY(50%);
+  border-radius: 4px;
+  background: var(--wp--preset--color--secondary);
+  z-index: 5;
 }
 
 :root .is-style-overlap {
