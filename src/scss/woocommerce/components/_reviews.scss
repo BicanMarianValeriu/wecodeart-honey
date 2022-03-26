@@ -1,0 +1,59 @@
+.woocommerce-Reviews {
+    .comment-form-rating {
+        label {
+            display: block;
+        }
+
+        p {
+            display: inline-block;
+        }
+    }
+
+    .review {
+        margin-bottom: 1rem;
+
+        @include media-breakpoint-down( 'sm' ) {
+            padding-top: 1rem;
+        }
+
+        .meta {
+            margin-bottom: 0;
+        }
+
+        .comment_container {
+            @include clearfix();
+        }
+
+        .comment-text {
+            position: relative;
+            float: right;
+            width: calc( 100% - 60px );
+            padding: 0 10px;
+            font-size: .75rem;
+
+            @include media-breakpoint-up( 'sm' ) { 
+                font-size: .9rem;
+            }
+        }
+
+        .avatar {
+            float: left;
+            border: 4px solid var(--wp--gray-100);
+            border-radius: 100%;
+        }
+
+        .star-rating {
+            float: right;
+            
+            @include media-breakpoint-down( 'sm' ) {
+                position: absolute;
+                right: 0;
+                bottom: 100%;
+                
+                svg {
+                    font-size: .7rem;
+                }
+            }
+        }
+    }
+}

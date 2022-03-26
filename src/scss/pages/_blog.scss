@@ -1,0 +1,9 @@
+.blog,
+.archive,
+.wp-block-post {
+    .wp-block-post-featured-image {
+        & + .wp-block-group {
+            justify-content: center;
+        }
+    }
+}

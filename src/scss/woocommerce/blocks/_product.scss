@@ -1,0 +1,118 @@
+.wc-block-featured-category,
+.wc-block-featured-product {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &.alignnone {
+        margin: 0;
+    }
+
+    &.has-left-content {
+        align-items: flex-start;
+    }
+
+    &.has-right-content {
+        align-items: flex-end;
+    }
+
+    &.has-background-dim {
+        &::before {
+            content: "";
+            background-color: inherit;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: .5;
+            pointer-events: none;
+        }
+    }
+
+    @for $i from 1 through 10 {
+		&.has-background-dim.has-background-dim-#{ $i * 10 } {
+			&:not(.has-background-gradient)::before {
+				opacity: $i * 0.1;
+			}
+		}
+    }
+}
+
+.wc-block-featured-category {
+    &.has-right-content {
+        .wc-block-featured-category__description {
+            text-align: right;
+        }
+    }
+
+    &.has-background-dim {
+        .wc-block-featured-category {
+            &__title,
+            &__description,
+            &__variation,
+            &__price,
+            &__link {
+                position: relative;
+                z-index: 5;
+            }
+        }
+    }
+
+    &:not(.has-white-background-color):not(.has-light-background-color) {
+        .wc-block-featured-category {
+            &__title,
+            &__description,
+            &__variation,
+            &__price {
+                color: white;
+            }
+        }
+    }
+
+    .wc-block-featured-product__description {
+        text-align: center;
+    }
+}
+
+.wc-block-featured-product {
+    &.has-right-content {
+        .wc-block-featured-product__description {
+            text-align: right;
+        }
+    }
+
+    &.has-background-dim {
+        .wc-block-featured-product {
+            &__title,
+            &__description,
+            &__variation,
+            &__price,
+            &__link {
+                position: relative;
+                z-index: 5;
+            }
+        }
+    }
+
+    &:not(.has-white-background-color):not(.has-light-background-color) {
+        .wc-block-featured-product {
+            &__title,
+            &__description,
+            &__variation,
+            &__price {
+                color: white;
+            }
+        }
+    }
+
+    .wc-block-featured-product__description {
+        text-align: center;
+    }
+}

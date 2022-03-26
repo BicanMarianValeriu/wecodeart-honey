@@ -1,0 +1,95 @@
+.widget_price_filter {
+    .widgettitle {
+        margin-bottom: 2rem;
+    }
+}
+
+.price_slider { 
+    margin-bottom: 1.5rem;
+
+    &_amount {
+        text-align: right;
+        line-height: 2.4em;
+        font-size: 0.8751em;
+        font-weight: bold;
+        color: $gray-800;
+    
+        .button {
+            float: left;
+        }
+
+        input {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+
+    &_wrapper {
+        .ui-widget-content {
+            border-radius: 1em;
+            background: $gray-300;
+            background: -webkit-gradient(linear, left top, left bottom, from($gray-300), to($gray-100));
+            background: -webkit-linear-gradient( $gray-300, $gray-100 );
+            background: -moz-linear-gradient(center top, $gray-300 0%, $gray-100 100%);
+            background: -moz-gradient(center top, $gray-300 0%, $gray-100 100%);
+        }
+    }
+}
+
+.ui-slider {
+    position: relative;
+    text-align: left;
+
+    &-horizontal {
+        height:.5em;
+    
+        .ui-slider-range {
+            top: 0;
+            height: 100%;
+    
+            &-min {
+                left: -1px;
+            }
+    
+            &-max {
+                right: -1px;
+            }
+        }
+    }
+
+    .ui-slider-handle {
+        position: absolute;
+        z-index: 2;
+        width: 1.2em;
+        height: 1.2em;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.10);
+        background: #fff;
+        outline: none;
+        top: 50%;
+        transform: translate3d(-50%,-50%,0);
+        cursor: pointer;
+
+        &.ui-state-focus {
+            border-color: theme-color( 'primary' );
+        }
+
+        &.ui-state-hover {
+            background: white;
+            border-color: white;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.3),;
+        }
+    }
+
+    .ui-slider-range {
+        position: absolute;
+        display: block;
+        z-index: 1;
+        font-size: .7em;
+        border: 0;
+        background: none repeat scroll 0 0 theme-color( 'primary' );
+        box-shadow: 1px 1px 1px 0.5px rgba(0, 0, 0, 0.25) inset;
+        border-radius: 1em;
+    }
+}

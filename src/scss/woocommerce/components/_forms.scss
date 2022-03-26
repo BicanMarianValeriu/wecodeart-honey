@@ -1,0 +1,67 @@
+/**
+ * Woo Field Function is extended to use Bootstrap Classes
+ */
+.woocommerce-form,
+.woocommerce-account-fields,
+.woocommerce-ResetPassword,
+.woocommerce-EditAccountForm,
+.woocommerce-billing-fields__field-wrapper,
+.woocommerce-address-fields__field-wrapper,
+.woocommerce-shipping-fields__field-wrapper,
+.woocommerce-additional-fields__field-wrapper {
+    @include make-row(30px);
+
+    .form-row {
+        @include make-col-ready(30px);
+        margin-left: 0;
+        margin-right: 0;
+
+        &-first,
+        &-last {
+            @include make-col(12);
+
+            @include media-breakpoint-up( 'sm' ) {
+                @include make-col(6);
+            }
+        }
+
+        &-wide {
+            width: 100%;
+            flex: 1 1 100%;
+        }
+    }
+
+    fieldset {
+        @include make-col(12);
+
+        legend {
+            @include make-col-ready(30px);
+        }
+    }
+
+    .woocommerce-input-wrapper { 
+        width: 100%;
+    }
+}
+
+.woocommerce-form-login,
+.woocommerce-ResetPassword,
+.woocommerce-EditAccountForm {
+    p {
+        @include make-col-ready(30px); 
+    }
+}
+
+.woocommerce-invalid {
+    input,
+    select,
+    textarea,
+    .select2-container .select2-selection {
+        border-color: var(--wp--preset--color--danger)!important;
+    }
+}
+
+.password-input {
+    display: block;
+    width: 100%;
+}

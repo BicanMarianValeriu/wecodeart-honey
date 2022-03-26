@@ -12,12 +12,14 @@ namespace WeCodeArt\Honey;
 
 defined( 'ABSPATH' ) || exit();
 
+use WeCodeArt\Singleton;
+
 /**
  * Support
  */
 class Support {
 
-	use \WeCodeArt\Singleton;
+	use Singleton;
 
 	/**
 	 * Send Construtor
@@ -32,15 +34,21 @@ class Support {
 			'name'	=> 'overlap',
             'label'	=> __( 'Overlap', 'wecodeart-honey' ),
 		] );
-	}
 
+		Support\WooCommerce::get_instance(); // WooCommerce
+	}
+	
 	/**
-	 * Render
+	 * Sample
 	 *
 	 * @since	1.0
 	 * @version	1.0
 	 *
-	 * @return 	string
+	 * @return 	array
 	 */
-	public function render( $html, $args ) {}
+	public function sample( $args ) {
+		$args['delimiter'] = ' » ';
+
+		return $args;
+	}
 }

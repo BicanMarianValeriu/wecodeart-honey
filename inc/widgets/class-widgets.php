@@ -12,14 +12,14 @@ namespace WeCodeArt\Honey;
 
 defined( 'ABSPATH' ) || exit();
 
-use WeCodeArt\Markup;
+use WeCodeArt\Singleton;
 
 /**
  * Widgets
  */
 class Widgets {
 
-	use \WeCodeArt\Singleton;
+	use Singleton;
 
 	/**
 	 * Send to Constructor

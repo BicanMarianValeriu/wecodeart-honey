@@ -1,0 +1,152 @@
+.wc-block-grid {
+    &.alignfull {
+        .wc-block-grid__products {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    
+    &.has-aligned-buttons {
+		.wc-block-grid__product {
+			display: flex;
+			flex-direction: column;
+        }
+        
+		.wc-block-grid__product-add-to-cart {
+			margin-top: auto !important;
+		}
+    }
+    
+    @for $i from 2 to 6 {
+        &.has-#{$i}-columns .wc-block-grid__product {
+            @include media-breakpoint-up( 'sm' ) {
+                @include make-col( 6 );
+            }
+
+            @include media-breakpoint-up( 'lg' ) {
+                @include make-col( 4 );
+            }
+
+            @include media-breakpoint-up( 'xl' ) {
+                @include make-col( 12 / $i );
+            }
+        }
+    }
+
+    &__products {
+        @include make-row();
+        @include list-unstyled();
+    }
+
+    &__product {
+        @include make-col-ready();
+        @include make-col( 12 );
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+
+        &.is-loading {
+            .wp-block-button,
+            .wc-block-grid__product-price,
+            .wc-block-grid__product-title {
+                display: none;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: white;
+            top: 0;
+            left: $grid-gutter-width / 2;
+            right: $grid-gutter-width / 2;
+            bottom: 0;
+            border: 1px solid theme-color( 'light' );
+            box-shadow: 0 0.25rem 1.875rem rgba(42, 53, 79, 0.1);
+            pointer-events: none;
+            @include border-radius();
+        }
+
+        &-image {
+            position: relative;
+            margin-bottom: .5rem;
+            z-index: 2;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        
+        &-title,
+        &-rating,
+        &-price {
+            position: relative;
+            display: block;
+            text-align: left;
+            padding: 0 10px;
+        }
+
+        &-title {
+            color: $dark;
+            font-size: $font-size-base;
+            font-weight: 700;
+            line-height: 1.2;
+            text-transform: uppercase;
+
+            a {
+                color: inherit;
+            }
+        }
+
+        &-onsale {
+            left: 7px;
+
+            &--alignright {
+                left: auto;
+                right: 7px;
+
+                &::before {
+                    border-right-color: transparent;
+                    border-left: 5px solid theme-color( 'danger' );
+                    border-left-width: 5px;
+                    right: -2px;
+                    left: inherit;
+                }
+            }
+        }
+
+        &-rating {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            
+            &__stars,
+            .star-rating {
+                float: left;
+            }
+        }
+
+        &-add-to-cart {
+            margin-top: auto;
+            color: white;
+            
+            .wp-block-button__link {
+                display: block;
+                width: 100%;
+                margin-top: 5px;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+        }
+    }
+}
+
+.wc-block-all-products {
+    position: relative;
+
+    .with-scroll-to-top__scroll-point {
+        position: absolute;
+        top: -90px;
+    }
+}

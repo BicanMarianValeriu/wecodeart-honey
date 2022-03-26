@@ -1,0 +1,183 @@
+/* ==========================================================================
+   Product
+   ========================================================================== */
+.single-product {
+    .woocommerce-breadcrumb {
+        margin-bottom: var(--wp--custom--spacers--3);
+    }
+
+    .woocommerce-notices-wrapper {
+        margin-bottom: var(--wp--custom--spacers--3);
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    .woocommerce-product-summary {
+        .price ins {
+            font-size: 1.5rem; 
+        }
+    }
+
+    .woocommerce-product-rating {
+        .star-rating {
+            float: left;
+        }
+    }
+
+    .woocommerce-product-meta {
+        .product-meta__item--sku {
+            text-transform: uppercase;
+        }
+    }
+
+    .woocommerce-variation {
+        margin-bottom: var(--wp--custom--spacers--3);
+    }
+
+    form.cart {
+        &.variations_form {
+            position: relative;
+        
+            a.reset_variations {
+                position: absolute;
+                bottom: 100%;
+                right: 0;
+            }
+        }
+    
+        &.grouped_form {
+            overflow: auto;
+        }
+    }
+    
+    table.variations,
+    table.shop_attributes, 
+    .woocommerce-grouped-product-list {
+        margin-bottom: var(--wp--custom--spacers--3);
+    
+        td {
+            label {
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-bottom: 0;
+            }
+    
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
+    } 
+    
+    table.shop_attributes {
+        width: auto;
+        min-width: 300px;
+    }
+}
+
+.woocommerce-product-gallery {
+    position: relative;
+
+    &__wrapper {
+        max-width: initial;
+    }
+
+    &__trigger {
+        position: absolute;
+        top: .5rem;
+        right: .8rem;
+        z-index: 1;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 30px;
+        height: 20px;
+        width: 20px;
+        text-indent: -9999px;
+        color: black;
+        border: 2px solid var(--wp--gray-800);
+
+        &:hover {
+            border-color: var(--wp--preset--color--primary);
+
+            &::before {
+                background: var(--wp--preset--color--primary);
+                color: white;
+            }
+        }
+
+        &:before { 
+            content: "";
+            position: absolute;
+            transition: inherit;
+            height: 2px;
+            width: 6px;
+            background: var(--wp--gray-800);
+            top: 90%;
+            left: 90%; 
+            transform: rotate(45deg);  
+            border-radius: 100%;
+            padding: 2px; 
+        }
+    }
+
+    &__image--placeholder,  // Placeholder
+    &__image:only-child,    // Single Image
+    & .flex-viewport {      // Multiple Images
+        border: 3px solid white;
+        border-radius: .25rem;
+        outline: 1px solid var(--wp--gray-100);
+        box-shadow: var(--wp--custom--shadows--lg);
+
+        img {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        a {
+            display: block;
+        }
+    }
+
+    .flex-viewport {
+        max-height: 500px;
+    }
+
+    .flex-control-thumbs {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 1rem;
+        margin-bottom: 0;
+    
+        li {
+            img {
+                width: 100%;
+                opacity: .5;
+                padding: 3px;
+                border: 1px solid var(--wp--gray-200);
+                border-radius: .25rem;
+                cursor: pointer;
+       
+                &.flex-active,
+                &:hover {
+                    opacity: 1;
+                    border-color: var(--wp--preset--color--primary);
+                }
+            }	
+        }
+    }
+
+    &--columns {
+        @for $i from 1 through 8 {
+            &-#{ $i } {
+                .flex-control-thumbs {
+                    @include media-breakpoint-up( 'sm' ) {
+                        grid-template-columns: repeat( $i, 1fr);
+                    }
+                }
+            }
+        }
+    }
+}

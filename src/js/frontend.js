@@ -5,14 +5,15 @@
  */
 import './../scss/frontend.scss';
 
-import loadjs from 'loadjs';
+// Helpers
 import helperGetParents from './helpers/getParents';
 
 // Common JS
 import common from './routes/common';
+import woocommerceJs from './routes/pages/woocommerceJs';
+// import singleProduct from './routes/pages/product';
 
 // Attach Some Required Plugins
-wecodeart.fn.loadJs = loadjs;
 wecodeart.fn.getParents = helperGetParents;
 
 const { hooks: { addAction } } = wp;
@@ -41,9 +42,8 @@ wecodeart = {
 			 * This prop includes the global JS fired on every page
 			 */
 			...wecodeart.routes,
-			someRoute: {
-				init: () => {}
-			},
+			woocommerceJs,
+			// singleProduct,
 		}
 	}
 };

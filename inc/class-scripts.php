@@ -13,13 +13,16 @@ namespace WeCodeArt\Honey;
 
 defined( 'ABSPATH' ) || exit();
 
+use WeCodeArt\Singleton;
+use WeCodeArt\Config\Traits\Asset;
+
 /**
  * Scripts
  */
 class Scripts {
 
-	use \WeCodeArt\Singleton;
-	use \WeCodeArt\Core\Scripts\Base;
+	use Singleton;
+	use Asset;
 
 	/**
 	 * Send Construtor
@@ -58,7 +61,7 @@ class Scripts {
 		$name = wecodeart_if( 'is_dev_mode' ) ? 'frontend' : 'frontend.min';
 		$default = [
 			'version' 		=> wecodeart( 'version' ),
-			'dependencies'	=> [ 'jquery', 'wecodeart-core-scripts' ],
+			'dependencies'	=> [ 'jquery', 'wecodeart-support-assets' ],
 		];
 
 		wp_register_style(
@@ -70,7 +73,7 @@ class Scripts {
 
 		wp_enqueue_style( $this->make_handle() );
 
-		wp_enqueue_style( $this->make_handle( 'fonts' ) , $this->get_fonts_url(), [], wecodeart( 'version' ) );
+		wp_enqueue_style( $this->make_handle( 'fonts' ) , self::get_fonts_url(), [], wecodeart( 'version' ) );
 
 		// JS
 		$deps = sprintf( '%s/assets/%s/js/%s.php', get_stylesheet_directory(), $path, '' . $name . '.asset' );
@@ -95,13 +98,13 @@ class Scripts {
 	 * Admin Fonts
 	 */
 	public function admin_fonts() {
-		add_editor_style( $this->get_fonts_url() );
+		add_editor_style( self::get_fonts_url() );
 	}
 
 	/**
 	 * Get Fonts URL
 	 */
-	public function get_fonts_url() {
+	public static function get_fonts_url() {
 		$google_fonts = [
 			'opensans' 	=> 'Open+Sans:300,500,700',
 			'signika'	=> 'Signika:700,900',

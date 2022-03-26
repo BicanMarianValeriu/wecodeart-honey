@@ -1,0 +1,64 @@
+.checkout-header {
+    @include make-row();
+    
+    @include media-breakpoint-up( 'md' ) {
+        margin-bottom: 1.5rem; 
+    }
+
+    & > * {
+        @include make-col-ready();
+
+        &[class*="toggle"] {
+            @include make-col(6);
+            margin: 0 auto;
+
+            @include media-breakpoint-down( 'md' ) {
+                @include make-col(12);
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        &[class*="notices"] {
+            @include make-col(12);
+            margin-top: 1.5rem;
+            background-color: transparent;
+
+            @include media-breakpoint-down( 'md' ) {
+                margin-top: 0;
+
+                ul {
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    }
+
+    &__panel {
+        border-width: 1px;
+        border-style: solid;
+        border-color: $gray-200; 
+        padding: 0rem 1rem;
+        
+        & > a {
+            display: block; 
+            text-align: center;
+            padding: 1rem 0;
+            font-size: .9rem;
+            font-weight: 600;
+            color: $black;
+        }
+    }
+}
+
+.woocommerce-form-login-toggle,
+.woocommerce-form-coupon-toggle {  
+    .input-group {
+        margin-bottom: 0;
+    } 
+}
+
+.woocommerce-form-coupon-toggle {
+    form {
+        margin-bottom: 1.5rem;
+    }
+}

@@ -1,7 +1,14 @@
 .wpcf7-response-output,
 .wpcf7-not-valid-tip {
-    color: var(--wp--preset--color--vivid-red);
     font-size: small;
+}
+
+.wpcf7-not-valid-tip {
+    color: white;
+}
+
+.wpcf7-response-output {
+    color: var(--wp--preset--color--vivid-red);
 }
 
 .wpcf7-form-control {

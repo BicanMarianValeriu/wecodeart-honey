@@ -54,11 +54,6 @@
 			"title": "Main Sidebar",
 			"name": "sidebar",
 			"area": "uncategorized"
-		},
-		{
-			"title": "Bottom Sidebar",
-			"name": "sidebar-bottom",
-			"area": "uncategorized"
 		}
 	],
 	"settings": {
@@ -100,6 +95,11 @@
 					"name": "Light"
 				},
 				{
+					"slug": "white",
+					"color": "#ffffff",
+					"name": "White"
+				},
+				{
 					"slug": "dark",
 					"color": "#5A3733",
 					"name": "Dark"
@@ -109,8 +109,8 @@
 			"link": true,
 			"custom": true,
 			"customGradient": true,
-			"corePalette": false,
-			"coreGradients": false
+			"defaultGradients": false,
+			"defaultPalette": false
 		},
 		"layout": {
 			"contentSize": "1320px",

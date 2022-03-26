@@ -1,0 +1,70 @@
+/*	-------  *	
+    Select2																									
+ *	-------  */
+.select2-container--default {
+    &.select2-container--open { 
+        .select2-selection--single {
+            border-color: var(--wp--preset--color--primary);
+
+            .select2-selection {
+                &__arrow {
+                    top: 48%!important;
+
+                    b {
+                        @include caret-up();
+                    }
+                }
+            }
+        } 
+    } 
+
+    .select2-selection {
+        outline: none;
+
+        &--single {
+            height: $input-height!important;
+            margin: 0 0 0;
+            padding: $input-padding-y $input-padding-x;
+            appearance: none;
+            background-color: $input-bg;
+            border: 1px solid $gray-100;
+            border-radius: $input-border-radius; //$global-radius;
+            font-family: inherit;
+            font-size: $font-size-base;
+            font-weight: 400;
+            line-height: $line-height-base;
+            color: #0a0a0a;
+            background-color: $gray-100;
+            padding-right: 1.5rem;
+            transition: $input-transition;
+
+            .select2-selection {
+                &__rendered {
+                    padding-left: 0;
+                }
+        
+                &__arrow {
+                    top: 51%!important;
+                    transform: translate3d(0,-50%,0)!important;
+
+                    b {
+                        @include caret-down();
+                    }
+                }
+            }
+        }
+    }  
+}
+
+.select2 {
+    &-dropdown {
+        border-color: var(--wp--preset--color--primary);
+    }
+
+    &-results {
+        &__option {
+            padding-left: .8rem;
+            padding-right: .8rem;
+        }
+    }
+}

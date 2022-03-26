@@ -1,6 +1,13 @@
+// Core
 .wp-site-blocks {
     max-width: 1920px;
     margin: 0 auto;
+}
+
+.wp-block-post-featured-image {
+    img {
+        min-height: 100%;
+    }
 }
 
 // Styles

@@ -1,0 +1,54 @@
+.widget_recent_reviews {
+    .product_list_widget {
+        @include list-unstyled();
+    }
+
+    li {
+        position: relative;
+        padding-left: 75px;
+        margin-bottom: 1rem;
+    }
+
+    a {
+        margin-bottom: 3px;
+        font-weight: bold;
+        line-height: 1;
+        
+        & > img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            max-width: 60px;
+            height: auto;
+            border: 1px solid theme-color( 'light' );
+            box-shadow: 0 .25rem 1.875rem rgba(42,53,79,.08);
+            @include border-radius();
+        }
+    }
+
+    a,
+    .reviewer {
+        display: block;
+    }
+
+    .reviewer,
+    .star-rating {
+        float: none;
+        text-align: left;
+        line-height: 1;
+    }
+
+    .star-rating {
+        display: inline-block;
+        min-width: 90px;
+    }
+
+    .reviewer {
+        font-style: italic;
+        color: $gray-600;
+    }
+
+    svg {
+        font-size: .9rem;
+    }
+}

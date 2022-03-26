@@ -1,0 +1,30 @@
+.wc-bacs-bank-details-heading,
+.woocommerce-order-details__title,
+.woocommerce-customer-details h2 {
+    position: relative;
+    padding-bottom: 5px;
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: 100%;
+        left: 0;
+        height: 0;
+        width: 100%;
+        border-top: 1px solid $gray-200;
+    }
+}
+
+.woocommerce-bacs-bank-details {
+    .bacs_details {
+        @include list-unstyled();
+    }
+}
+
+.wc-bacs-bank-details-heading {
+    margin-bottom: 1.2rem;
+}
+
+.wc-bacs-bank-details-account-name {
+    font-size: 1.1rem;
+}

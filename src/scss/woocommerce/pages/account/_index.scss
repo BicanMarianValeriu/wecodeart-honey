@@ -1,0 +1,217 @@
+.woocommerce-account {
+    &.logged-in {
+        .site-main {
+            margin-top: 0;
+        }
+
+        .woocommerce {
+            @include make-row();
+    
+            & > * {
+                @include make-col-ready();
+                @include make-col( 12 );
+    
+                @include media-breakpoint-up( lg ) {
+                    @include make-col( 9 );
+                }
+    
+                &.woocommerce-MyAccount-navigation {
+                    @include make-col( 12 );
+    
+                    @include media-breakpoint-up( lg ) {
+                        @include make-col( 3 );
+                    }
+                }
+            }
+        }
+
+        .entry {
+            &-header,
+            &-title {
+                font-size: 1.5rem;
+                text-align: left;
+            }
+
+            &-content {
+                margin-bottom: 2.5rem;
+    
+                @include media-breakpoint-up( sm ) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &.woocommerce-lost-password { 
+        .woocommerce {
+            @include media-breakpoint-up( md ) {
+                display: block;
+                margin: 0 auto;
+                max-width: 550px; 
+            } 
+        }
+    }
+    
+    .entry {    
+        margin-bottom: 0;
+            
+        &-header {
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        &-title {
+            padding-top: 0;
+            text-align: center;
+        }
+
+        &-content {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &__login,
+    &__register {
+        label {
+            font-size: .9rem;
+        }
+    }
+
+    &__login {
+        padding: 2.5rem;
+        background-color: theme-color( 'primary' );
+        color: white;
+        border-radius: 6px;
+
+        @include media-breakpoint-down( sm ) {
+            padding: 1rem;
+        } 
+
+        > span {
+            color: white;
+            font-size: 13px;
+            opacity: .7;
+        }
+
+        a,
+        h2 {
+            color: white;
+        }
+        
+        .button {
+            background-color: $dark;
+            text-transform: uppercase;
+            padding: .7rem 2.5rem; 
+            border-radius: 50px;
+            font-size: .75rem;
+
+            &:hover {
+                background-color: white;
+                color: $dark;
+            }
+        }
+
+        .custom-control-input {
+            &:checked {
+                & ~ .custom-control-label {
+                    &::before {
+                        border-color: white;
+                    }
+                }
+            }
+
+            & ~ .custom-control-label {
+                &::before {
+                    background-color: transparent;
+                }
+            }
+        }
+
+        a,
+        .custom-control-label {
+            @include media-breakpoint-only( xs ) {
+                font-size: 12px;
+            }
+
+            &::before {
+                @include media-breakpoint-only( xs ) {
+                    top: .1rem;
+                } 
+            }
+
+            &::after {
+                @include media-breakpoint-only( xs ) {
+                    top: .1rem;
+                } 
+            }
+        }
+    }
+
+    &__register {
+        padding-top: 2rem; 
+
+        span {
+            font-size: .9em;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        .lead {
+            font-size: 1rem;
+        }
+
+        .button { 
+            text-transform: uppercase;
+            padding: .7rem 2.5rem; 
+            border-radius: 50px;
+            font-size: .75rem; 
+        }
+
+        .woocommerce-password-strength {
+            margin-top: .5rem;
+            font-weight: bold;
+            font-style: italic; 
+
+            &.bad {
+                color: theme-color( 'danger' );
+            }
+
+            &.good {
+                color: theme-color( 'warning' );
+            }
+
+            &.strong {
+                color: theme-color( 'success' );
+            } 
+        }
+    }
+
+    .col2-set {
+        .col-1 {
+            @include media-breakpoint-up( lg ) {
+                @include make-col( 5 );
+            }
+
+            @include media-breakpoint-up( xl ) {
+                @include make-col( 4 );
+            }
+        }
+
+        .col-2 {
+            @include media-breakpoint-up( lg ) {
+                @include make-col( 7 );
+            }
+
+            @include media-breakpoint-up( xl ) {
+                @include make-col( 8 );
+            }
+        } 
+    }
+}
+
+@import './address';
+@import './navigation';
+@import './content';
+@import './order-updates';
