@@ -77,7 +77,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "http://working.on/wca-docs/wp-content/themes/wecodeart-docs/assets/unminified/";
+/******/ 	__webpack_require__.p = "C:\\assets\\unminified";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -2546,166 +2546,6 @@ var autoReplace = function autoReplace() {
 
 /***/ }),
 
-/***/ "./node_modules/@fortawesome/free-brands-svg-icons/faFacebook.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-brands-svg-icons/faFacebook.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, '__esModule', { value: true });
-var prefix = 'fab';
-var iconName = 'facebook';
-var width = 512;
-var height = 512;
-var ligatures = [];
-var unicode = 'f09a';
-var svgPathData = 'M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z';
-
-exports.definition = {
-  prefix: prefix,
-  iconName: iconName,
-  icon: [
-    width,
-    height,
-    ligatures,
-    unicode,
-    svgPathData
-  ]};
-
-exports.faFacebook = exports.definition;
-exports.prefix = prefix;
-exports.iconName = iconName;
-exports.width = width;
-exports.height = height;
-exports.ligatures = ligatures;
-exports.unicode = unicode;
-exports.svgPathData = svgPathData;
-
-/***/ }),
-
-/***/ "./node_modules/@fortawesome/free-brands-svg-icons/faTwitter.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-brands-svg-icons/faTwitter.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, '__esModule', { value: true });
-var prefix = 'fab';
-var iconName = 'twitter';
-var width = 512;
-var height = 512;
-var ligatures = [];
-var unicode = 'f099';
-var svgPathData = 'M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z';
-
-exports.definition = {
-  prefix: prefix,
-  iconName: iconName,
-  icon: [
-    width,
-    height,
-    ligatures,
-    unicode,
-    svgPathData
-  ]};
-
-exports.faTwitter = exports.definition;
-exports.prefix = prefix;
-exports.iconName = iconName;
-exports.width = width;
-exports.height = height;
-exports.ligatures = ligatures;
-exports.unicode = unicode;
-exports.svgPathData = svgPathData;
-
-/***/ }),
-
-/***/ "./node_modules/@fortawesome/free-brands-svg-icons/faWordpressSimple.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-brands-svg-icons/faWordpressSimple.js ***!
-  \******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, '__esModule', { value: true });
-var prefix = 'fab';
-var iconName = 'wordpress-simple';
-var width = 512;
-var height = 512;
-var ligatures = [];
-var unicode = 'f411';
-var svgPathData = 'M256 8C119.3 8 8 119.2 8 256c0 136.7 111.3 248 248 248s248-111.3 248-248C504 119.2 392.7 8 256 8zM33 256c0-32.3 6.9-63 19.3-90.7l106.4 291.4C84.3 420.5 33 344.2 33 256zm223 223c-21.9 0-43-3.2-63-9.1l66.9-194.4 68.5 187.8c.5 1.1 1 2.1 1.6 3.1-23.1 8.1-48 12.6-74 12.6zm30.7-327.5c13.4-.7 25.5-2.1 25.5-2.1 12-1.4 10.6-19.1-1.4-18.4 0 0-36.1 2.8-59.4 2.8-21.9 0-58.7-2.8-58.7-2.8-12-.7-13.4 17.7-1.4 18.4 0 0 11.4 1.4 23.4 2.1l34.7 95.2L200.6 393l-81.2-241.5c13.4-.7 25.5-2.1 25.5-2.1 12-1.4 10.6-19.1-1.4-18.4 0 0-36.1 2.8-59.4 2.8-4.2 0-9.1-.1-14.4-.3C109.6 73 178.1 33 256 33c58 0 110.9 22.2 150.6 58.5-1-.1-1.9-.2-2.9-.2-21.9 0-37.4 19.1-37.4 39.6 0 18.4 10.6 33.9 21.9 52.3 8.5 14.8 18.4 33.9 18.4 61.5 0 19.1-7.3 41.2-17 72.1l-22.2 74.3-80.7-239.6zm81.4 297.2l68.1-196.9c12.7-31.8 17-57.2 17-79.9 0-8.2-.5-15.8-1.5-22.9 17.4 31.8 27.3 68.2 27.3 107 0 82.3-44.6 154.1-110.9 192.7z';
-
-exports.definition = {
-  prefix: prefix,
-  iconName: iconName,
-  icon: [
-    width,
-    height,
-    ligatures,
-    unicode,
-    svgPathData
-  ]};
-
-exports.faWordpressSimple = exports.definition;
-exports.prefix = prefix;
-exports.iconName = iconName;
-exports.width = width;
-exports.height = height;
-exports.ligatures = ligatures;
-exports.unicode = unicode;
-exports.svgPathData = svgPathData;
-
-/***/ }),
-
-/***/ "./node_modules/@fortawesome/free-brands-svg-icons/faYoutubeSquare.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-brands-svg-icons/faYoutubeSquare.js ***!
-  \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, '__esModule', { value: true });
-var prefix = 'fab';
-var iconName = 'youtube-square';
-var width = 448;
-var height = 512;
-var ligatures = [];
-var unicode = 'f431';
-var svgPathData = 'M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z';
-
-exports.definition = {
-  prefix: prefix,
-  iconName: iconName,
-  icon: [
-    width,
-    height,
-    ligatures,
-    unicode,
-    svgPathData
-  ]};
-
-exports.faYoutubeSquare = exports.definition;
-exports.prefix = prefix;
-exports.iconName = iconName;
-exports.width = width;
-exports.height = height;
-exports.ligatures = ligatures;
-exports.unicode = unicode;
-exports.svgPathData = svgPathData;
-
-/***/ }),
-
 /***/ "./node_modules/@fortawesome/free-regular-svg-icons/faClock.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/@fortawesome/free-regular-svg-icons/faClock.js ***!
@@ -2736,86 +2576,6 @@ exports.definition = {
   ]};
 
 exports.faClock = exports.definition;
-exports.prefix = prefix;
-exports.iconName = iconName;
-exports.width = width;
-exports.height = height;
-exports.ligatures = ligatures;
-exports.unicode = unicode;
-exports.svgPathData = svgPathData;
-
-/***/ }),
-
-/***/ "./node_modules/@fortawesome/free-regular-svg-icons/faEye.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-regular-svg-icons/faEye.js ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, '__esModule', { value: true });
-var prefix = 'far';
-var iconName = 'eye';
-var width = 576;
-var height = 512;
-var ligatures = [];
-var unicode = 'f06e';
-var svgPathData = 'M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z';
-
-exports.definition = {
-  prefix: prefix,
-  iconName: iconName,
-  icon: [
-    width,
-    height,
-    ligatures,
-    unicode,
-    svgPathData
-  ]};
-
-exports.faEye = exports.definition;
-exports.prefix = prefix;
-exports.iconName = iconName;
-exports.width = width;
-exports.height = height;
-exports.ligatures = ligatures;
-exports.unicode = unicode;
-exports.svgPathData = svgPathData;
-
-/***/ }),
-
-/***/ "./node_modules/@fortawesome/free-regular-svg-icons/faFileCode.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-regular-svg-icons/faFileCode.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, '__esModule', { value: true });
-var prefix = 'far';
-var iconName = 'file-code';
-var width = 384;
-var height = 512;
-var ligatures = [];
-var unicode = 'f1c9';
-var svgPathData = 'M149.9 349.1l-.2-.2-32.8-28.9 32.8-28.9c3.6-3.2 4-8.8.8-12.4l-.2-.2-17.4-18.6c-3.4-3.6-9-3.7-12.4-.4l-57.7 54.1c-3.7 3.5-3.7 9.4 0 12.8l57.7 54.1c1.6 1.5 3.8 2.4 6 2.4 2.4 0 4.8-1 6.4-2.8l17.4-18.6c3.3-3.5 3.1-9.1-.4-12.4zm220-251.2L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM256 51.9l76.1 76.1H256zM336 464H48V48h160v104c0 13.3 10.7 24 24 24h104zM209.6 214c-4.7-1.4-9.5 1.3-10.9 6L144 408.1c-1.4 4.7 1.3 9.6 6 10.9l24.4 7.1c4.7 1.4 9.6-1.4 10.9-6L240 231.9c1.4-4.7-1.3-9.6-6-10.9zm24.5 76.9l.2.2 32.8 28.9-32.8 28.9c-3.6 3.2-4 8.8-.8 12.4l.2.2 17.4 18.6c3.3 3.5 8.9 3.7 12.4.4l57.7-54.1c3.7-3.5 3.7-9.4 0-12.8l-57.7-54.1c-3.5-3.3-9.1-3.2-12.4.4l-17.4 18.6c-3.3 3.5-3.1 9.1.4 12.4z';
-
-exports.definition = {
-  prefix: prefix,
-  iconName: iconName,
-  icon: [
-    width,
-    height,
-    ligatures,
-    unicode,
-    svgPathData
-  ]};
-
-exports.faFileCode = exports.definition;
 exports.prefix = prefix;
 exports.iconName = iconName;
 exports.width = width;
@@ -2986,46 +2746,6 @@ exports.svgPathData = svgPathData;
 
 /***/ }),
 
-/***/ "./node_modules/@fortawesome/free-solid-svg-icons/faBolt.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-solid-svg-icons/faBolt.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, '__esModule', { value: true });
-var prefix = 'fas';
-var iconName = 'bolt';
-var width = 320;
-var height = 512;
-var ligatures = [];
-var unicode = 'f0e7';
-var svgPathData = 'M296 160H180.6l42.6-129.8C227.2 15 215.7 0 200 0H56C44 0 33.8 8.9 32.2 20.8l-32 240C-1.7 275.2 9.5 288 24 288h118.7L96.6 482.5c-3.6 15.2 8 29.5 23.3 29.5 8.4 0 16.4-4.4 20.8-12l176-304c9.3-15.9-2.2-36-20.7-36z';
-
-exports.definition = {
-  prefix: prefix,
-  iconName: iconName,
-  icon: [
-    width,
-    height,
-    ligatures,
-    unicode,
-    svgPathData
-  ]};
-
-exports.faBolt = exports.definition;
-exports.prefix = prefix;
-exports.iconName = iconName;
-exports.width = width;
-exports.height = height;
-exports.ligatures = ligatures;
-exports.unicode = unicode;
-exports.svgPathData = svgPathData;
-
-/***/ }),
-
 /***/ "./node_modules/@fortawesome/free-solid-svg-icons/faCartArrowDown.js":
 /*!***************************************************************************!*\
   !*** ./node_modules/@fortawesome/free-solid-svg-icons/faCartArrowDown.js ***!
@@ -3106,10 +2826,10 @@ exports.svgPathData = svgPathData;
 
 /***/ }),
 
-/***/ "./node_modules/@fortawesome/free-solid-svg-icons/faCheck.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-solid-svg-icons/faCheck.js ***!
-  \*******************************************************************/
+/***/ "./node_modules/@fortawesome/free-solid-svg-icons/faChevronRight.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@fortawesome/free-solid-svg-icons/faChevronRight.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3117,12 +2837,12 @@ exports.svgPathData = svgPathData;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 var prefix = 'fas';
-var iconName = 'check';
-var width = 512;
+var iconName = 'chevron-right';
+var width = 320;
 var height = 512;
 var ligatures = [];
-var unicode = 'f00c';
-var svgPathData = 'M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z';
+var unicode = 'f054';
+var svgPathData = 'M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z';
 
 exports.definition = {
   prefix: prefix,
@@ -3135,7 +2855,7 @@ exports.definition = {
     svgPathData
   ]};
 
-exports.faCheck = exports.definition;
+exports.faChevronRight = exports.definition;
 exports.prefix = prefix;
 exports.iconName = iconName;
 exports.width = width;
@@ -3176,46 +2896,6 @@ exports.definition = {
   ]};
 
 exports.faCloudDownloadAlt = exports.definition;
-exports.prefix = prefix;
-exports.iconName = iconName;
-exports.width = width;
-exports.height = height;
-exports.ligatures = ligatures;
-exports.unicode = unicode;
-exports.svgPathData = svgPathData;
-
-/***/ }),
-
-/***/ "./node_modules/@fortawesome/free-solid-svg-icons/faDesktop.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-solid-svg-icons/faDesktop.js ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, '__esModule', { value: true });
-var prefix = 'fas';
-var iconName = 'desktop';
-var width = 576;
-var height = 512;
-var ligatures = [];
-var unicode = 'f108';
-var svgPathData = 'M528 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h192l-16 48h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24h-72l-16-48h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm-16 352H64V64h448v288z';
-
-exports.definition = {
-  prefix: prefix,
-  iconName: iconName,
-  icon: [
-    width,
-    height,
-    ligatures,
-    unicode,
-    svgPathData
-  ]};
-
-exports.faDesktop = exports.definition;
 exports.prefix = prefix;
 exports.iconName = iconName;
 exports.width = width;
@@ -3306,46 +2986,6 @@ exports.svgPathData = svgPathData;
 
 /***/ }),
 
-/***/ "./node_modules/@fortawesome/free-solid-svg-icons/faEnvelopeOpen.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-solid-svg-icons/faEnvelopeOpen.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, '__esModule', { value: true });
-var prefix = 'fas';
-var iconName = 'envelope-open';
-var width = 512;
-var height = 512;
-var ligatures = [];
-var unicode = 'f2b6';
-var svgPathData = 'M512 464c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V200.724a48 48 0 0 1 18.387-37.776c24.913-19.529 45.501-35.365 164.2-121.511C199.412 29.17 232.797-.347 256 .003c23.198-.354 56.596 29.172 73.413 41.433 118.687 86.137 139.303 101.995 164.2 121.512A48 48 0 0 1 512 200.724V464zm-65.666-196.605c-2.563-3.728-7.7-4.595-11.339-1.907-22.845 16.873-55.462 40.705-105.582 77.079-16.825 12.266-50.21 41.781-73.413 41.43-23.211.344-56.559-29.143-73.413-41.43-50.114-36.37-82.734-60.204-105.582-77.079-3.639-2.688-8.776-1.821-11.339 1.907l-9.072 13.196a7.998 7.998 0 0 0 1.839 10.967c22.887 16.899 55.454 40.69 105.303 76.868 20.274 14.781 56.524 47.813 92.264 47.573 35.724.242 71.961-32.771 92.263-47.573 49.85-36.179 82.418-59.97 105.303-76.868a7.998 7.998 0 0 0 1.839-10.967l-9.071-13.196z';
-
-exports.definition = {
-  prefix: prefix,
-  iconName: iconName,
-  icon: [
-    width,
-    height,
-    ligatures,
-    unicode,
-    svgPathData
-  ]};
-
-exports.faEnvelopeOpen = exports.definition;
-exports.prefix = prefix;
-exports.iconName = iconName;
-exports.width = width;
-exports.height = height;
-exports.ligatures = ligatures;
-exports.unicode = unicode;
-exports.svgPathData = svgPathData;
-
-/***/ }),
-
 /***/ "./node_modules/@fortawesome/free-solid-svg-icons/faExternalLinkAlt.js":
 /*!*****************************************************************************!*\
   !*** ./node_modules/@fortawesome/free-solid-svg-icons/faExternalLinkAlt.js ***!
@@ -3376,126 +3016,6 @@ exports.definition = {
   ]};
 
 exports.faExternalLinkAlt = exports.definition;
-exports.prefix = prefix;
-exports.iconName = iconName;
-exports.width = width;
-exports.height = height;
-exports.ligatures = ligatures;
-exports.unicode = unicode;
-exports.svgPathData = svgPathData;
-
-/***/ }),
-
-/***/ "./node_modules/@fortawesome/free-solid-svg-icons/faEye.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-solid-svg-icons/faEye.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, '__esModule', { value: true });
-var prefix = 'fas';
-var iconName = 'eye';
-var width = 576;
-var height = 512;
-var ligatures = [];
-var unicode = 'f06e';
-var svgPathData = 'M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z';
-
-exports.definition = {
-  prefix: prefix,
-  iconName: iconName,
-  icon: [
-    width,
-    height,
-    ligatures,
-    unicode,
-    svgPathData
-  ]};
-
-exports.faEye = exports.definition;
-exports.prefix = prefix;
-exports.iconName = iconName;
-exports.width = width;
-exports.height = height;
-exports.ligatures = ligatures;
-exports.unicode = unicode;
-exports.svgPathData = svgPathData;
-
-/***/ }),
-
-/***/ "./node_modules/@fortawesome/free-solid-svg-icons/faGlobe.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-solid-svg-icons/faGlobe.js ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, '__esModule', { value: true });
-var prefix = 'fas';
-var iconName = 'globe';
-var width = 496;
-var height = 512;
-var ligatures = [];
-var unicode = 'f0ac';
-var svgPathData = 'M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z';
-
-exports.definition = {
-  prefix: prefix,
-  iconName: iconName,
-  icon: [
-    width,
-    height,
-    ligatures,
-    unicode,
-    svgPathData
-  ]};
-
-exports.faGlobe = exports.definition;
-exports.prefix = prefix;
-exports.iconName = iconName;
-exports.width = width;
-exports.height = height;
-exports.ligatures = ligatures;
-exports.unicode = unicode;
-exports.svgPathData = svgPathData;
-
-/***/ }),
-
-/***/ "./node_modules/@fortawesome/free-solid-svg-icons/faHeart.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-solid-svg-icons/faHeart.js ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, '__esModule', { value: true });
-var prefix = 'fas';
-var iconName = 'heart';
-var width = 512;
-var height = 512;
-var ligatures = [];
-var unicode = 'f004';
-var svgPathData = 'M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z';
-
-exports.definition = {
-  prefix: prefix,
-  iconName: iconName,
-  icon: [
-    width,
-    height,
-    ligatures,
-    unicode,
-    svgPathData
-  ]};
-
-exports.faHeart = exports.definition;
 exports.prefix = prefix;
 exports.iconName = iconName;
 exports.width = width;
@@ -3626,6 +3146,46 @@ exports.svgPathData = svgPathData;
 
 /***/ }),
 
+/***/ "./node_modules/@fortawesome/free-solid-svg-icons/faPhone.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@fortawesome/free-solid-svg-icons/faPhone.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fas';
+var iconName = 'phone';
+var width = 512;
+var height = 512;
+var ligatures = [];
+var unicode = 'f095';
+var svgPathData = 'M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    ligatures,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faPhone = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = ligatures;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+
+/***/ }),
+
 /***/ "./node_modules/@fortawesome/free-solid-svg-icons/faPlane.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/@fortawesome/free-solid-svg-icons/faPlane.js ***!
@@ -3706,86 +3266,6 @@ exports.svgPathData = svgPathData;
 
 /***/ }),
 
-/***/ "./node_modules/@fortawesome/free-solid-svg-icons/faPuzzlePiece.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-solid-svg-icons/faPuzzlePiece.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, '__esModule', { value: true });
-var prefix = 'fas';
-var iconName = 'puzzle-piece';
-var width = 576;
-var height = 512;
-var ligatures = [];
-var unicode = 'f12e';
-var svgPathData = 'M519.442 288.651c-41.519 0-59.5 31.593-82.058 31.593C377.409 320.244 432 144 432 144s-196.288 80-196.288-3.297c0-35.827 36.288-46.25 36.288-85.985C272 19.216 243.885 0 210.539 0c-34.654 0-66.366 18.891-66.366 56.346 0 41.364 31.711 59.277 31.711 81.75C175.885 207.719 0 166.758 0 166.758v333.237s178.635 41.047 178.635-28.662c0-22.473-40-40.107-40-81.471 0-37.456 29.25-56.346 63.577-56.346 33.673 0 61.788 19.216 61.788 54.717 0 39.735-36.288 50.158-36.288 85.985 0 60.803 129.675 25.73 181.23 25.73 0 0-34.725-120.101 25.827-120.101 35.962 0 46.423 36.152 86.308 36.152C556.712 416 576 387.99 576 354.443c0-34.199-18.962-65.792-56.558-65.792z';
-
-exports.definition = {
-  prefix: prefix,
-  iconName: iconName,
-  icon: [
-    width,
-    height,
-    ligatures,
-    unicode,
-    svgPathData
-  ]};
-
-exports.faPuzzlePiece = exports.definition;
-exports.prefix = prefix;
-exports.iconName = iconName;
-exports.width = width;
-exports.height = height;
-exports.ligatures = ligatures;
-exports.unicode = unicode;
-exports.svgPathData = svgPathData;
-
-/***/ }),
-
-/***/ "./node_modules/@fortawesome/free-solid-svg-icons/faSearch.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-solid-svg-icons/faSearch.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, '__esModule', { value: true });
-var prefix = 'fas';
-var iconName = 'search';
-var width = 512;
-var height = 512;
-var ligatures = [];
-var unicode = 'f002';
-var svgPathData = 'M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z';
-
-exports.definition = {
-  prefix: prefix,
-  iconName: iconName,
-  icon: [
-    width,
-    height,
-    ligatures,
-    unicode,
-    svgPathData
-  ]};
-
-exports.faSearch = exports.definition;
-exports.prefix = prefix;
-exports.iconName = iconName;
-exports.width = width;
-exports.height = height;
-exports.ligatures = ligatures;
-exports.unicode = unicode;
-exports.svgPathData = svgPathData;
-
-/***/ }),
-
 /***/ "./node_modules/@fortawesome/free-solid-svg-icons/faShoppingCart.js":
 /*!**************************************************************************!*\
   !*** ./node_modules/@fortawesome/free-solid-svg-icons/faShoppingCart.js ***!
@@ -3816,126 +3296,6 @@ exports.definition = {
   ]};
 
 exports.faShoppingCart = exports.definition;
-exports.prefix = prefix;
-exports.iconName = iconName;
-exports.width = width;
-exports.height = height;
-exports.ligatures = ligatures;
-exports.unicode = unicode;
-exports.svgPathData = svgPathData;
-
-/***/ }),
-
-/***/ "./node_modules/@fortawesome/free-solid-svg-icons/faSpider.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-solid-svg-icons/faSpider.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, '__esModule', { value: true });
-var prefix = 'fas';
-var iconName = 'spider';
-var width = 576;
-var height = 512;
-var ligatures = [];
-var unicode = 'f717';
-var svgPathData = 'M151.17 167.35L177.1 176h4.67l5.22-26.12c.72-3.58 1.8-7.58 3.21-11.79l-20.29-40.58 23.8-71.39c2.79-8.38-1.73-17.44-10.12-20.24L168.42.82c-8.38-2.8-17.45 1.73-20.24 10.12l-25.89 77.68a32.04 32.04 0 0 0 1.73 24.43l27.15 54.3zm422.14 182.03l-52.75-79.12a32.002 32.002 0 0 0-26.62-14.25H416l68.99-24.36a32.03 32.03 0 0 0 16.51-12.61l53.6-80.41c4.9-7.35 2.91-17.29-4.44-22.19l-13.31-8.88c-7.35-4.9-17.29-2.91-22.19 4.44l-50.56 75.83L404.1 208H368l-10.37-51.85C355.44 145.18 340.26 96 288 96c-52.26 0-67.44 49.18-69.63 60.15L208 208h-36.1l-60.49-20.17L60.84 112c-4.9-7.35-14.83-9.34-22.19-4.44l-13.31 8.88c-7.35 4.9-9.34 14.83-4.44 22.19l53.6 80.41a32.03 32.03 0 0 0 16.51 12.61L160 256H82.06a32.02 32.02 0 0 0-26.63 14.25L2.69 349.38c-4.9 7.35-2.92 17.29 4.44 22.19l13.31 8.88c7.35 4.9 17.29 2.91 22.19-4.44l48-72h47.06l-60.83 97.33A31.988 31.988 0 0 0 72 418.3V496c0 8.84 7.16 16 16 16h16c8.84 0 16-7.16 16-16v-73.11l74.08-118.53c-1.01 14.05-2.08 28.11-2.08 42.21C192 399.64 232.76 448 288 448s96-48.36 96-101.43c0-14.1-1.08-28.16-2.08-42.21L456 422.89V496c0 8.84 7.16 16 16 16h16c8.84 0 16-7.16 16-16v-77.71c0-6-1.69-11.88-4.86-16.96L438.31 304h47.06l48 72c4.9 7.35 14.84 9.34 22.19 4.44l13.31-8.88c7.36-4.9 9.34-14.83 4.44-22.18zM406.09 97.51l-20.29 40.58c1.41 4.21 2.49 8.21 3.21 11.79l5.22 26.12h4.67l25.93-8.65 27.15-54.3a31.995 31.995 0 0 0 1.73-24.43l-25.89-77.68C425.03 2.56 415.96-1.98 407.58.82l-15.17 5.06c-8.38 2.8-12.91 11.86-10.12 20.24l23.8 71.39z';
-
-exports.definition = {
-  prefix: prefix,
-  iconName: iconName,
-  icon: [
-    width,
-    height,
-    ligatures,
-    unicode,
-    svgPathData
-  ]};
-
-exports.faSpider = exports.definition;
-exports.prefix = prefix;
-exports.iconName = iconName;
-exports.width = width;
-exports.height = height;
-exports.ligatures = ligatures;
-exports.unicode = unicode;
-exports.svgPathData = svgPathData;
-
-/***/ }),
-
-/***/ "./node_modules/@fortawesome/free-solid-svg-icons/faSpinner.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-solid-svg-icons/faSpinner.js ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, '__esModule', { value: true });
-var prefix = 'fas';
-var iconName = 'spinner';
-var width = 512;
-var height = 512;
-var ligatures = [];
-var unicode = 'f110';
-var svgPathData = 'M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z';
-
-exports.definition = {
-  prefix: prefix,
-  iconName: iconName,
-  icon: [
-    width,
-    height,
-    ligatures,
-    unicode,
-    svgPathData
-  ]};
-
-exports.faSpinner = exports.definition;
-exports.prefix = prefix;
-exports.iconName = iconName;
-exports.width = width;
-exports.height = height;
-exports.ligatures = ligatures;
-exports.unicode = unicode;
-exports.svgPathData = svgPathData;
-
-/***/ }),
-
-/***/ "./node_modules/@fortawesome/free-solid-svg-icons/faWrench.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-solid-svg-icons/faWrench.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, '__esModule', { value: true });
-var prefix = 'fas';
-var iconName = 'wrench';
-var width = 512;
-var height = 512;
-var ligatures = [];
-var unicode = 'f0ad';
-var svgPathData = 'M507.73 109.1c-2.24-9.03-13.54-12.09-20.12-5.51l-74.36 74.36-67.88-11.31-11.31-67.88 74.36-74.36c6.62-6.62 3.43-17.9-5.66-20.16-47.38-11.74-99.55.91-136.58 37.93-39.64 39.64-50.55 97.1-34.05 147.2L18.74 402.76c-24.99 24.99-24.99 65.51 0 90.5 24.99 24.99 65.51 24.99 90.5 0l213.21-213.21c50.12 16.71 107.47 5.68 147.37-34.22 37.07-37.07 49.7-89.32 37.91-136.73zM64 472c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24z';
-
-exports.definition = {
-  prefix: prefix,
-  iconName: iconName,
-  icon: [
-    width,
-    height,
-    ligatures,
-    unicode,
-    svgPathData
-  ]};
-
-exports.faWrench = exports.definition;
 exports.prefix = prefix;
 exports.iconName = iconName;
 exports.width = width;
@@ -9477,8 +8837,9 @@ const {
 addAction('wecodeart.route', 'wecodeart/skin/common', extendCommon, 10);
 
 function extendCommon(route, func) {
-  if (route === 'common') {
-    _routes_common__WEBPACK_IMPORTED_MODULE_2__["default"][func]();
+  if (route === 'common' && func === 'init') {
+    _routes_common__WEBPACK_IMPORTED_MODULE_2__["default"]['init']();
+    _routes_common__WEBPACK_IMPORTED_MODULE_2__["default"]['complete']();
   }
 } // Attach Specific Route JS
 
@@ -9562,11 +8923,6 @@ function getParents(elem, selector) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-const falPaperPlane = {
-  icon: [512, 512, [], 'f1d8', 'M 464 4.3 L 16 262.7 C -7 276 -4.7 309.9 19.8 320 L 160 378 v 102 c 0 30.2 37.8 43.3 56.7 20.3 l 60.7 -73.8 l 126.4 52.2 c 19.1 7.9 40.7 -4.2 43.8 -24.7 l 64 -417.1 C 515.7 10.2 487 -9 464 4.3 Z M 192 480 v -88.8 l 54.5 22.5 L 192 480 Z m 224 -30.9 l -206.2 -85.2 l 199.5 -235.8 c 4.8 -5.6 -2.9 -13.2 -8.5 -8.4 L 145.5 337.3 L 32 290.5 L 480 32 l -64 417.1 Z'],
-  iconName: 'paper-plane',
-  prefix: 'fal'
-};
 const falFileAlt = {
   icon: [384, 512, [], 'f15c', 'M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zm-22.6 22.7c2.1 2.1 3.5 4.6 4.2 7.4H256V32.5c2.8.7 5.3 2.1 7.4 4.2l83.9 83.9zM336 480H48c-8.8 0-16-7.2-16-16V48c0-8.8 7.2-16 16-16h176v104c0 13.3 10.7 24 24 24h104v304c0 8.8-7.2 16-16 16zm-48-244v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm0 64v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm0 64v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12z'],
   iconName: 'file-alt',
@@ -9642,74 +8998,42 @@ const falFlaskPotion = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_free_solid_svg_icons_faEnvelope__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faEnvelope */ "./node_modules/@fortawesome/free-solid-svg-icons/faEnvelope.js");
 /* harmony import */ var _fortawesome_free_solid_svg_icons_faEnvelope__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faEnvelope__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faEnvelopeOpen__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faEnvelopeOpen */ "./node_modules/@fortawesome/free-solid-svg-icons/faEnvelopeOpen.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faEnvelopeOpen__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faEnvelopeOpen__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faDownload__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faDownload */ "./node_modules/@fortawesome/free-solid-svg-icons/faDownload.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faDownload__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faDownload__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faPuzzlePiece__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faPuzzlePiece */ "./node_modules/@fortawesome/free-solid-svg-icons/faPuzzlePiece.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faPuzzlePiece__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faPuzzlePiece__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faHeart__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faHeart */ "./node_modules/@fortawesome/free-solid-svg-icons/faHeart.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faHeart__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faHeart__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faCloudDownloadAlt__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faCloudDownloadAlt */ "./node_modules/@fortawesome/free-solid-svg-icons/faCloudDownloadAlt.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faCloudDownloadAlt__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faCloudDownloadAlt__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faCheck__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faCheck */ "./node_modules/@fortawesome/free-solid-svg-icons/faCheck.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faCheck__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faCheck__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faDesktop__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faDesktop */ "./node_modules/@fortawesome/free-solid-svg-icons/faDesktop.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faDesktop__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faDesktop__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faEye__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faEye */ "./node_modules/@fortawesome/free-solid-svg-icons/faEye.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faEye__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faEye__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _fortawesome_free_regular_svg_icons_faEye__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons/faEye */ "./node_modules/@fortawesome/free-regular-svg-icons/faEye.js");
-/* harmony import */ var _fortawesome_free_regular_svg_icons_faEye__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_regular_svg_icons_faEye__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faGlobe__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faGlobe */ "./node_modules/@fortawesome/free-solid-svg-icons/faGlobe.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faGlobe__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faGlobe__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faList__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faList */ "./node_modules/@fortawesome/free-solid-svg-icons/faList.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faList__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faList__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faPlane__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faPlane */ "./node_modules/@fortawesome/free-solid-svg-icons/faPlane.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faPlane__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faPlane__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faBolt__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faBolt */ "./node_modules/@fortawesome/free-solid-svg-icons/faBolt.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faBolt__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faBolt__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faCartPlus__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faCartPlus */ "./node_modules/@fortawesome/free-solid-svg-icons/faCartPlus.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faCartPlus__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faCartPlus__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faSearch__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faSearch */ "./node_modules/@fortawesome/free-solid-svg-icons/faSearch.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faSearch__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faSearch__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faSpinner__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faSpinner */ "./node_modules/@fortawesome/free-solid-svg-icons/faSpinner.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faSpinner__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faSpinner__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faCartArrowDown__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faCartArrowDown */ "./node_modules/@fortawesome/free-solid-svg-icons/faCartArrowDown.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faCartArrowDown__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faCartArrowDown__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faShoppingCart__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faShoppingCart */ "./node_modules/@fortawesome/free-solid-svg-icons/faShoppingCart.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faShoppingCart__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faShoppingCart__WEBPACK_IMPORTED_MODULE_18__);
-/* harmony import */ var _fortawesome_free_brands_svg_icons_faWordpressSimple__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @fortawesome/free-brands-svg-icons/faWordpressSimple */ "./node_modules/@fortawesome/free-brands-svg-icons/faWordpressSimple.js");
-/* harmony import */ var _fortawesome_free_brands_svg_icons_faWordpressSimple__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_brands_svg_icons_faWordpressSimple__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var _fortawesome_free_brands_svg_icons_faYoutubeSquare__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @fortawesome/free-brands-svg-icons/faYoutubeSquare */ "./node_modules/@fortawesome/free-brands-svg-icons/faYoutubeSquare.js");
-/* harmony import */ var _fortawesome_free_brands_svg_icons_faYoutubeSquare__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_brands_svg_icons_faYoutubeSquare__WEBPACK_IMPORTED_MODULE_20__);
-/* harmony import */ var _fortawesome_free_brands_svg_icons_faTwitter__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @fortawesome/free-brands-svg-icons/faTwitter */ "./node_modules/@fortawesome/free-brands-svg-icons/faTwitter.js");
-/* harmony import */ var _fortawesome_free_brands_svg_icons_faTwitter__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_brands_svg_icons_faTwitter__WEBPACK_IMPORTED_MODULE_21__);
-/* harmony import */ var _fortawesome_free_brands_svg_icons_faFacebook__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @fortawesome/free-brands-svg-icons/faFacebook */ "./node_modules/@fortawesome/free-brands-svg-icons/faFacebook.js");
-/* harmony import */ var _fortawesome_free_brands_svg_icons_faFacebook__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_brands_svg_icons_faFacebook__WEBPACK_IMPORTED_MODULE_22__);
-/* harmony import */ var _fortawesome_free_regular_svg_icons_faGrinHearts__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons/faGrinHearts */ "./node_modules/@fortawesome/free-regular-svg-icons/faGrinHearts.js");
-/* harmony import */ var _fortawesome_free_regular_svg_icons_faGrinHearts__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_regular_svg_icons_faGrinHearts__WEBPACK_IMPORTED_MODULE_23__);
-/* harmony import */ var _fortawesome_free_regular_svg_icons_faPaperPlane__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons/faPaperPlane */ "./node_modules/@fortawesome/free-regular-svg-icons/faPaperPlane.js");
-/* harmony import */ var _fortawesome_free_regular_svg_icons_faPaperPlane__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_regular_svg_icons_faPaperPlane__WEBPACK_IMPORTED_MODULE_24__);
-/* harmony import */ var _fortawesome_free_regular_svg_icons_faClock__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons/faClock */ "./node_modules/@fortawesome/free-regular-svg-icons/faClock.js");
-/* harmony import */ var _fortawesome_free_regular_svg_icons_faClock__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_regular_svg_icons_faClock__WEBPACK_IMPORTED_MODULE_25__);
-/* harmony import */ var _fortawesome_free_regular_svg_icons_faFileCode__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons/faFileCode */ "./node_modules/@fortawesome/free-regular-svg-icons/faFileCode.js");
-/* harmony import */ var _fortawesome_free_regular_svg_icons_faFileCode__WEBPACK_IMPORTED_MODULE_26___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_regular_svg_icons_faFileCode__WEBPACK_IMPORTED_MODULE_26__);
-/* harmony import */ var _fortawesome_free_regular_svg_icons_faThumbsUp__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons/faThumbsUp */ "./node_modules/@fortawesome/free-regular-svg-icons/faThumbsUp.js");
-/* harmony import */ var _fortawesome_free_regular_svg_icons_faThumbsUp__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_regular_svg_icons_faThumbsUp__WEBPACK_IMPORTED_MODULE_27__);
-/* harmony import */ var _fortawesome_free_regular_svg_icons_faThumbsDown__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons/faThumbsDown */ "./node_modules/@fortawesome/free-regular-svg-icons/faThumbsDown.js");
-/* harmony import */ var _fortawesome_free_regular_svg_icons_faThumbsDown__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_regular_svg_icons_faThumbsDown__WEBPACK_IMPORTED_MODULE_28__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faPlusCircle__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faPlusCircle */ "./node_modules/@fortawesome/free-solid-svg-icons/faPlusCircle.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faPlusCircle__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faPlusCircle__WEBPACK_IMPORTED_MODULE_29__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faMinusCircle__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faMinusCircle */ "./node_modules/@fortawesome/free-solid-svg-icons/faMinusCircle.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faMinusCircle__WEBPACK_IMPORTED_MODULE_30___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faMinusCircle__WEBPACK_IMPORTED_MODULE_30__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faPen__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faPen */ "./node_modules/@fortawesome/free-solid-svg-icons/faPen.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faPen__WEBPACK_IMPORTED_MODULE_31___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faPen__WEBPACK_IMPORTED_MODULE_31__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faWrench__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faWrench */ "./node_modules/@fortawesome/free-solid-svg-icons/faWrench.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faWrench__WEBPACK_IMPORTED_MODULE_32___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faWrench__WEBPACK_IMPORTED_MODULE_32__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faSpider__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faSpider */ "./node_modules/@fortawesome/free-solid-svg-icons/faSpider.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faSpider__WEBPACK_IMPORTED_MODULE_33___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faSpider__WEBPACK_IMPORTED_MODULE_33__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faExternalLinkAlt__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faExternalLinkAlt */ "./node_modules/@fortawesome/free-solid-svg-icons/faExternalLinkAlt.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faExternalLinkAlt__WEBPACK_IMPORTED_MODULE_34___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faExternalLinkAlt__WEBPACK_IMPORTED_MODULE_34__);
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faDownload__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faDownload */ "./node_modules/@fortawesome/free-solid-svg-icons/faDownload.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faDownload__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faDownload__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faCloudDownloadAlt__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faCloudDownloadAlt */ "./node_modules/@fortawesome/free-solid-svg-icons/faCloudDownloadAlt.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faCloudDownloadAlt__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faCloudDownloadAlt__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faList */ "./node_modules/@fortawesome/free-solid-svg-icons/faList.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faList__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faList__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faPhone__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faPhone */ "./node_modules/@fortawesome/free-solid-svg-icons/faPhone.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faPhone__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faPhone__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faPlane__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faPlane */ "./node_modules/@fortawesome/free-solid-svg-icons/faPlane.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faPlane__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faPlane__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faCartPlus__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faCartPlus */ "./node_modules/@fortawesome/free-solid-svg-icons/faCartPlus.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faCartPlus__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faCartPlus__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faCartArrowDown__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faCartArrowDown */ "./node_modules/@fortawesome/free-solid-svg-icons/faCartArrowDown.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faCartArrowDown__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faCartArrowDown__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faShoppingCart__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faShoppingCart */ "./node_modules/@fortawesome/free-solid-svg-icons/faShoppingCart.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faShoppingCart__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faShoppingCart__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _fortawesome_free_regular_svg_icons_faGrinHearts__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons/faGrinHearts */ "./node_modules/@fortawesome/free-regular-svg-icons/faGrinHearts.js");
+/* harmony import */ var _fortawesome_free_regular_svg_icons_faGrinHearts__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_regular_svg_icons_faGrinHearts__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _fortawesome_free_regular_svg_icons_faPaperPlane__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons/faPaperPlane */ "./node_modules/@fortawesome/free-regular-svg-icons/faPaperPlane.js");
+/* harmony import */ var _fortawesome_free_regular_svg_icons_faPaperPlane__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_regular_svg_icons_faPaperPlane__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _fortawesome_free_regular_svg_icons_faClock__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons/faClock */ "./node_modules/@fortawesome/free-regular-svg-icons/faClock.js");
+/* harmony import */ var _fortawesome_free_regular_svg_icons_faClock__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_regular_svg_icons_faClock__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _fortawesome_free_regular_svg_icons_faThumbsUp__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons/faThumbsUp */ "./node_modules/@fortawesome/free-regular-svg-icons/faThumbsUp.js");
+/* harmony import */ var _fortawesome_free_regular_svg_icons_faThumbsUp__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_regular_svg_icons_faThumbsUp__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _fortawesome_free_regular_svg_icons_faThumbsDown__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons/faThumbsDown */ "./node_modules/@fortawesome/free-regular-svg-icons/faThumbsDown.js");
+/* harmony import */ var _fortawesome_free_regular_svg_icons_faThumbsDown__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_regular_svg_icons_faThumbsDown__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faPlusCircle__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faPlusCircle */ "./node_modules/@fortawesome/free-solid-svg-icons/faPlusCircle.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faPlusCircle__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faPlusCircle__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faMinusCircle__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faMinusCircle */ "./node_modules/@fortawesome/free-solid-svg-icons/faMinusCircle.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faMinusCircle__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faMinusCircle__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faChevronRight__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faChevronRight */ "./node_modules/@fortawesome/free-solid-svg-icons/faChevronRight.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faChevronRight__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faChevronRight__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faPen__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faPen */ "./node_modules/@fortawesome/free-solid-svg-icons/faPen.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faPen__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faPen__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faExternalLinkAlt__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faExternalLinkAlt */ "./node_modules/@fortawesome/free-solid-svg-icons/faExternalLinkAlt.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faExternalLinkAlt__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons_faExternalLinkAlt__WEBPACK_IMPORTED_MODULE_18__);
 
 
 
@@ -9729,23 +9053,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ([_fortawesome_free_solid_svg_icons_faEnvelope__WEBPACK_IMPORTED_MODULE_0__["faEnvelope"], _fortawesome_free_solid_svg_icons_faEnvelopeOpen__WEBPACK_IMPORTED_MODULE_1__["faEnvelopeOpen"], _fortawesome_free_solid_svg_icons_faDownload__WEBPACK_IMPORTED_MODULE_2__["faDownload"], _fortawesome_free_solid_svg_icons_faPuzzlePiece__WEBPACK_IMPORTED_MODULE_3__["faPuzzlePiece"], _fortawesome_free_solid_svg_icons_faHeart__WEBPACK_IMPORTED_MODULE_4__["faHeart"], _fortawesome_free_solid_svg_icons_faCloudDownloadAlt__WEBPACK_IMPORTED_MODULE_5__["faCloudDownloadAlt"], _fortawesome_free_solid_svg_icons_faCheck__WEBPACK_IMPORTED_MODULE_6__["faCheck"], _fortawesome_free_solid_svg_icons_faBolt__WEBPACK_IMPORTED_MODULE_13__["faBolt"], _fortawesome_free_regular_svg_icons_faClock__WEBPACK_IMPORTED_MODULE_25__["faClock"], _fortawesome_free_solid_svg_icons_faDesktop__WEBPACK_IMPORTED_MODULE_7__["faDesktop"], _fortawesome_free_solid_svg_icons_faEye__WEBPACK_IMPORTED_MODULE_8__["faEye"], _fortawesome_free_regular_svg_icons_faEye__WEBPACK_IMPORTED_MODULE_9__["faEye"], _fortawesome_free_solid_svg_icons_faGlobe__WEBPACK_IMPORTED_MODULE_10__["faGlobe"], _fortawesome_free_solid_svg_icons_faPlane__WEBPACK_IMPORTED_MODULE_12__["faPlane"], _fortawesome_free_brands_svg_icons_faWordpressSimple__WEBPACK_IMPORTED_MODULE_19__["faWordpressSimple"], _fortawesome_free_brands_svg_icons_faYoutubeSquare__WEBPACK_IMPORTED_MODULE_20__["faYoutubeSquare"], _fortawesome_free_brands_svg_icons_faTwitter__WEBPACK_IMPORTED_MODULE_21__["faTwitter"], _fortawesome_free_brands_svg_icons_faFacebook__WEBPACK_IMPORTED_MODULE_22__["faFacebook"], _fortawesome_free_solid_svg_icons_faCartPlus__WEBPACK_IMPORTED_MODULE_14__["faCartPlus"], _fortawesome_free_solid_svg_icons_faCartArrowDown__WEBPACK_IMPORTED_MODULE_17__["faCartArrowDown"], _fortawesome_free_solid_svg_icons_faSearch__WEBPACK_IMPORTED_MODULE_15__["faSearch"], _fortawesome_free_regular_svg_icons_faGrinHearts__WEBPACK_IMPORTED_MODULE_23__["faGrinHearts"], _fortawesome_free_regular_svg_icons_faPaperPlane__WEBPACK_IMPORTED_MODULE_24__["faPaperPlane"], _fortawesome_free_solid_svg_icons_faList__WEBPACK_IMPORTED_MODULE_11__["faList"], _fortawesome_free_solid_svg_icons_faExternalLinkAlt__WEBPACK_IMPORTED_MODULE_34__["faExternalLinkAlt"], _fortawesome_free_regular_svg_icons_faFileCode__WEBPACK_IMPORTED_MODULE_26__["faFileCode"], _fortawesome_free_solid_svg_icons_faShoppingCart__WEBPACK_IMPORTED_MODULE_18__["faShoppingCart"], _fortawesome_free_solid_svg_icons_faSpinner__WEBPACK_IMPORTED_MODULE_16__["faSpinner"], _fortawesome_free_regular_svg_icons_faThumbsUp__WEBPACK_IMPORTED_MODULE_27__["faThumbsUp"], _fortawesome_free_regular_svg_icons_faThumbsDown__WEBPACK_IMPORTED_MODULE_28__["faThumbsDown"], _fortawesome_free_solid_svg_icons_faPlusCircle__WEBPACK_IMPORTED_MODULE_29__["faPlusCircle"], _fortawesome_free_solid_svg_icons_faMinusCircle__WEBPACK_IMPORTED_MODULE_30__["faMinusCircle"], _fortawesome_free_solid_svg_icons_faWrench__WEBPACK_IMPORTED_MODULE_32__["faWrench"], _fortawesome_free_solid_svg_icons_faPen__WEBPACK_IMPORTED_MODULE_31__["faPen"], _fortawesome_free_solid_svg_icons_faSpider__WEBPACK_IMPORTED_MODULE_33__["faSpider"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_fortawesome_free_solid_svg_icons_faEnvelope__WEBPACK_IMPORTED_MODULE_0__["faEnvelope"], _fortawesome_free_solid_svg_icons_faDownload__WEBPACK_IMPORTED_MODULE_1__["faDownload"], _fortawesome_free_solid_svg_icons_faCloudDownloadAlt__WEBPACK_IMPORTED_MODULE_2__["faCloudDownloadAlt"], _fortawesome_free_solid_svg_icons_faPhone__WEBPACK_IMPORTED_MODULE_4__["faPhone"], _fortawesome_free_regular_svg_icons_faClock__WEBPACK_IMPORTED_MODULE_11__["faClock"], _fortawesome_free_solid_svg_icons_faPlane__WEBPACK_IMPORTED_MODULE_5__["faPlane"], _fortawesome_free_solid_svg_icons_faCartPlus__WEBPACK_IMPORTED_MODULE_6__["faCartPlus"], _fortawesome_free_solid_svg_icons_faCartArrowDown__WEBPACK_IMPORTED_MODULE_7__["faCartArrowDown"], _fortawesome_free_regular_svg_icons_faGrinHearts__WEBPACK_IMPORTED_MODULE_9__["faGrinHearts"], _fortawesome_free_regular_svg_icons_faPaperPlane__WEBPACK_IMPORTED_MODULE_10__["faPaperPlane"], _fortawesome_free_solid_svg_icons_faList__WEBPACK_IMPORTED_MODULE_3__["faList"], _fortawesome_free_solid_svg_icons_faExternalLinkAlt__WEBPACK_IMPORTED_MODULE_18__["faExternalLinkAlt"], _fortawesome_free_solid_svg_icons_faShoppingCart__WEBPACK_IMPORTED_MODULE_8__["faShoppingCart"], _fortawesome_free_regular_svg_icons_faThumbsUp__WEBPACK_IMPORTED_MODULE_12__["faThumbsUp"], _fortawesome_free_regular_svg_icons_faThumbsDown__WEBPACK_IMPORTED_MODULE_13__["faThumbsDown"], _fortawesome_free_solid_svg_icons_faPlusCircle__WEBPACK_IMPORTED_MODULE_14__["faPlusCircle"], _fortawesome_free_solid_svg_icons_faMinusCircle__WEBPACK_IMPORTED_MODULE_15__["faMinusCircle"], _fortawesome_free_solid_svg_icons_faPen__WEBPACK_IMPORTED_MODULE_17__["faPen"], _fortawesome_free_solid_svg_icons_faChevronRight__WEBPACK_IMPORTED_MODULE_16__["faChevronRight"]]);
 
 /***/ }),
 

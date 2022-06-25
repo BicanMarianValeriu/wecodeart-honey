@@ -9,15 +9,15 @@
     &__plus,
     &__minus,
     &__qty {
-        background-color: var(--wp--preset--color--light);
-        border-radius: 0!important;
         height: auto;
-        border: none;
-        box-shadow: none; 
         padding: 0.5rem 1.3rem; 
+        background-color: var(--wp--gray-100);
+        border: 1px solid var(--wp--gray-100);
+        border-radius: 0;
+        box-shadow: none; 
         font-size: 1.15rem;
-        outline: none;
         text-align: center;
+        outline: none;
     }
 
     &__qty {
@@ -47,7 +47,7 @@
 
         &:hover,
         &:focus {
-            background-color: darken( $gray-100, 5% );
+            background-color: var(--wp--gray-200);
         }
     }
 }

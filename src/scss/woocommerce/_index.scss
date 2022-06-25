@@ -92,32 +92,17 @@
 @import 'components/quantity';
 @import 'components/notifications';
 @import 'components/rating';
-@import 'components/related';
 @import 'components/select2';
 @import 'components/tabs';
 @import 'components/reviews';
 @import 'components/sale';
 
-// // Blocks
-// @import 'blocks/general';
-@import 'blocks/active-filters';
-// @import 'blocks/top-rated';
-// @import 'blocks/reviews';
-// @import 'blocks/product';
-// @import 'blocks/pagination';
-// @import 'blocks/categories-list';
-
-// // Widgets
-// @import 'widgets/ajax-search';
-// @import 'widgets/price-slider';
-// @import 'widgets/rating-filter';
-// @import 'widgets/product-categories';
-// @import 'widgets/layered-nav';
-// @import 'widgets/recent-reviews';
-
-// // Custom Elements
-// @import 'custom/header-cart';
-// @import 'custom/shop-features';
+// Blocks
+@import 'blocks/general';
+@import 'blocks/components';
+@import 'blocks/filters';
+@import 'blocks/product';
+@import 'blocks/reviews';
 
 // // Pages
 @import 'pages/archive';

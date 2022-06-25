@@ -23,12 +23,7 @@ if ( ! comments_open() ) {
 	return;
 }
 
-use WeCodeArt\Gutenberg\Blocks;
-
-$storage = Blocks::get_instance();
-$storage::load( [ 'core/post-comments-form' ] );
-
-wecodeart( 'styles' )->Utilities->load( [ 'fw-700' ] );
+wecodeart( 'styles' )->Utilities->load( [ 'fw-700', 'col-md-7', 'my-3', 'mb-3' ] );
 
 ?>
 <div id="reviews" class="woocommerce-Reviews">
@@ -117,7 +112,7 @@ wecodeart( 'styles' )->Utilities->load( [ 'fw-700' ] );
 				$comment_form['fields'][ $key ] = wecodeart( 'markup' )::wrap( 'comment-author-' . $key, [ [
 					'tag' 	=> 'div',
 					'attrs' => [
-						'class' => 'comment-form-field comment-form-' . $key . ' col-md-7'
+						'class' => 'comment-form-field comment-form-' . $key . ' col-md-7 my-3'
 					]
 				] ], 'wecodeart_input', [ 'floating', [
 					'type' 	=> $field['type'],
@@ -154,7 +149,7 @@ wecodeart( 'styles' )->Utilities->load( [ 'fw-700' ] );
 			$comment_form['comment_field'] .= wecodeart( 'markup' )::wrap( 'comment-author-comment', [ [
 				'tag' 	=> 'div',
 				'attrs' => [
-					'class' => 'comment-form-field comment-form-comment'
+					'class' => 'comment-form-field comment-form-comment mb-3'
 				]
 			] ], 'wecodeart_input', [ 'floating', [
 				'type'	=> 'textarea',

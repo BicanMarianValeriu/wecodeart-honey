@@ -17,7 +17,9 @@
 
 defined( 'ABSPATH' ) || exit;
 
-WeCodeArt\Gutenberg\Blocks::load( [ 'core/table', 'core/button', 'core/columns' ] );
+add_action( 'wp_enqueue_scripts', function() {
+	wp_enqueue_style( 'wp-block-table' );
+} );
 
 wecodeart( 'styles' )->Utilities->load( [
 	'd-flex',
@@ -36,14 +38,15 @@ wecodeart( 'styles' )->Utilities->load( [
 	'has-text-align-sm-right',
 	'has-text-align-lg-right',
 	'fw-400',
-	'fw-700'
+	'fw-700',
+	'col-lg-4'
 ] );
 
 do_action( 'woocommerce_before_cart' );
 
 ?>
 
-<form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+<form class="woocommerce-cart-form wp-block-table" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
 	<table class="table table-bordered shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">

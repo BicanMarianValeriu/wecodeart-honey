@@ -17,6 +17,9 @@
  */
 
 defined( 'ABSPATH' ) || exit;
+
+use function WeCodeArt\Functions\get_prop;
+
 ?>
 <div class="woocommerce-shipping-fields">
 	<?php if ( true === WC()->cart->needs_shipping_address() ) : ?>
@@ -36,7 +39,21 @@ defined( 'ABSPATH' ) || exit;
 				$fields = $checkout->get_checkout_fields( 'shipping' );
 
 				foreach ( $fields as $key => $field ) {
-					woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
+					$type = get_prop( $field, 'type', 'text' );
+					switch( $type ) :
+						case 'country' : woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
+						case 'state' : woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
+						default : wecodeart_input( $type, [
+							'label' => get_prop( $field, 'label' ),
+							'attrs' => [
+								'name' 			=> $key,
+								'value'			=> $checkout->get_value( $key ),
+								'class' 		=> join( ' ', wp_parse_args( [ 'form-control' ], get_prop( $field, 'class' ) ) ),
+								'autocomplete' 	=> get_prop( $field, 'autocomplete' ),
+								'required' 		=> get_prop( $field, 'required' ),
+							]
+						] );
+					endswitch;
 				}
 				?>
 			</div>
@@ -59,9 +76,18 @@ defined( 'ABSPATH' ) || exit;
 		<?php endif; ?>
 
 		<div class="woocommerce-additional-fields__field-wrapper">
-			<?php foreach ( $checkout->get_checkout_fields( 'order' ) as $key => $field ) : ?>
-				<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
-			<?php endforeach; ?>
+			<?php foreach ( $checkout->get_checkout_fields( 'order' ) as $key => $field ) :
+				wecodeart_input( get_prop( $field, 'type', 'hidden' ), [
+					'label' => get_prop( $field, 'label' ),
+					'attrs' => [
+						'name' 			=> $key,
+						'value'			=> $checkout->get_value( $key ),
+						'class' 		=> join( ' ', wp_parse_args( [ 'form-control' ], get_prop( $field, 'class' ) ) ),
+						'autocomplete' 	=> get_prop( $field, 'autocomplete' ),
+						'required' 		=> get_prop( $field, 'required' ),
+					]
+				] );
+			endforeach; ?>
 		</div>
 
 	<?php endif; ?>

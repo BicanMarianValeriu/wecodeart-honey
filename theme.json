@@ -1,48 +1,30 @@
 {
 	"$schema": "http://schemas.wp.org/trunk/theme.json",
 	"version": 2,
-	"customTemplates": [
-		{
-			"name": "archive-product",
-			"title": "Arhiva produs",
-			"postTypes": []
-		},
-		{
-			"name": "taxonomy-product_cat",
-			"title": "Categorie produs",
-			"postTypes": []
-		},
-		{
-			"name": "taxonomy-product_tag",
-			"title": "Eticheta produs",
-			"postTypes": []
-		},
-		{
-			"name": "single-product",
-			"title": "Produs singular",
-			"postTypes": []
-		},
-		{
-			"name": "page-sidebar",
-			"title": "Page - Sidebar",
-			"postTypes": [
-				"page",
-				"post"
-			]
-		},
-		{
-			"name": "content-only",
-			"title": "Content Only",
-			"postTypes": [
-				"page",
-				"post"
-			]
-		}
-	],
 	"templateParts": [
 		{
 			"title": "Header",
 			"name": "header",
+			"area": "header"
+		},
+		{
+			"title": "Header (Dark)",
+			"name": "header-dark",
+			"area": "header"
+		},
+		{
+			"title": "Header (Logo left)",
+			"name": "header-left",
+			"area": "header"
+		},
+		{
+			"title": "Header (with Search)",
+			"name": "header-search",
+			"area": "header"
+		},
+		{
+			"title": "Header (with Topbar)",
+			"name": "header-top",
 			"area": "header"
 		},
 		{
@@ -51,12 +33,36 @@
 			"area": "footer"
 		},
 		{
+			"title": "Footer (Dark)",
+			"name": "footer-dark",
+			"area": "footer"
+		},
+		{
 			"title": "Main Sidebar",
 			"name": "sidebar",
+			"area": "uncategorized"
+		},
+		{
+			"title": "Shop: Banner - Top",
+			"name": "shop-banner",
 			"area": "uncategorized"
 		}
 	],
 	"settings": {
+		"typography": {
+			"fontFamilies": [
+				{
+					"name": "Base",
+					"slug": "base",
+					"fontFamily": "var(--wp--font-sans-serif)"
+				},
+				{
+					"name": "Signika",
+					"slug": "signika",
+					"fontFamily": "Signika"
+				}
+			]
+		},
 		"color": {
 			"palette": [
 				{
@@ -81,7 +87,7 @@
 				},
 				{
 					"slug": "danger",
-					"color": "#dc3545",
+					"color": "#C11501",
 					"name": "Danger"
 				},
 				{
@@ -98,6 +104,11 @@
 					"slug": "white",
 					"color": "#ffffff",
 					"name": "White"
+				},
+				{
+					"slug": "black",
+					"color": "#000000",
+					"name": "Black"
 				},
 				{
 					"slug": "dark",
@@ -119,6 +130,17 @@
 	},
 	"styles": {
 		"blocks": {
+			"core/heading": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|signika",
+					"fontWeight": "700"
+				},
+				"spacing": {
+					"margin": {
+						"bottom": "1rem"
+					}
+				}
+			},
 			"core/paragraph": {
 				"typography": {
 					"lineHeight": "1.7"
@@ -141,39 +163,6 @@
 						"left": "2.5rem",
 						"right": "2.5rem"
 					}
-				}
-			}
-		},
-		"typography": {
-			"fontSize": "var:preset|font-size|normal",
-			"fontFamily": "var:preset|font-family|base"
-		},
-		"elements": {
-			"h1": {
-				"typography": {
-					"fontFamily": "Signika",
-					"fontWeight": "700"
-				}
-			},
-			"h2": {
-				"color": {
-					"text": "#121212"
-				},
-				"typography": {
-					"fontFamily": "Signika",
-					"fontWeight": "700"
-				}
-			},
-			"h3": {
-				"typography": {
-					"fontFamily": "Signika",
-					"fontWeight": "700"
-				}
-			},
-			"h4": {
-				"typography": {
-					"fontFamily": "Signika",
-					"fontWeight": "700"
 				}
 			}
 		}

@@ -46,7 +46,7 @@ $product_meta = [
 ];
 
 ?>
-<div class="woocommerce-product-meta d-flex flex-column">
+<div class="woocommerce-product-meta vstack">
 
 	<?php 
 	

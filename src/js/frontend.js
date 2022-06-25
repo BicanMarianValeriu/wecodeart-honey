@@ -20,8 +20,9 @@ const { hooks: { addAction } } = wp;
 
 addAction('wecodeart.route', 'wecodeart/skin/common', extendCommon, 10);
 function extendCommon(route, func) {
-	if (route === 'common') {
-		common[func]();
+	if (route === 'common' && func === 'init') {
+		common['init']();
+		common['complete']();
 	}
 }
 

@@ -21,8 +21,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( $related_products ) :
 
-	WeCodeArt\Gutenberg\Blocks::load( [ 'core/separator' ] );
-
+	add_action( 'wp_enqueue_scripts', function() {
+		wp_enqueue_style( 'wp-block-separator' );
+	}, 20 );
+	
 	wecodeart( 'styles' )->Utilities->load( [ 'mt-5', 'mb-5' ] );
 
 ?>
@@ -32,7 +34,7 @@ if ( $related_products ) :
 
 	if ( $heading ) : ?>
 	<h2 class="has-dark-color has-text-align-center mt-5"><?php echo esc_html( $heading ); ?></h2>
-	<hr class="wp-block-separator is-style-faded has-primary-color mb-5">
+	<hr class="wp-block-separator is-style-faded has-primary-color mb-5" style="border:none;">
 	<?php endif; ?>
 	
 	<?php woocommerce_product_loop_start(); ?>

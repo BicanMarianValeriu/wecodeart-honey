@@ -23,8 +23,6 @@ $attribute_keys  = array_keys( $attributes );
 $variations_json = wp_json_encode( $available_variations );
 $variations_attr = function_exists( 'wc_esc_json' ) ? wc_esc_json( $variations_json ) : _wp_specialchars( $variations_json, ENT_QUOTES, 'UTF-8', true );
 
-WeCodeArt\Gutenberg\Blocks::load( [ 'core/table' ] );
-
 wecodeart( 'styles' )->Utilities->load( [ 'position-relative', 'position-absolute', 'm-0', 'mb-5' ] );
 
 do_action( 'woocommerce_before_add_to_cart_form' );

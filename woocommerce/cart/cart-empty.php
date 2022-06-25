@@ -24,8 +24,8 @@ do_action( 'woocommerce_cart_is_empty' );
 
 if ( wc_get_page_id( 'shop' ) > 0 ) :
 
-	wecodeart( 'styles' )->Utilities->load( [ 'mt-5' ] );
-	WeCodeArt\Gutenberg\Blocks::load( [ 'core/buttons', 'core/button' ] );
+	wp_enqueue_style( 'wp-block-buttons' );
+	wp_enqueue_style( 'wp-block-button' );
 
 	$return_cls = 'wp-block-button__link has-secondary-background-color has-dark-color wc-backward';
 	$return_url = apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) );

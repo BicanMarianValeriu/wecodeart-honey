@@ -17,17 +17,17 @@
  */
 
 defined( 'ABSPATH' ) || exit;
+
+use function WeCodeArt\Functions\get_prop;
+
 ?>
 <div class="woocommerce-billing-fields">
-	<?php if ( wc_ship_to_billing_address_only() && WC()->cart->needs_shipping() ) : ?>
-
-		<h3><?php esc_html_e( 'Billing &amp; Shipping', 'woocommerce' ); ?></h3>
-
-	<?php else : ?>
-
-		<h3><?php esc_html_e( 'Billing details', 'woocommerce' ); ?></h3>
-
-	<?php endif; ?>
+	<h3>
+	<?php if ( wc_ship_to_billing_address_only() && WC()->cart->needs_shipping() ) :
+		esc_html_e( 'Billing &amp; Shipping', 'woocommerce' ); 
+		else : esc_html_e( 'Billing details', 'woocommerce' );
+	endif; ?>
+	</h3>
 
 	<?php do_action( 'woocommerce_before_checkout_billing_form', $checkout ); ?>
 
@@ -36,7 +36,21 @@ defined( 'ABSPATH' ) || exit;
 		$fields = $checkout->get_checkout_fields( 'billing' );
 
 		foreach ( $fields as $key => $field ) {
-			woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
+			$type = get_prop( $field, 'type', 'text' );
+			switch( $type ) :
+				case 'country' : woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
+				case 'state' : woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
+				default : wecodeart_input( $type, [
+					'label' => get_prop( $field, 'label' ),
+					'attrs' => [
+						'name' 			=> $key,
+						'value'			=> $checkout->get_value( $key ),
+						'class' 		=> join( ' ', wp_parse_args( [ 'form-control' ], get_prop( $field, 'class' ) ) ),
+						'autocomplete' 	=> get_prop( $field, 'autocomplete' ),
+						'required' 		=> get_prop( $field, 'required' ),
+					]
+				] );
+			endswitch;
 		}
 		?>
 	</div>

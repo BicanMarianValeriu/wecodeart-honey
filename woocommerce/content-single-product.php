@@ -38,15 +38,14 @@ wecodeart( 'styles' )->Utilities->load( [
 	'w-100',
 	'mb-5',
 	'ps-md-5',
+	'col-md-5',
 	'p-0'
 ] );
-
-WeCodeArt\Gutenberg\Blocks::load( [ 'core/columns', 'core/button' ] );
 
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 	<div class="wp-block-columns flex-column flex-md-row p-0">
-		<div class="wp-block-column mb-5 position-relative">
+		<div class="wp-block-column col-md-5 mb-5 position-relative">
 		<?php
 		/**
 		 * Hook: woocommerce_before_single_product_summary.

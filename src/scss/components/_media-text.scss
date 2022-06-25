@@ -2,6 +2,7 @@
     .is-style-overlap {
         position: relative;
         background-color: transparent;
+        gap: 0;
 
         @media (max-width: 991.7px) {
             flex-direction: column;
@@ -13,7 +14,7 @@
             right: 0;
             height: 100%;
             width: 180px;
-            background-image: url('http://working.on/honey/wp-content/uploads/2021/12/honey-splash-2.png');
+            background-image: url('http://localhost/wecodeart-honey/wp-content/uploads/2021/12/honey-splash-2.png');
             background-size: contain;
             background-repeat: no-repeat;
             z-index: 2;

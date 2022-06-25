@@ -23,7 +23,7 @@ if ( ! $product_attributes ) {
 	return;
 }
 
-WeCodeArt\Gutenberg\Blocks::load( [ 'core/table' ] );
+wp_enqueue_style( 'wp-block-table' );
 
 ?>
 <table class="woocommerce-product-attributes table table-bordered shop_attributes">

@@ -28,7 +28,7 @@
             position: relative;
             float: right;
             width: calc( 100% - 60px );
-            padding: 0 10px;
+            padding-left: 10px;
             font-size: .75rem;
 
             @include media-breakpoint-up( 'sm' ) { 

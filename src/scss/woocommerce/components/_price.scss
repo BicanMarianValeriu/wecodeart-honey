@@ -17,27 +17,6 @@
     ins {
         color: var(--wp--preset--color--danger);
         text-decoration: none;
-    }
-}
-
-.wc-block-grid {
-    &__product {
-        &-price {
-            font-weight: bold;
-
-            &__regular {
-                font-size: .8rem;
-                color: var(--wp--gray-500); 
-            }
-
-            &__value {
-                text-decoration: none;
-                
-                &:not(:first-child) {
-                    color: var(--wp--preset--color--danger);
-                    margin-left: 5px;
-                }
-            }
-        }
+        margin-left: 5px;
     }
 }

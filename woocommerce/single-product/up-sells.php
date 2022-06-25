@@ -20,8 +20,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( $upsells ) :
+	
+	add_action( 'wp_enqueue_scripts', function() {
+		wp_enqueue_style( 'wp-block-separator' );
+	}, 20 );
 
-wecodeart( 'styles' )->Utilities->load( [ 'mb-5' ] );
+	wecodeart( 'styles' )->Utilities->load( [ 'mb-5' ] );
 
 ?>
 <section class="products-upsells up-sells upsells">
@@ -31,7 +35,7 @@ wecodeart( 'styles' )->Utilities->load( [ 'mb-5' ] );
 	if ( $heading ) :
 	?>
 	<h2 class="has-dark-color has-text-align-center"><?php echo esc_html( $heading ); ?></h2>
-	<hr class="wp-block-separator is-style-faded has-primary-color mb-5">
+	<hr class="wp-block-separator is-style-faded has-primary-color mb-5" style="border:none;">
 	<?php endif; ?>
 
 	<?php woocommerce_product_loop_start(); ?>

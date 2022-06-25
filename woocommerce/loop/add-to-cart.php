@@ -14,17 +14,13 @@
  * @package     WooCommerce\Templates
  * @version     3.3.0
  */
+use function WeCodeArt\Functions\get_prop;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-use WeCodeArt\Gutenberg\Blocks;
-use function WeCodeArt\Functions\get_prop;
-
 global $product;
-
-Blocks::load( [ 'core/buttons', 'core/button' ] );
 
 wecodeart( 'styles' )->Utilities->load( [ 'w-100' ] );
 
