@@ -18,16 +18,33 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-?>
-<li class="wc_payment_method payment_method_<?php echo esc_attr( $gateway->id ); ?>">
-	<input id="payment_method_<?php echo esc_attr( $gateway->id ); ?>" type="radio" class="input-radio" name="payment_method" value="<?php echo esc_attr( $gateway->id ); ?>" <?php checked( $gateway->chosen, true ); ?> data-order_button_text="<?php echo esc_attr( $gateway->order_button_text ); ?>" />
 
-	<label for="payment_method_<?php echo esc_attr( $gateway->id ); ?>">
-		<?php echo $gateway->get_title(); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?> <?php echo $gateway->get_icon(); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?>
-	</label>
+?>
+<li class="accordion-item wc_payment_method payment_method_<?php echo esc_attr( $gateway->id ); ?>">
+	<div class="accordion-header has-light-background-color p-1">	
+	<?php
+	
+		wecodeart_input( 'radio', [
+			'_label' 	=> 'after',
+			'label' 	=> sprintf( '<strong class="ms-1 has-black-color">%s</strong>', $gateway->get_title() . $gateway->get_icon() ),
+			'attrs' 	=> [
+				'class'		=> 'form-check-input input-radio',
+				'name'		=> 'payment_method',
+				'id' 		=> 'payment_method_' . $gateway->id,
+				'value'		=> $gateway->id,
+				'checked'	=> $gateway->chosen ? 'checked' : false,
+				'data-order_button_text' => $gateway->order_button_text,
+			]
+		] );
+	
+	?>
+	</div>
 	<?php if ( $gateway->has_fields() || $gateway->get_description() ) : ?>
-		<div class="payment_box payment_method_<?php echo esc_attr( $gateway->id ); ?>" <?php if ( ! $gateway->chosen ) : /* phpcs:ignore Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace */ ?>style="display:none;"<?php endif; /* phpcs:ignore Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace */ ?>>
-			<?php $gateway->payment_fields(); ?>
-		</div>
+	<div class="accordion-body has-black-color payment_box payment_method_<?php echo esc_attr( $gateway->id ); ?>"
+		<?php if ( ! $gateway->chosen ) : /* phpcs:ignore Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace */ ?>
+		style="display:none;"
+		<?php endif; /* phpcs:ignore Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace */ ?>>
+		<?php $gateway->payment_fields(); ?>
+	</div>
 	<?php endif; ?>
 </li>

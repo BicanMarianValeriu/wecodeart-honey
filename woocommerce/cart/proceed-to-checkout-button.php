@@ -20,9 +20,10 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+$classes = ['wp-block-button__link', 'has-dark-color', 'has-secondary-background-color', 'alt', 'wc-forward', 'w-100' ];
 ?>
 <div class="wp-block-button has-text-align-lg-right">
-	<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="wp-block-button__link alt wc-forward">
+	<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="<?php echo esc_attr( join( ' ', $classes ) ); ?>">
 		<?php esc_html_e( 'Proceed to checkout', 'woocommerce' ); ?>
 	</a>
 </div>

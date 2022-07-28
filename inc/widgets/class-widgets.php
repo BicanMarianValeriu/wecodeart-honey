@@ -25,7 +25,20 @@ class Widgets {
 	 * Send to Constructor
 	 */
 	public function init() {
-		add_shortcode( 'wecodeart-stats', [ $this, 'render'	] );
+		add_shortcode( 'wecodeart-stats', 		[ $this, 'render'		] );
+		add_shortcode( 'wecodeart-decoration', 	[ $this, 'render_svg'	] );
+	}
+
+	/**
+	 * SVG
+	 *
+	 * @return void
+	 */
+	public function render_svg( $attrs ) {
+		$attrs = shortcode_atts( [
+		], $attrs, 'wecodeart-decoration' );
+
+        return wecodeart_template( 'general/bee', $attrs, false );
 	}
 
 	/**

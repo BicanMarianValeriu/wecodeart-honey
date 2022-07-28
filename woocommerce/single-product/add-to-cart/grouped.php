@@ -19,23 +19,19 @@ defined( 'ABSPATH' ) || exit;
 
 global $product, $post;
 
+wecodeart( 'styles' )->Utilities->load( [ 'mt-3', 'mb-5' ] );
+
+wp_enqueue_style( 'wp-block-table' );
+
 do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
-<form class="cart grouped_form" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
-	<table cellspacing="0" class="woocommerce-grouped-product-list group_table">
+<form class="cart mb-5 grouped_form" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
+	<table cellspacing="0" class="woocommerce-grouped-product-list group_table table table-bordered">
 		<tbody>
 			<?php
 			$quantites_required      = false;
 			$previous_post           = $post;
-			$grouped_product_columns = apply_filters(
-				'woocommerce_grouped_product_columns',
-				array(
-					'quantity',
-					'label',
-					'price',
-				),
-				$product
-			);
+			$grouped_product_columns = apply_filters( 'woocommerce_grouped_product_columns', [ 'quantity', 'label', 'price' ], $product );
 			$show_add_to_cart_button = false;
 
 			do_action( 'woocommerce_grouped_product_list_before', $grouped_product_columns, $quantites_required, $product );
@@ -114,11 +110,23 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 	<?php if ( $quantites_required && $show_add_to_cart_button ) : ?>
 
-		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+	<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+	
+	<div class="wp-block-button"><?php
 
-		<button type="submit" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+	wecodeart_input( 'button', [
+		'label' => $product->single_add_to_cart_text(),
+		'attrs' => [
+			'type'	=> 'submit',
+			'name'	=> 'add-to-cart',
+			'value'	=> $product->get_id(),
+			'class' => 'wp-block-button__link has-secondary-background-color has-dark-color single_add_to_cart_button mt-3'
+		]
+	] );
 
-		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+	?></div>
+
+	<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 
 	<?php endif; ?>
 </form>

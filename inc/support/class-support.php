@@ -47,8 +47,7 @@ class Support {
 	 * @return 	array
 	 */
 	public function sample( $args ) {
-		$args['delimiter'] = ' » ';
-
+		
 		return $args;
 	}
 }

@@ -1,41 +1,45 @@
-<!-- wp:pattern {"slug":"wecodeart/footer-top"} /-->
-<!-- wp:group {"layout":{"inherit":true}} -->
-<div class="wp-block-group">
-    <!-- wp:columns {"style":{"spacing":{"blockGap":"1rem"}},"className":"flex-column flex-md-row pt-5"} -->
-    <div class="wp-block-columns flex-column flex-md-row pt-5">
-        <!-- wp:column {"className":"col-12 col-lg-5 mb-5"} -->
-        <div class="wp-block-column col-12 col-lg-5 mb-5">
-            <!-- wp:heading {"level":4} -->
-            <h4 id="about-this-site">ABOUT THIS SITE</h4>
-            <!-- /wp:heading -->
-            <!-- wp:paragraph -->
-            <p>This may be a good place to introduce yourself and your site or include some credits.</p>
+<!-- wp:group {"align":"full","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"spacing":{"blockGap":{"top":"10px","left":"10px"},"padding":{"top":"5px","bottom":"5px"}}},"backgroundColor":"primary","textColor":"white","className":"","layout":{"inherit":true}} -->
+<div class="wp-block-group alignfull has-white-color has-primary-background-color has-text-color has-background has-link-color"
+    style="padding-top:5px;padding-bottom:5px">
+    <!-- wp:columns {"verticalAlignment":"center","isStackedOnMobile":false} -->
+    <div class="wp-block-columns are-vertically-aligned-center is-not-stacked-on-mobile">
+        <!-- wp:column {"verticalAlignment":"center"} -->
+        <div class="wp-block-column is-vertically-aligned-center">
+            <!-- wp:paragraph {"className":"mb-0","fontSize":"small"} -->
+            <p class="mb-0 has-small-font-size"><a href="mailto:contact@domain.com">contact@domain.com</a></p>
             <!-- /wp:paragraph -->
         </div>
         <!-- /wp:column -->
-        <!-- wp:column {"className":"mb-5"} -->
-        <div class="wp-block-column mb-5">
-            <!-- wp:heading {"level":4} -->
-            <h4 id="links">LINKS</h4>
-            <!-- /wp:heading -->
-            <!-- wp:navigation {"overlayMenu":"never","className":"mb-3","layout":{"type":"flex","orientation":"vertical"},"style":{"typography":{"fontStyle":"normal","fontWeight":"700"}},"fontSize":"small"} /-->
-            <!-- wp:buttons -->
-            <div class="wp-block-buttons">
-                <!-- wp:button {"backgroundColor":"primary","style":{"spacing":{"padding":{"top":"5px","right":"20px","bottom":"5px","left":"20px"}}},"fontSize":"small"} -->
-                <div class="wp-block-button has-custom-font-size has-small-font-size">
-                    <a class="wp-block-button__link has-primary-background-color has-background" href="#" style="padding-top:5px;padding-right:20px;padding-bottom:5px;padding-left:20px">Contact Us</a>
-                </div>
-                <!-- /wp:button -->
-            </div>
-            <!-- /wp:buttons -->
+        <!-- wp:column {"verticalAlignment":"center"} -->
+        <div class="wp-block-column is-vertically-aligned-center">
+            <!-- wp:social-links {"iconColor":"white","iconColorValue":"#ffffff","className":"mb-0 is-style-logos-only","layout":{"type":"flex","justifyContent":"right"}} -->
+            <ul class="wp-block-social-links has-icon-color mb-0 is-style-logos-only">
+                <!-- wp:social-link {"url":"https://www.facebook.com/mvbican","service":"facebook"} /-->
+            </ul>
+            <!-- /wp:social-links -->
         </div>
         <!-- /wp:column -->
-        <!-- wp:column {"className":"mb-5"} -->
-        <div class="wp-block-column mb-5">
-            <!-- wp:heading {"level":4} -->
-            <h4 id="recent-posts">RECENT POSTS</h4>
-            <!-- /wp:heading -->
-            <!-- wp:latest-posts {"postsToShow":1,"displayPostContent":true,"excerptLength":10,"displayPostDate":true,"displayFeaturedImage":true,"featuredImageAlign":"left","featuredImageSizeSlug":"medium","addLinkToFeaturedImage":true} /-->
+    </div>
+    <!-- /wp:columns -->
+</div>
+<!-- /wp:group -->
+<!-- wp:group {"layout":{"inherit":true}} -->
+<div class="wp-block-group">
+    <!-- wp:columns {"verticalAlignment":"center","isStackedOnMobile":false,"className":"justify-content-between"} -->
+    <div class="wp-block-columns are-vertically-aligned-center is-not-stacked-on-mobile justify-content-between">
+        <!-- wp:column {"verticalAlignment":"center","className":"col-auto col-md-3"} -->
+        <div class="wp-block-column is-vertically-aligned-center col-auto col-md-3">
+            <!-- wp:site-logo {"width":60} /-->
+        </div>
+        <!-- /wp:column -->
+        <!-- wp:column {"verticalAlignment":"center","className":"d-none d-md-block"} -->
+        <div class="wp-block-column is-vertically-aligned-center d-none d-md-block">
+            <!-- wp:woocommerce/product-search {"hasLabel":false,"formId":"wc-block-product-search-0"} /-->
+        </div>
+        <!-- /wp:column -->
+        <!-- wp:column {"verticalAlignment":"center","className":"col-auto col-md-3 d-flex justify-content-end"} -->
+        <div class="wp-block-column is-vertically-aligned-center col-auto col-md-3 d-flex justify-content-end">
+            <!-- wp:woocommerce/mini-cart {"className":""} /-->
         </div>
         <!-- /wp:column -->
     </div>

@@ -23,38 +23,88 @@ if ( is_user_logged_in() ) {
 	return;
 }
 
+wecodeart( 'styles' )->Utilities->load( [
+	'mb-3',
+] );
+
 ?>
-<form class="woocommerce-form woocommerce-form-login login" method="post" <?php echo ( $hidden ) ? 'style="display:none;"' : ''; ?>>
+<form class="woocommerce-form woocommerce-form-login login needs-validation" method="post" <?php echo ( $hidden ) ? 'style="display:none;"' : ''; ?> novalidate>
 
 	<?php do_action( 'woocommerce_login_form_start' ); ?>
 
 	<?php echo ( $message ) ? wpautop( wptexturize( $message ) ) : ''; // @codingStandardsIgnoreLine ?>
 
-	<p class="form-row form-row-first">
-		<label for="username"><?php esc_html_e( 'Username or email', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-		<input type="text" class="input-text" name="username" id="username" autocomplete="username" />
-	</p>
-	<p class="form-row form-row-last">
-		<label for="password"><?php esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-		<input class="input-text" type="password" name="password" id="password" autocomplete="current-password" />
-	</p>
-	<div class="clear"></div>
+	<div class="mb-3"><?php
+	
+		wecodeart_input( 'floating', [
+			'type'	=> 'text',
+			'label' => esc_html__( 'Username or email', 'woocommerce' ) . '&nbsp;<span class="required">*</span>',
+			'attrs' => [
+				'id'			=> 'username',
+				'name'			=> 'username',
+				'autocomplete'	=> 'username',
+				'placeholder'	=> ' ',
+				'required'		=> true
+			]
+		] );
+		
+	?></div>
+	<div class="mb-3"><?php
+	
+		wecodeart_input( 'floating', [
+			'type'	=> 'password',
+			'label' => esc_html__( 'Password', 'woocommerce' ) . '&nbsp;<span class="required">*</span>',
+			'attrs' => [
+				'id'			=> 'password',
+				'name'			=> 'password',
+				'autocomplete'	=> 'current-password',
+				'placeholder'	=> ' ',
+				'required'		=> true
+			]
+		] );
+	
+	?></div>
 
 	<?php do_action( 'woocommerce_login_form' ); ?>
 
-	<p class="form-row">
-		<label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
-			<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_html_e( 'Remember me', 'woocommerce' ); ?></span>
-		</label>
-		<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
-		<input type="hidden" name="redirect" value="<?php echo esc_url( $redirect ); ?>" />
-		<button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="<?php esc_attr_e( 'Login', 'woocommerce' ); ?>"><?php esc_html_e( 'Login', 'woocommerce' ); ?></button>
-	</p>
-	<p class="lost_password">
-		<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'woocommerce' ); ?></a>
-	</p>
+	<div class="mb-3 grid" style="--wp--columns: 2;">
+		<div class="has-text-align-left"><?php
 
-	<div class="clear"></div>
+			wecodeart_input( 'toggle', [
+				'type'	=> 'checkbox',
+				'label' => esc_html__( 'Remember me', 'woocommerce' ),
+				'attrs' => [
+					'class'		=> 'form-switch',
+					'id' 		=> 'rememberme',
+					'name' 		=> 'rememberme',
+					'value'		=> 'forever',
+				]
+			] );
+
+		?></div>
+		<div class="has-text-align-right">
+			<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'woocommerce' ); ?></a>
+		</div>
+	</div>
+
+	<div class="wp-block-button"><?php
+
+		wecodeart_input( 'button', [
+			'type'	=> 'submit',
+			'label' => esc_html__( 'Login', 'woocommerce' ),
+			'attrs' => [
+				'name'	=> 'login',
+				'value'	=> esc_attr__( 'Login', 'woocommerce' ),
+				'class'	=> 'woocommerce-form-login__submit wp-block-button__link has-primary-background-color'
+			]
+		] );
+		
+		?>
+		<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
+		<?php if( ! empty( $redirect ) ) : ?>
+		<input type="hidden" name="redirect" value="<?php echo esc_url( $redirect ); ?>" />
+		<?php endif; ?>
+	</div>
 
 	<?php do_action( 'woocommerce_login_form_end' ); ?>
 

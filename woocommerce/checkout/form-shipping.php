@@ -21,57 +21,57 @@ defined( 'ABSPATH' ) || exit;
 use function WeCodeArt\Functions\get_prop;
 
 ?>
+<?php if ( true === WC()->cart->needs_shipping_address() ) : ?>
 <div class="woocommerce-shipping-fields">
-	<?php if ( true === WC()->cart->needs_shipping_address() ) : ?>
+	<div class="mb-3" id="ship-to-different-address">
+		<?php
+		
+		wecodeart_input( 'toggle', [
+			'type'	=> 'checkbox',
+			'label' => esc_html__( 'Ship to a different address?', 'woocommerce' ),
+			'attrs' => [
+				'id'	=> 'ship-to-different-address-checkbox',
+				'name'	=> 'ship_to_different_address',
+				'class'	=> 'form-switch',
+				'value'	=> '1',
+				'checked'	=> checked( apply_filters( 'woocommerce_ship_to_different_address_checked', 'shipping' === get_option( 'woocommerce_ship_to_destination' ) ? 1 : 0 ) ),
+			]
+		] );
 
-		<h3 id="ship-to-different-address">
-			<label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
-				<input id="ship-to-different-address-checkbox" class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" <?php checked( apply_filters( 'woocommerce_ship_to_different_address_checked', 'shipping' === get_option( 'woocommerce_ship_to_destination' ) ? 1 : 0 ), 1 ); ?> type="checkbox" name="ship_to_different_address" value="1" /> <span><?php esc_html_e( 'Ship to a different address?', 'woocommerce' ); ?></span>
-			</label>
-		</h3>
+		?>
+	</div>
+	<div class="shipping_address">
 
-		<div class="shipping_address">
+		<?php do_action( 'woocommerce_before_checkout_shipping_form', $checkout ); ?>
 
-			<?php do_action( 'woocommerce_before_checkout_shipping_form', $checkout ); ?>
+		<div class="woocommerce-shipping-fields__field-wrapper grid mb-3" style="--wp--columns:2;">
+			<?php
+			$fields = $checkout->get_checkout_fields( 'shipping' );
 
-			<div class="woocommerce-shipping-fields__field-wrapper">
-				<?php
-				$fields = $checkout->get_checkout_fields( 'shipping' );
-
-				foreach ( $fields as $key => $field ) {
-					$type = get_prop( $field, 'type', 'text' );
-					switch( $type ) :
-						case 'country' : woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
-						case 'state' : woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
-						default : wecodeart_input( $type, [
-							'label' => get_prop( $field, 'label' ),
-							'attrs' => [
-								'name' 			=> $key,
-								'value'			=> $checkout->get_value( $key ),
-								'class' 		=> join( ' ', wp_parse_args( [ 'form-control' ], get_prop( $field, 'class' ) ) ),
-								'autocomplete' 	=> get_prop( $field, 'autocomplete' ),
-								'required' 		=> get_prop( $field, 'required' ),
-							]
-						] );
-					endswitch;
-				}
-				?>
-			</div>
-
-			<?php do_action( 'woocommerce_after_checkout_shipping_form', $checkout ); ?>
-
+			foreach ( $fields as $key => $field ) {
+				woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
+			}
+			?>
 		</div>
 
-	<?php endif; ?>
+		<?php do_action( 'woocommerce_after_checkout_shipping_form', $checkout ); ?>
+
+	</div>
 </div>
+<?php endif; ?>
 <div class="woocommerce-additional-fields">
+
 	<?php do_action( 'woocommerce_before_order_notes', $checkout ); ?>
 
 	<?php if ( apply_filters( 'woocommerce_enable_order_notes_field', 'yes' === get_option( 'woocommerce_enable_order_comments', 'yes' ) ) ) : ?>
 
 		<?php if ( ! WC()->cart->needs_shipping() || wc_ship_to_billing_address_only() ) : ?>
 
-			<h3><?php esc_html_e( 'Additional information', 'woocommerce' ); ?></h3>
+		<p class="mt-0"><strong><?php esc_html_e( 'Additional information', 'woocommerce' ); ?></strong></p>
+
+		<?php else : ?>
+		
+		<hr class="wp-block-separator is-style-wide has-light-color">
 
 		<?php endif; ?>
 

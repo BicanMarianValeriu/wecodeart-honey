@@ -30,23 +30,31 @@ $review_count = $product->get_review_count();
 $average      = $product->get_average_rating();
 
 wecodeart( 'styles' )->Utilities->load( [
-	'float-end',
-	'mb-3'
+	'mb-3',
+	'ms-1'
 ] );
 
 if ( $rating_count > 0 ) : ?>
 
-<div class="woocommerce-product-rating mb-3 clearfix">
+<div class="woocommerce-product-rating mb-3">
 	<?php echo wc_get_rating_html( $average, $rating_count ); // WPCS: XSS ok. ?>
 	<?php if ( comments_open() ) : ?>
-		<?php //phpcs:disable ?>
-		<a href="#reviews" class="woocommerce-review-link float-end" rel="nofollow">(<?php
-			printf(
-				_n( '%s customer review', '%s customer reviews', $review_count, 'woocommerce' ),
-				'<span class="count">' . esc_html( $review_count ) . '</span>'
-			);
-		?>)</a>
-		<?php // phpcs:enable ?>
+	<?php //phpcs:disable ?>
+	<a href="#reviews" class="woocommerce-review-link ms-1 has-black-color" rel="nofollow">(<?php
+		printf(
+			_n( '%s customer review', '%s customer reviews', $review_count, 'woocommerce' ),
+			'<span class="count">' . esc_html( $review_count ) . '</span>'
+		);
+	?>)</a>
+	<p class="has-small-font-size has-cyan-bluish-gray-color"><?php
+	
+		printf(
+			__( '%s of the customers recommend the product', 'woocommerce' ),
+			'<strong>' .  ( ( $average / 5 ) * 100 ) . '%</strong>'
+		);
+		
+	?></p>
+	<?php // phpcs:enable ?>
 	<?php endif ?>
 </div>
 

@@ -85,7 +85,7 @@ class Scripts {
 		wp_register_script( 
 			$this->make_handle(),
 			get_stylesheet_directory_uri() . '/assets/' . $path . '/js/' . $name . '.js',
-			$data['dependencies'], 
+			array_merge( $data['dependencies'], [ 'moment', 'lodash' ] ), 
 			current( $data['version'] ), 
 			true 
 		);

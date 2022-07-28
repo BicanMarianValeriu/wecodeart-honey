@@ -11,11 +11,19 @@ const wplib = [
     'hooks',
 ];
 
+// Turn Off url imports in CSS (background urls)
+const rules = defaultConfig.module.rules;
+rules[devMode ? 3 : 2].use[1].options.url = false;
+
 module.exports = {
     ...defaultConfig,
     entry: {
         'frontend': path.resolve(process.cwd(), 'src', 'js', 'frontend.js'),
     },
+    module: {
+		...defaultConfig.module,
+		rules,
+	},
     output: {
         path: path.resolve(process.cwd(), `assets/${devMode ? 'unminified' : 'minified'}`),
         publicPath: path.resolve(process.cwd(), `/assets/${devMode ? 'unminified' : 'minified'}/`),

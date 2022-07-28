@@ -15,22 +15,20 @@ defined( 'ABSPATH' ) || exit();
 
 ?>
 <div class="wp-site-credits has-light-background-color">
-    <div class="container">
-        <div class="has-text-align-center">
-            <span class="wp-site-credits__text"><?php
-                
-                echo wp_kses_post( sprintf( __( '%s - All rights reserved.', 'wecodeart' ), '&copy; ' . date( 'Y' ) ) );
-                
-            ?></span>
-            <span class="wp-site-credits__theme"><?php
+    <div class="has-text-align-center">
+        <span class="wp-site-credits__text"><?php
+            
+            echo wp_kses_post( sprintf( __( '%s - All rights reserved.', 'wecodeart' ), '&copy; ' . date( 'Y' ) ) );
+            
+        ?></span>
+        <span class="wp-site-credits__theme"><?php
 
-                printf(
-                    esc_html__( 'Built on %1s.', 'wecodeart' ),
-                    sprintf( '<a href="%s" target="_blank">%s</a>', 'https://www.wecodeart.com/', 'WeCodeArt Framework' )
-                );
+            printf(
+                esc_html__( 'Built on %1s.', 'wecodeart' ),
+                sprintf( '<a href="%s" target="_blank">%s</a>', 'https://www.wecodeart.com/', 'WeCodeArt Framework' )
+            );
 
-            ?></span>
-        </div>
+        ?></span>
     </div>
 </div>
 <div class="wp-site-toasts position-fixed bottom-0 start-0 p-3" style="z-index: 11"></div>

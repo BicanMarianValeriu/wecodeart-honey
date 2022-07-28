@@ -17,14 +17,13 @@
 
 defined( 'ABSPATH' ) || exit;
 
-add_action( 'wp_enqueue_scripts', function() {
-	wp_enqueue_style( 'wp-block-table' );
-} );
+wp_enqueue_style( 'wp-block-table' );
 
 wecodeart( 'styles' )->Utilities->load( [
 	'd-flex',
 	'flex-column',
 	'flex-lg-row',
+	'flex-shrink-0',
 	'float-none',
 	'ms-3',
 	'ms-auto',
@@ -34,12 +33,14 @@ wecodeart( 'styles' )->Utilities->load( [
 	'mb-sm-0',
 	'mb-lg-0',
 	'p-0',
+	'py-1',
 	'has-text-align-left',
 	'has-text-align-sm-right',
 	'has-text-align-lg-right',
 	'fw-400',
 	'fw-700',
-	'col-lg-4'
+	'col-lg-4',
+	'w-100'
 ] );
 
 do_action( 'woocommerce_before_cart' );
@@ -183,7 +184,7 @@ do_action( 'woocommerce_before_cart' );
 									'attrs' => [
 										'type'	=> 'submit',
 										'name' 	=> 'apply_coupon',
-										'class' => 'ms-3 wp-block-button__link',
+										'class' => 'wp-block-button__link ms-3 flex-shrink-0',
 									]
 								] );
 								

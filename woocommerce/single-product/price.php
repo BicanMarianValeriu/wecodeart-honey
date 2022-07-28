@@ -15,13 +15,15 @@
  * @version 3.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
+defined( 'ABSPATH' ) || exit; // Exit if accessed directly
 
 global $product;
 
-$classname = apply_filters( 'woocommerce_product_price_class', 'woocommerce-product-price price' );
+wecodeart( 'styles' )->Utilities->load( [ 'mt-0' ] );
 
 ?>
-<p class="<?php echo esc_attr( $classname ); ?>"><?php echo $product->get_price_html(); ?></p>
+<p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'woocommerce-product-price price' ) ); ?> mt-0"><?php
+
+	echo $product->get_price_html();
+	
+?></p>

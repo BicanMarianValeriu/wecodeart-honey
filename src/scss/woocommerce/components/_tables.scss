@@ -1,3 +1,21 @@
+.woocommerce-table--order-details,
+.woocommerce-checkout-review-order-table {
+    thead,
+    tfoot {
+        background-color: var(--wp--gray-100);
+
+        tr {
+            border-bottom: 1px solid var(--wp--preset--color--white);
+        }
+    }
+
+    tbody {
+        tr {
+            border-bottom: 1px solid var(--wp--gray-200);
+        }
+    }
+}
+
 @include media-breakpoint-down( 'md' ) {
     table.shop_table_responsive {
         thead {
@@ -22,7 +40,7 @@
             td {
                 display: block;
                 text-align: right !important;
-                border-top: 1px solid var(--wp--light);
+                border-top: 1px solid var(--wp--grey-300);
 
                 &::before {
                     content: attr(data-title) ': ';

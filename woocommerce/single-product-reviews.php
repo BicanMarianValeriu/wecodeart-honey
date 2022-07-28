@@ -23,12 +23,14 @@ if ( ! comments_open() ) {
 	return;
 }
 
-wecodeart( 'styles' )->Utilities->load( [ 'fw-700', 'col-md-7', 'my-3', 'mb-3' ] );
+wp_enqueue_style( 'wp-block-separator' );
+
+wecodeart( 'styles' )->Utilities->load( [ 'position-sticky', 'col-md-7', 'my-3', 'mb-3' ] );
 
 ?>
-<div id="reviews" class="woocommerce-Reviews">
-	<div id="comments">
-		<h2 class="woocommerce-Reviews-title">
+<div id="reviews" class="woocommerce-Reviews grid" style="--wp--columns:3;--wp--style--block-gap:2.5rem;">
+	<div class="span-3 span-lg-2" id="comments">
+		<h2 class="woocommerce-Reviews-title h4">
 		<?php
 			$count = $product->get_review_count();
 			if ( $count && wc_review_ratings_enabled() ) {
@@ -40,6 +42,7 @@ wecodeart( 'styles' )->Utilities->load( [ 'fw-700', 'col-md-7', 'my-3', 'mb-3' ]
 			}
 		?>
 		</h2>
+		<hr class="wp-block-separator is-style-wide has-primary-color my-3">
 		<?php if ( have_comments() ) : ?>
 		<ol class="commentlist list-unstyled">
 			<?php
@@ -71,8 +74,8 @@ wecodeart( 'styles' )->Utilities->load( [ 'fw-700', 'col-md-7', 'my-3', 'mb-3' ]
 		<?php endif; ?>
 	</div>
 	<?php if ( get_option( 'woocommerce_review_rating_verification_required' ) === 'no' || wc_customer_bought_product( '', get_current_user_id(), $product->get_id() ) ) : ?>
-	<div id="review_form_wrapper">
-		<div id="review_form">
+	<div class="span-3 span-lg-1" id="review_form_wrapper">
+		<div class="position-sticky" id="review_form" style="top:90px;">
 			<?php
 			$commenter	= wp_get_current_commenter();
 			$required 	= (bool) get_option( 'require_name_email', 1 );
@@ -82,8 +85,8 @@ wecodeart( 'styles' )->Utilities->load( [ 'fw-700', 'col-md-7', 'my-3', 'mb-3' ]
 				'title_reply'         	=> have_comments() ? esc_html__( 'Add a review', 'woocommerce' ) : sprintf( esc_html__( 'Be the first to review &ldquo;%s&rdquo;', 'woocommerce' ), get_the_title() ),
 				/* translators: %s is product title */
 				'title_reply_to'      	=> esc_html__( 'Leave a Reply to %s', 'woocommerce' ),
-				'title_reply_before'  	=> '<h3 id="reply-title" class="comment-reply-title h4 has-primary-color fw-700">',
-				'title_reply_after'   	=> '</h3>',
+				'title_reply_before'  	=> '<h3 id="reply-title" class="comment-reply-title h4">',
+				'title_reply_after'   	=> '</h3><hr class="wp-block-separator is-style-wide has-primary-color my-3">',
 				'comment_notes_after' 	=> '',
 				'label_submit'        	=> esc_html__( 'Submit', 'woocommerce' ),
 				'class_submit'			=> 'comment-form-submit wp-block-button__link',
@@ -170,6 +173,6 @@ wecodeart( 'styles' )->Utilities->load( [ 'fw-700', 'col-md-7', 'my-3', 'mb-3' ]
 		</div>
 	</div>
 	<?php else : ?>
-	<p class="woocommerce-verification-required"><?php esc_html_e( 'Only logged in customers who have purchased this product may leave a review.', 'woocommerce' ); ?></p>
+	<p class="span-3 woocommerce-verification-required"><?php esc_html_e( 'Only logged in customers who have purchased this product may leave a review.', 'woocommerce' ); ?></p>
 	<?php endif; ?>
 </div>

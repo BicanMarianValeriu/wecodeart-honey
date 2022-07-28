@@ -54,7 +54,7 @@
 				{
 					"name": "Base",
 					"slug": "base",
-					"fontFamily": "var(--wp--font-sans-serif)"
+					"fontFamily": "var(--wp--font-system)"
 				},
 				{
 					"name": "Signika",
@@ -67,7 +67,7 @@
 			"palette": [
 				{
 					"slug": "primary",
-					"color": "#EB6D2F",
+					"color": "#7dc855",
 					"name": "Primary"
 				},
 				{
@@ -163,6 +163,11 @@
 						"left": "2.5rem",
 						"right": "2.5rem"
 					}
+				}
+			},
+			"core/post-author-name": {
+				"typography": {
+					"fontSize": "var:preset|font-size|small"
 				}
 			}
 		}

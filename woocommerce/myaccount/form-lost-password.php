@@ -17,29 +17,60 @@
 
 defined( 'ABSPATH' ) || exit;
 
+wecodeart( 'styles' )->Utilities->load( [
+	'col-md-10',
+	'col-lg-6',
+	'mx-auto',
+	'mb-3',
+] );
+
 do_action( 'woocommerce_before_lost_password_form' );
+
 ?>
 
-<form method="post" class="woocommerce-ResetPassword lost_reset_password">
+<form method="post" class="woocommerce-ResetPassword lost_reset_password needs-validation col-md-10 col-lg-6 mx-auto">
+	<p class="has-text-align-center"><?php
 
-	<p><?php echo apply_filters( 'woocommerce_lost_password_message', esc_html__( 'Lost your password? Please enter your username or email address. You will receive a link to create a new password via email.', 'woocommerce' ) ); ?></p><?php // @codingStandardsIgnoreLine ?>
+		echo apply_filters(
+			'woocommerce_lost_password_message',
+			esc_html__( 'Lost your password? Please enter your username or email address. You will receive a link to create a new password via email.', 'woocommerce' )
+		);
+			
+	?></p>
+	<?php
+	
+	wecodeart_input( 'floating', [
+		'type'	=> 'text',
+		'label' => esc_html__( 'Username or email', 'woocommerce' ),
+		'attrs' => [
+			'id'			=> 'user_login',
+			'name'			=> 'user_login',
+			'class'			=> 'form-control mb-3',
+			'autocomplete'	=> 'username',
+			'placeholder'	=> esc_html__( 'Username or email', 'woocommerce' ),
+			'required'		=> 'required'
+		]
+	] );
 
-	<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
-		<label for="user_login"><?php esc_html_e( 'Username or email', 'woocommerce' ); ?></label>
-		<input class="woocommerce-Input woocommerce-Input--text input-text" type="text" name="user_login" id="user_login" autocomplete="username" />
-	</p>
-
-	<div class="clear"></div>
-
+	?>
 	<?php do_action( 'woocommerce_lostpassword_form' ); ?>
-
-	<p class="woocommerce-form-row form-row">
+	<div class="wp-block-button">
 		<input type="hidden" name="wc_reset_password" value="true" />
-		<button type="submit" class="woocommerce-Button button" value="<?php esc_attr_e( 'Reset password', 'woocommerce' ); ?>"><?php esc_html_e( 'Reset password', 'woocommerce' ); ?></button>
-	</p>
+		<?php
 
-	<?php wp_nonce_field( 'lost_password', 'woocommerce-lost-password-nonce' ); ?>
+		wecodeart_input( 'button', [
+			'type'	=> 'submit',
+			'label' => esc_html__( 'Reset password', 'woocommerce' ),
+			'attrs' => [
+				'class'	=> 'wp-block-button__link has-primary-background-color woocommerce-Button button',
+				'value'	=> esc_html__( 'Reset password', 'woocommerce' )
+			]
+		] );
 
+		?>
+		<?php wp_nonce_field( 'lost_password', 'woocommerce-lost-password-nonce' ); ?>
+	</div>
 </form>
 <?php
+
 do_action( 'woocommerce_after_lost_password_form' );

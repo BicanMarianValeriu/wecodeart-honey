@@ -85,28 +85,34 @@
 }
 
 // Components
-@import 'components/forms';
-@import 'components/tables';
 @import 'components/buttons';
-@import 'components/price';
-@import 'components/quantity';
+@import 'components/checkbox';
+@import 'components/chips';
+@import 'components/drawer';
+@import 'components/dropdown';
+@import 'components/forms';
 @import 'components/notifications';
+@import 'components/product-price';
+@import 'components/product-badge';
+@import 'components/product-details';
+@import 'components/product-meta';
+@import 'components/quantity';
 @import 'components/rating';
-@import 'components/select2';
-@import 'components/tabs';
 @import 'components/reviews';
-@import 'components/sale';
+@import 'components/tables';
+@import 'components/tabs';
+@import 'components/totals';
 
 // Blocks
 @import 'blocks/general';
-@import 'blocks/components';
 @import 'blocks/filters';
-@import 'blocks/product';
+@import 'blocks/featured';
 @import 'blocks/reviews';
+@import 'blocks/cart';
 
 // // Pages
 @import 'pages/archive';
 @import 'pages/cart';
 @import 'pages/product';
-// @import 'pages/account/index';
-// @import 'pages/checkout/index';
+@import 'pages/checkout';
+@import 'pages/account';

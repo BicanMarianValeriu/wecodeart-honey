@@ -33,6 +33,7 @@ if ( post_password_required() ) {
 
 wecodeart( 'styles' )->Utilities->load( [
 	'position-relative',
+	'position-sticky',
 	'flex-column',
 	'flex-md-row',
 	'w-100',
@@ -46,15 +47,17 @@ wecodeart( 'styles' )->Utilities->load( [
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 	<div class="wp-block-columns flex-column flex-md-row p-0">
 		<div class="wp-block-column col-md-5 mb-5 position-relative">
-		<?php
-		/**
-		 * Hook: woocommerce_before_single_product_summary.
-		 *
-		 * @hooked woocommerce_show_product_sale_flash - 10
-		 * @hooked woocommerce_show_product_images - 20
-		 */
-		do_action( 'woocommerce_before_single_product_summary' );
-		?>
+			<div class="woocommerce-product-images position-sticky">
+				<?php
+				/**
+				 * Hook: woocommerce_before_single_product_summary.
+				 *
+				 * @hooked woocommerce_show_product_sale_flash - 10
+				 * @hooked woocommerce_show_product_images - 20
+				 */
+				do_action( 'woocommerce_before_single_product_summary' );
+				?>
+			</div>
 		</div>
 		<div class="wp-block-column mb-5 position-relative">
 			<div class="woocommerce-product-summary ps-md-5">

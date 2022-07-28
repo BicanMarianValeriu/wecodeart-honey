@@ -5,13 +5,17 @@
  */
 import './../scss/frontend.scss';
 
+// Core
+import 'bootstrap/js/dist/collapse';
+
 // Helpers
 import helperGetParents from './helpers/getParents';
 
 // Common JS
 import common from './routes/common';
 import woocommerceJs from './routes/pages/woocommerceJs';
-// import singleProduct from './routes/pages/product';
+import woocommerceCheckout from './routes/pages/woocommerceCheckout';
+import singleProduct from './routes/pages/product';
 
 // Attach Some Required Plugins
 wecodeart.fn.getParents = helperGetParents;
@@ -44,7 +48,8 @@ wecodeart = {
 			 */
 			...wecodeart.routes,
 			woocommerceJs,
-			// singleProduct,
+			woocommerceCheckout,
+			singleProduct,
 		}
 	}
 };

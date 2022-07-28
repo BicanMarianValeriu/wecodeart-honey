@@ -25,7 +25,7 @@ if ( $cross_sells ) : ?>
 
 		if ( $heading ) : ?>
 
-		<h2><?php echo esc_html( $heading ); ?></h2>
+		<h3><?php echo esc_html( $heading ); ?></h3>
 		
 		<?php endif; ?>
 

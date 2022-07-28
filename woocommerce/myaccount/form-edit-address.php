@@ -17,40 +17,53 @@
 
 defined( 'ABSPATH' ) || exit;
 
+use function WeCodeArt\Functions\get_prop;
+
+wecodeart( 'styles' )->Utilities->load( [
+	'mt-5',
+	'mb-0',
+] );
+
 $page_title = ( 'billing' === $load_address ) ? esc_html__( 'Billing address', 'woocommerce' ) : esc_html__( 'Shipping address', 'woocommerce' );
 
 do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 
 <?php if ( ! $load_address ) : ?>
-	<?php wc_get_template( 'myaccount/my-address.php' ); ?>
+<?php wc_get_template( 'myaccount/my-address.php' ); ?>
 <?php else : ?>
-
-	<form method="post">
-
-		<h3><?php echo apply_filters( 'woocommerce_my_account_edit_address_title', $page_title, $load_address ); ?></h3><?php // @codingStandardsIgnoreLine ?>
-
-		<div class="woocommerce-address-fields">
-			<?php do_action( "woocommerce_before_edit_address_form_{$load_address}" ); ?>
-
-			<div class="woocommerce-address-fields__field-wrapper">
-				<?php
-				foreach ( $address as $key => $field ) {
-					woocommerce_form_field( $key, $field, wc_get_post_data_by_key( $key, $field['value'] ) );
-				}
-				?>
-			</div>
-
-			<?php do_action( "woocommerce_after_edit_address_form_{$load_address}" ); ?>
-
-			<p>
-				<button type="submit" class="button" name="save_address" value="<?php esc_attr_e( 'Save address', 'woocommerce' ); ?>"><?php esc_html_e( 'Save address', 'woocommerce' ); ?></button>
-				<?php wp_nonce_field( 'woocommerce-edit_address', 'woocommerce-edit-address-nonce' ); ?>
-				<input type="hidden" name="action" value="edit_address" />
-			</p>
+<form method="post" class="card needs-validation" novalidate="">
+	<div class="card-header">
+		<h5 class="mb-0"><?php echo apply_filters( 'woocommerce_my_account_edit_address_title', $page_title, $load_address ); ?></h5><?php // @codingStandardsIgnoreLine ?>
+	</div>
+	<div class="card-body woocommerce-address-fields">
+		<?php do_action( "woocommerce_before_edit_address_form_{$load_address}" ); ?>
+		<div class="woocommerce-address-fields__field-wrapper grid" style="--wp--columns:2;">
+		<?php foreach ( $address as $key => $field ) {
+			woocommerce_form_field( $key, $field, wc_get_post_data_by_key( $key, $field['value'] ) );
+		} ?>
 		</div>
-
-	</form>
-
+		<?php do_action( "woocommerce_after_edit_address_form_{$load_address}" ); ?>
+	</div>
+	<div class="card-footer">
+		<?php wp_nonce_field( 'woocommerce-edit_address', 'woocommerce-edit-address-nonce' ); ?>
+		<div class="wp-block-button">
+			<?php			
+			
+				wecodeart_input( 'button', [
+					'type'	=> 'submit',
+					'label' => esc_html__( 'Save address', 'woocommerce' ),
+					'attrs' => [
+						'name'	=> 'save_address',
+						'value'	=> esc_attr__( 'Save address', 'woocommerce' ),
+						'class'	=> 'wp-block-button__link has-primary-background-color'
+					]
+				] );
+			
+			?>
+		</div>
+		<input type="hidden" name="action" value="edit_address" />	
+	</div>
+</form>
 <?php endif; ?>
 
 <?php do_action( 'woocommerce_after_edit_account_address_form' ); ?>

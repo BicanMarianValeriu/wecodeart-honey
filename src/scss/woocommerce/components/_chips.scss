@@ -1,0 +1,33 @@
+// Chips
+.wc-block-components-chip {
+    display: inline-flex;
+    margin-right: .5rem;
+    padding: 0;
+    background-color: white;
+    border: 1px solid var(--wp--gray-300);
+    
+    &__text {
+        padding: 5px 8px;
+        color: var(--wp--preset--color--dark);
+        font-size: .75rem;
+    }
+
+    &__remove {
+        line-height: 1.1;
+        padding: 6px;
+        margin: -1px;
+        border: inherit;
+        background: transparent;
+
+        &:hover,
+        &:focus {
+            background-color: var(--wp--preset--color--danger);
+            border-color: var(--wp--preset--color--danger);
+            color: white;
+        }
+
+        &-icon {
+            display: block;
+        }
+    }
+}

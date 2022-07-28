@@ -14,14 +14,14 @@ return [
             'width'     => 235,
             'height'    => 50
         ],
-        'fonts' => [
-            'google' => [
-                [
-                    'family' 	=> 'Signika',
-                    'variants' 	=> [ 700, 900 ]
-                ]
-            ]
-        ],
+        // 'fonts' => [
+        //     'google' => [
+        //         [
+        //             'family' 	=> 'Signika',
+        //             'variants' 	=> [ 700, 900 ]
+        //         ]
+        //     ]
+        // ],
     ],
     'header'    => [
         'clean' => true

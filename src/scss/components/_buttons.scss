@@ -1,9 +1,8 @@
-.wp-block-button {
-    &__link {
-        box-shadow: 0 5px 10px rgba( black, .05 );
+.wc-block-components-button,
+.wp-block-button__link {
+    box-shadow: 0 5px 10px rgba( black, .05 );
 
-        &:hover {
-            box-shadow: none;
-        }
+    &:hover {
+        box-shadow: none;
     }
 }

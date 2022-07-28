@@ -17,20 +17,30 @@
 
 defined( 'ABSPATH' ) || exit;
 
-/**
- * My Account navigation.
- *
- * @since 2.6.0
- */
-do_action( 'woocommerce_account_navigation' ); ?>
+wecodeart( 'styles' )->Utilities->load( [
+	'g-5',
+] );
 
-<div class="woocommerce-MyAccount-content">
+?>
+<div class="grid g-5" style="--wp--columns:4;">
 	<?php
-		/**
-		 * My Account content.
-		 *
-		 * @since 2.6.0
-		 */
-		do_action( 'woocommerce_account_content' );
-	?>
+	/**
+	 * My Account navigation.
+	 *
+	 * @since 2.6.0
+	 */
+	do_action( 'woocommerce_account_navigation' ); ?>
+	
+	<div class="span-4 span-md-3">
+		<div class="woocommerce-MyAccount-content">
+		<?php
+			/**
+			 * My Account content.
+			 *
+			 * @since 2.6.0
+			 */
+			do_action( 'woocommerce_account_content' );
+		?>
+		</div>
+	</div>
 </div>

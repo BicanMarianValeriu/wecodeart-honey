@@ -1,11 +1,11 @@
 /* 	= Header Area
 --------------------------------------------------------------- */
 .wp-site-header {
-    border-top: 4px solid var(--wp--preset--color--primary);
+    // border-top: 4px solid var(--wp--preset--color--primary);
 
     .wp-block-navigation {
         padding: 0;
-        min-height: 55px;
+        // min-height: 55px;
 
         .dropdown-menu:not(.dropdown-menu-dark) {
             border-color: var(--wp--preset--color--light);

@@ -19,93 +19,128 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+wecodeart( 'styles' )->Utilities->load( [
+	'align-self-center',
+	'text-uppercase',
+	'opacity-50',
+	'rounded',
+	'mb-3',
+	'mb-0',
+	'p-3',
+	'p-md-5',
+	'g-5',
+] );
+
 do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
 
-<div class="u-columns col2-set" id="customer_login">
+<div class="grid g-5" id="customer_login" style="--wp--columns: 6;--wp--style--block-gap: 2rem;">
 
-	<div class="u-column1 col-1">
+	<div class="span-6 span-md-3 span-lg-2">
 
 <?php endif; ?>
 
-		<h2><?php esc_html_e( 'Login', 'woocommerce' ); ?></h2>
+		<div class="has-secondary-background-color p-3 p-md-5 rounded">
+			<span class="has-small-font-size has-dark-color text-uppercase opacity-50"><?php esc_html_e( 'Already a member?', 'woocommerce' ); ?></span>
+			<h2 class="has-dark-color"><?php esc_html_e( 'Login', 'woocommerce' ); ?></h2>
 
-		<form class="woocommerce-form woocommerce-form-login login" method="post">
+			<?php
 
-			<?php do_action( 'woocommerce_login_form_start' ); ?>
+			woocommerce_login_form( [
+				'redirect' => false,
+				'hidden'   => false,
+			] );
 
-			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-				<label for="username"><?php esc_html_e( 'Username or email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
-			</p>
-			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-				<label for="password"><?php esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-				<input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password" />
-			</p>
-
-			<?php do_action( 'woocommerce_login_form' ); ?>
-
-			<p class="form-row">
-				<label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
-					<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_html_e( 'Remember me', 'woocommerce' ); ?></span>
-				</label>
-				<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
-				<button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>"><?php esc_html_e( 'Log in', 'woocommerce' ); ?></button>
-			</p>
-			<p class="woocommerce-LostPassword lost_password">
-				<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'woocommerce' ); ?></a>
-			</p>
-
-			<?php do_action( 'woocommerce_login_form_end' ); ?>
-
-		</form>
+			?>
+		</div>
 
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
 
 	</div>
 
-	<div class="u-column2 col-2">
+	<div class="span-6 span-md-3 span-lg-4 align-self-center">
+		<span class="has-small-font-size has-primary-color text-uppercase"><?php esc_html_e( 'New User?', 'woocommerce' ); ?></span>
 
-		<h2><?php esc_html_e( 'Register', 'woocommerce' ); ?></h2>
-
-		<form method="post" class="woocommerce-form woocommerce-form-register register" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
-
+		<h3><?php esc_html_e( 'Don`t have an account? Register Now!', 'woocommerce' ); ?></h3>
+		
+		<form method="post" class="woocommerce-form woocommerce-form-register register needs-validation" <?php do_action( 'woocommerce_register_form_tag' ); ?> novalidate>
+			
 			<?php do_action( 'woocommerce_register_form_start' ); ?>
-
-			<?php if ( 'no' === get_option( 'woocommerce_registration_generate_username' ) ) : ?>
-
-				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-					<label for="reg_username"><?php esc_html_e( 'Username', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-					<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="reg_username" autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
-				</p>
-
-			<?php endif; ?>
-
-			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-				<label for="reg_email"><?php esc_html_e( 'Email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-				<input type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" autocomplete="email" value="<?php echo ( ! empty( $_POST['email'] ) ) ? esc_attr( wp_unslash( $_POST['email'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
-			</p>
-
-			<?php if ( 'no' === get_option( 'woocommerce_registration_generate_password' ) ) : ?>
-
-				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-					<label for="reg_password"><?php esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-					<input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" autocomplete="new-password" />
-				</p>
-
-			<?php else : ?>
-
-				<p><?php esc_html_e( 'A link to set a new password will be sent to your email address.', 'woocommerce' ); ?></p>
-
-			<?php endif; ?>
 
 			<?php do_action( 'woocommerce_register_form' ); ?>
 
-			<p class="woocommerce-form-row form-row">
-				<?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
-				<button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></button>
-			</p>
+			<?php if ( 'no' === get_option( 'woocommerce_registration_generate_username' ) ) : ?>
+			<div class="woocommerce-form-row woocommerce-form-row--wide mb-3"><?php
+
+				wecodeart_input( 'floating', [
+					'type'	=> 'text',
+					'label' => esc_html__( 'Username', 'woocommerce' ) . '&nbsp;<span class="required">*</span>',
+					'attrs' => [
+						'id'			=> 'reg_username',
+						'name'			=> 'username',
+						'autocomplete'	=> 'username',
+						'value'			=> ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : '',
+						'placeholder'	=> ' ',
+						'required'		=> 'required'
+					]
+				] );
+				
+			?></div>
+			<?php endif; ?>
+			
+			<div class="woocommerce-form-row woocommerce-form-row--wide mb-3"><?php
+			
+				wecodeart_input( 'floating', [
+					'type'	=> 'text',
+					'label' => esc_html__( 'Email address', 'woocommerce' ) . '&nbsp;<span class="required">*</span>',
+					'attrs' => [
+						'id'			=> 'reg_email',
+						'name'			=> 'email',
+						'autocomplete'	=> 'email',
+						'value'			=> ( ! empty( $_POST['email'] ) ) ? esc_attr( wp_unslash( $_POST['email'] ) ) : '',
+						'placeholder'	=> ' ',
+						'required'		=> 'required'
+					]
+				] );
+				
+			?></div>
+
+			<?php if ( 'no' === get_option( 'woocommerce_registration_generate_password' ) ) : ?>
+			<div class="woocommerce-form-row woocommerce-form-row--wide mb-3"><?php
+			
+				wecodeart_input( 'floating', [
+					'type'	=> 'text',
+					'label' => esc_html__( 'Password', 'woocommerce' ) . '&nbsp;<span class="required">*</span>',
+					'attrs' => [
+						'id'			=> 'reg_password',
+						'name'			=> 'password',
+						'autocomplete'	=> 'new-password',
+						'placeholder'	=> ' ',
+						'required'		=> 'required'
+					]
+				] );
+				
+			?></div>
+			<?php else : ?>
+			<p><?php esc_html_e( 'A link to set a new password will be sent to your email address.', 'woocommerce' ); ?></p>
+			<?php endif; ?>
+			
+			<div class="has-text-align-right"><?php
+			
+				wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' );
+			
+				wecodeart_input( 'button', [
+					'type'	=> 'submit',
+					'label' => esc_html__( 'Register', 'woocommerce' ),
+					'attrs' => [
+						'name'	=> 'register',
+						'value'	=> esc_attr__( 'Register', 'woocommerce' ),
+						'class'	=> 'woocommerce-form-register__submit wp-block-button__link has-primary-background-color'
+					]
+				] );
+			
+			?></div>
 
 			<?php do_action( 'woocommerce_register_form_end' ); ?>
 
