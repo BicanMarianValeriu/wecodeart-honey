@@ -30,5 +30,6 @@ defined( 'ABSPATH' ) || exit();
 
         ?></span>
     </div>
+    <?php wecodeart_input(); ?>
 </div>
 <div class="wp-site-toasts position-fixed bottom-0 start-0 p-3" style="z-index: 11"></div>
