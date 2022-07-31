@@ -46,6 +46,11 @@
 			"title": "Shop: Banner - Top",
 			"name": "shop-banner",
 			"area": "uncategorized"
+		},
+		{
+			"title": "Header: Top Bar",
+			"name": "top-bar",
+			"area": "header"
 		}
 	],
 	"settings": {
