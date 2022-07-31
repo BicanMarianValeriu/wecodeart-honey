@@ -52,19 +52,19 @@ class WooCommerce {
 		add_action( 'woocommerce_save_product_variation', 				[ $this, 'save_product_variation' 		], 10, 2 );
 		add_filter( 'woocommerce_available_variation', 					[ $this, 'available_variation' 			] );
 
-		add_filter( 'woocommerce_states', 								[ $this, 'custom_woocommerce_state' ], 	10, 1 );
-		add_filter( 'woocommerce_checkout_fields', 						[ $this, 'custom_checkout_fields' ], 	10, 1 );
+		add_filter( 'woocommerce_checkout_fields',						[ $this, 'custom_checkout_fields' ], 	10, 1 );
+		add_filter( 'woocommerce_default_address_fields',				[ $this, 'default_address_fields' ], 	10, 1 );
 	}
 		
-	public function custom_woocommerce_state( $states ) {
-		return array( 'GJ' => array( 'GJ' => 'Gorj' ) );
+	public function default_address_fields( $states ) {
+		unset( $fields['state'] );
+
+		return $fields;
 	}
 
 	public function custom_checkout_fields( $fields ) {
-		// $fields['shipping']['billing_city']['type'] = 'select2';
 		$fields['billing']['billing_city']['custom_attributes']['readonly'] = 'true';
 		$fields['billing']['billing_city']['options'] = array( 'Targu Jiu' => 'Targu Jiu' );
-		// $fields['shipping']['shipping_city']['type'] = 'select2';
 		$fields['shipping']['shipping_city']['custom_attributes']['readonly'] = 'true';
 		$fields['shipping']['shipping_city']['options'] = array( 'Targu Jiu' => 'Targu Jiu' );
 
