@@ -51,6 +51,22 @@ class WooCommerce {
 		add_action( 'woocommerce_variation_options_pricing', 			[ $this, 'variation_options_pricing' 	], 10, 3 );
 		add_action( 'woocommerce_save_product_variation', 				[ $this, 'save_product_variation' 		], 10, 2 );
 		add_filter( 'woocommerce_available_variation', 					[ $this, 'available_variation' 			] );
+
+		add_filter( 'woocommerce_states', 								[ $this, 'custom_woocommerce_state' ], 	10, 1 );
+		add_filter( 'woocommerce_checkout_fields', 						[ $this, 'custom_checkout_fields' ], 	10, 1 );
+	}
+		
+	public function custom_woocommerce_state( $states ) {
+		return array( 'GJ' => array( 'GJ' => 'Gorj' ) );
+	}
+
+	public function custom_checkout_fields( $fields ) {
+		$fields['billing']['billing_city']['type'] = 'select';
+		$fields['billing']['billing_city']['options'] = array( 'Targu Jiu' => 'Targu Jiu' );
+		$fields['shipping']['shipping_city']['type'] = 'select';
+		$fields['shipping']['shipping_city']['options'] = array( 'Targu Jiu' => 'Targu Jiu' );
+
+		return $fields;
 	}
 
 	/**
