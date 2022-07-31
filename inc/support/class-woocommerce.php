@@ -61,9 +61,7 @@ class WooCommerce {
 	}
 
 	public function custom_checkout_fields( $fields ) {
-		$fields['billing']['billing_city']['type'] = 'select';
 		$fields['billing']['billing_city']['options'] = array( 'Targu Jiu' => 'Targu Jiu' );
-		$fields['shipping']['shipping_city']['type'] = 'select';
 		$fields['shipping']['shipping_city']['options'] = array( 'Targu Jiu' => 'Targu Jiu' );
 
 		return $fields;
