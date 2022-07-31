@@ -63,7 +63,7 @@ class WooCommerce {
 	}
 
 	public function custom_checkout_fields( $fields ) {
-		unset( $fields['billing']['billing_country'] );
+		// unset( $fields['billing']['billing_country'] );
 		unset( $fields['billing']['billing_state'] );
 
 		$fields['billing']['billing_city']['custom_attributes']['readonly'] = 'true';
