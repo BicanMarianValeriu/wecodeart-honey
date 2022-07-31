@@ -67,8 +67,10 @@ class WooCommerce {
 		unset( $fields['billing']['billing_state'] );
 
 		$fields['billing']['billing_city']['custom_attributes']['readonly'] = 'true';
+		$fields['billing']['billing_city']['value'] = 'Targu Jiu';
 		$fields['billing']['billing_city']['options'] = array( 'Targu Jiu' => 'Targu Jiu' );
 		$fields['shipping']['shipping_city']['custom_attributes']['readonly'] = 'true';
+		$fields['shipping']['shipping_city']['value'] = 'Targu Jiu';
 		$fields['shipping']['shipping_city']['options'] = array( 'Targu Jiu' => 'Targu Jiu' );
 
 		return $fields;
