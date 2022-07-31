@@ -61,7 +61,11 @@ class WooCommerce {
 	}
 
 	public function custom_checkout_fields( $fields ) {
+		$fields['shipping']['billing_city']['type'] = 'select2';
+		$fields['billing']['billing_city']['custom_attributes']['read_only'] = 'true';
 		$fields['billing']['billing_city']['options'] = array( 'Targu Jiu' => 'Targu Jiu' );
+		$fields['shipping']['shipping_city']['type'] = 'select2';
+		$fields['shipping']['shipping_city']['custom_attributes']['read_only'] = 'true';
 		$fields['shipping']['shipping_city']['options'] = array( 'Targu Jiu' => 'Targu Jiu' );
 
 		return $fields;
