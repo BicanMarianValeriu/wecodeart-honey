@@ -19,7 +19,9 @@ defined( 'ABSPATH' ) || exit;
 
 $available_gateways = WC()->payment_gateways->get_available_payment_gateways();
 
-if ( $available_gateways ) : ?>
+?>
+<?php if ( $available_gateways ) : ?>
+<div class="card">
 	<form id="add_payment_method" method="post">
 		<div id="payment" class="woocommerce-Payment">
 			<ul class="woocommerce-PaymentMethods payment_methods methods">
@@ -49,13 +51,26 @@ if ( $available_gateways ) : ?>
 
 			<?php do_action( 'woocommerce_add_payment_method_form_bottom' ); ?>
 
-			<div class="form-row">
-				<?php wp_nonce_field( 'woocommerce-add-payment-method', 'woocommerce-add-payment-method-nonce' ); ?>
-				<button type="submit" class="woocommerce-Button woocommerce-Button--alt button alt" id="place_order" value="<?php esc_attr_e( 'Add payment method', 'woocommerce' ); ?>"><?php esc_html_e( 'Add payment method', 'woocommerce' ); ?></button>
+			<div class="wp-block-button"><?php
+			
+				wp_nonce_field( 'woocommerce-add-payment-method', 'woocommerce-add-payment-method-nonce' );
+
+				wecodeart_input( 'button', [
+					'type'	=> 'submit',
+					'label' => esc_html__( 'Add payment method', 'woocommerce' ),
+					'attrs' => [
+						'id'	=> 'place_order',
+						'value'	=> esc_attr__( 'Add payment method', 'woocommerce' ),
+						'class'	=> 'wp-block-button__link has-dark-color has-secondary-background-color'
+					]
+				] );
+			
+				?>
 				<input type="hidden" name="woocommerce_add_payment_method" id="woocommerce_add_payment_method" value="1" />
 			</div>
 		</div>
 	</form>
+</div>
 <?php else : ?>
-	<p class="woocommerce-notice woocommerce-notice--info woocommerce-info"><?php esc_html_e( 'New payment methods can only be added during checkout. Please contact us if you require assistance.', 'woocommerce' ); ?></p>
+<p class="woocommerce-notice woocommerce-notice--info woocommerce-info"><?php esc_html_e( 'New payment methods can only be added during checkout. Please contact us if you require assistance.', 'woocommerce' ); ?></p>
 <?php endif; ?>

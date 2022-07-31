@@ -18,6 +18,10 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<p class="order-again wp-block-button">
-	<a href="<?php echo esc_url( $order_again_url ); ?>" class="button wp-block-button__link"><?php esc_html_e( 'Order again', 'woocommerce' ); ?></a>
-</p>
+<div class="wp-block-button">
+	<a href="<?php echo esc_url( $order_again_url ); ?>" class="wp-block-button__link has-dark-color has-secondary-background-color"><?php
+	
+		esc_html_e( 'Order again', 'woocommerce' );
+		
+	?></a>
+</div>

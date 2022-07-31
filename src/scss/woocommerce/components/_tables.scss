@@ -14,6 +14,12 @@
             border-bottom: 1px solid var(--wp--gray-200);
         }
     }
+
+    th,
+    td {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
 
 @include media-breakpoint-down( 'md' ) {

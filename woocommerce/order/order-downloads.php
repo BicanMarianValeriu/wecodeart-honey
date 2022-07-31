@@ -18,14 +18,18 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+wp_enqueue_style( 'wp-block-table' );
+
+wecodeart( 'styles' )->Utilities->load( [ 'mb-0' ] );
+
 ?>
-<section class="woocommerce-order-downloads col-md-10 col-lg-6 mx-auto card">
-	<div class="card-body">
+<section class="woocommerce-order-downloads card">
+	<div class="wp-block-table">
 		<?php if ( isset( $show_title ) ) : ?>
-			<h3 class="woocommerce-order-downloads__title has-black-color"><?php esc_html_e( 'Downloads', 'woocommerce' ); ?></h3>
+		<h3 class="woocommerce-order-downloads__title has-black-color"><?php esc_html_e( 'Downloads', 'woocommerce' ); ?></h3>
 		<?php endif; ?>
-	
-		<table class="woocommerce-table woocommerce-table--order-downloads shop_table shop_table_responsive order_details">
+		<table class="woocommerce-table woocommerce-table--order-downloads shop_table shop_table_responsive order_details mb-0">
 			<thead>
 				<tr>
 					<?php foreach ( wc_get_account_downloads_columns() as $column_id => $column_name ) : ?>
@@ -45,7 +49,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 								switch ( $column_id ) {
 									case 'download-product':
 										if ( $download['product_url'] ) {
-											echo '<a href="' . esc_url( $download['product_url'] ) . '">' . esc_html( $download['product_name'] ) . '</a>';
+											echo '<a class="has-dark-color" href="' . esc_url( $download['product_url'] ) . '">' . esc_html( $download['product_name'] ) . '</a>';
 										} else {
 											echo esc_html( $download['product_name'] );
 										}

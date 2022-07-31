@@ -21,11 +21,13 @@ defined( 'ABSPATH' ) || exit;
 
 wp_enqueue_style( 'wp-block-table' );
 
+wecodeart( 'styles' )->Utilities->load( [ 'mb-0' ] );
+
 do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 
 <?php if ( $has_orders ) : ?>
-<div class="wp-block-table">
-	<table class="woocommerce-orders-table woocommerce-MyAccount-orders shop_table shop_table_responsive table-hover table-bordered has-border has-light-border-color">
+<div class="wp-block-table card">
+	<table class="woocommerce-orders-table woocommerce-MyAccount-orders shop_table shop_table_responsive table-hover has-light-border-color mb-0">
 		<thead>
 			<tr>
 				<?php foreach ( wc_get_account_orders_columns() as $column_id => $column_name ) : ?>
@@ -47,7 +49,7 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 								<?php do_action( 'woocommerce_my_account_my_orders_column_' . $column_id, $order ); ?>
 
 							<?php elseif ( 'order-number' === $column_id ) : ?>
-								<a href="<?php echo esc_url( $order->get_view_order_url() ); ?>">
+								<a class="has-dark-color" href="<?php echo esc_url( $order->get_view_order_url() ); ?>">
 									<?php echo esc_html( _x( '#', 'hash before order number', 'woocommerce' ) . $order->get_order_number() ); ?>
 								</a>
 

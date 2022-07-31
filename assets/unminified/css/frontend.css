@@ -2413,6 +2413,13 @@ p.stars a:before {
 .woocommerce-checkout-review-order-table tbody tr {
   border-bottom: 1px solid var(--wp--gray-200);
 }
+.woocommerce-table--order-details th,
+.woocommerce-table--order-details td,
+.woocommerce-checkout-review-order-table th,
+.woocommerce-checkout-review-order-table td {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 
 @media (max-width: 767.98px) {
   table.shop_table_responsive thead {
