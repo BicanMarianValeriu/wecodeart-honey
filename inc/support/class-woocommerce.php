@@ -54,8 +54,13 @@ class WooCommerce {
 
 		add_filter( 'default_checkout_billing_state', 					[ $this, 'change_default_checkout_state' ] );
 		add_filter( 'default_checkout_shipping_state', 					[ $this, 'change_default_checkout_state' ] );
+		add_filter( 'woocommerce_states', 								[ $this, 'custom_woocommerce_state' ], 	10, 1 );
+		add_filter( 'woocommerce_checkout_fields',						[ $this, 'custom_checkout_fields' ],	10, 1 );
 		// add_filter( 'woocommerce_default_address_fields',				[ $this, 'default_address_fields' ], 	10, 1 );
-		add_filter( 'woocommerce_checkout_fields',						[ $this, 'custom_checkout_fields' ], 	10, 1 );
+	}
+
+	public function custom_woocommerce_state( $states ) {
+		return array( 'GJ' => array( 'GJ' => 'Gorj' ) );
 	}
 
 	public function change_default_checkout_state() {
