@@ -18,9 +18,14 @@
 defined( 'ABSPATH' ) || exit;
 
 $notes = $order->get_customer_order_notes();
+
+wecodeart( 'styles' )->Utilities->load( [
+	'my-5',
+] );
+
 ?>
 
-<p class="order-info">
+<p class="order-info my-5">
 	<?php
 	echo wp_kses_post(
 		apply_filters(

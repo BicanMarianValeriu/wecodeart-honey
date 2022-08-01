@@ -18,44 +18,105 @@
 defined( 'ABSPATH' ) || exit;
 
 global $post;
+
+wecodeart( 'styles' )->Utilities->load( [
+	'col-md-10',
+	'col-lg-6',
+	'mx-auto',
+	'my-5',
+	'mb-3',
+	'mb-0',
+] );
+
 ?>
+<div class="card col-md-10 col-lg-6 my-5 mx-auto">
+	<div class="card-header">
+		<p class="mb-0"><?php
+		
+			esc_html_e( 'To track your order please enter your Order ID in the box below and press the "Track" button. This was given to you on your receipt and in the confirmation email you should have received.', 'woocommerce' );
+			
+		?></p>
+	</div>
+	<form action="<?php echo esc_url( get_permalink( $post->ID ) ); ?>" method="post" class="woocommerce-form woocommerce-form-track-order track_order card-body needs-validation" novalidate="">
+		<?php
 
-<form action="<?php echo esc_url( get_permalink( $post->ID ) ); ?>" method="post" class="woocommerce-form woocommerce-form-track-order track_order">
+		/**
+		 * Action hook fired at the beginning of the form-tracking form.
+		 *
+		 * @since 6.5.0
+		 */
+		do_action( 'woocommerce_order_tracking_form_start' );
 
-	<?php
-	/**
-	 * Action hook fired at the beginning of the form-tracking form.
-	 *
-	 * @since 6.5.0
-	 */
-	do_action( 'woocommerce_order_tracking_form_start' );
-	?>
+		?>
+		<div class="mb-3"><?php
+	
+			wecodeart_input( 'floating', [
+				'type'	=> 'text',
+				'label' => esc_html__( 'Order ID', 'woocommerce' ) . '&nbsp;<span class="required">*</span>',
+				'attrs' => [
+					'id'			=> 'orderid',
+					'name'			=> 'orderid',
+					'value'			=> isset( $_REQUEST['orderid'] ) ? esc_attr( wp_unslash( $_REQUEST['orderid'] ) ) : '',
+					'placeholder'	=> ' ',
+					'required'		=> true
+				],
+				'messages' => [
+					'help' => esc_html__( 'Found in your order confirmation email.', 'woocommerce' ),
+				]
+			] );
 
-	<p><?php esc_html_e( 'To track your order please enter your Order ID in the box below and press the "Track" button. This was given to you on your receipt and in the confirmation email you should have received.', 'woocommerce' ); ?></p>
+		?></div>
+		<div class="mb-3"><?php
+	
+			wecodeart_input( 'floating', [
+				'type'	=> 'text',
+				'label' => esc_html__( 'Billing email', 'woocommerce' ) . '&nbsp;<span class="required">*</span>',
+				'attrs' => [
+					'id'			=> 'order_email',
+					'name'			=> 'order_email',
+					'value'			=> isset( $_REQUEST['order_email'] ) ? esc_attr( wp_unslash( $_REQUEST['order_email'] ) ) : '',
+					'placeholder'	=> ' ',
+					'required'		=> true
+				],
+				'messages' => [
+					'help' => esc_html__( 'Email you used during checkout.', 'woocommerce' ),
+				]
+			] );
+		
+		?></div>
+		<?php
 
-	<p class="form-row form-row-first"><label for="orderid"><?php esc_html_e( 'Order ID', 'woocommerce' ); ?></label> <input class="input-text" type="text" name="orderid" id="orderid" value="<?php echo isset( $_REQUEST['orderid'] ) ? esc_attr( wp_unslash( $_REQUEST['orderid'] ) ) : ''; ?>" placeholder="<?php esc_attr_e( 'Found in your order confirmation email.', 'woocommerce' ); ?>" /></p><?php // @codingStandardsIgnoreLine ?>
-	<p class="form-row form-row-last"><label for="order_email"><?php esc_html_e( 'Billing email', 'woocommerce' ); ?></label> <input class="input-text" type="text" name="order_email" id="order_email" value="<?php echo isset( $_REQUEST['order_email'] ) ? esc_attr( wp_unslash( $_REQUEST['order_email'] ) ) : ''; ?>" placeholder="<?php esc_attr_e( 'Email you used during checkout.', 'woocommerce' ); ?>" /></p><?php // @codingStandardsIgnoreLine ?>
-	<div class="clear"></div>
+		/**
+		 * Action hook fired in the middle of the form-tracking form (before the submit button).
+		 *
+		 * @since 6.5.0
+		 */
+		do_action( 'woocommerce_order_tracking_form' );
 
-	<?php
-	/**
-	 * Action hook fired in the middle of the form-tracking form (before the submit button).
-	 *
-	 * @since 6.5.0
-	 */
-	do_action( 'woocommerce_order_tracking_form' );
-	?>
+		?>
+		<div class="wp-block-button"><?php
 
-	<p class="form-row"><button type="submit" class="button" name="track" value="<?php esc_attr_e( 'Track', 'woocommerce' ); ?>"><?php esc_html_e( 'Track', 'woocommerce' ); ?></button></p>
-	<?php wp_nonce_field( 'woocommerce-order_tracking', 'woocommerce-order-tracking-nonce' ); ?>
+			wecodeart_input( 'button', [
+				'type'	=> 'submit',
+				'label' => esc_html__( 'Track', 'woocommerce' ),
+				'attrs' => [
+					'name'	=> 'track',
+					'value'	=> esc_attr__( 'Track', 'woocommerce' ),
+					'class'	=> 'wp-block-button__link has-primary-background-color'
+				]
+			] );
 
-	<?php
-	/**
-	 * Action hook fired at the end of the form-tracking form (after the submit button).
-	 *
-	 * @since 6.5.0
-	 */
-	do_action( 'woocommerce_order_tracking_form_end' );
-	?>
+			wp_nonce_field( 'woocommerce-order_tracking', 'woocommerce-order-tracking-nonce' );
 
-</form>
+		?></div><?php
+
+		/**
+		 * Action hook fired at the end of the form-tracking form (after the submit button).
+		 *
+		 * @since 6.5.0
+		 */
+		do_action( 'woocommerce_order_tracking_form_end' );
+
+		?>
+	</form>
+</div>
