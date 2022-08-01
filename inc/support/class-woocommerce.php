@@ -52,37 +52,34 @@ class WooCommerce {
 		add_action( 'woocommerce_save_product_variation', 				[ $this, 'save_product_variation' 		], 10, 2 );
 		add_filter( 'woocommerce_available_variation', 					[ $this, 'available_variation' 			] );
 
+		// 1 City/State delivery
 		add_filter( 'default_checkout_billing_state', 					[ $this, 'change_default_checkout_state' ] );
 		add_filter( 'default_checkout_shipping_state', 					[ $this, 'change_default_checkout_state' ] );
-		add_filter( 'woocommerce_states', 								[ $this, 'custom_woocommerce_state' ], 	10, 1 );
 		add_filter( 'woocommerce_checkout_fields',						[ $this, 'custom_checkout_fields' ],	10, 1 );
-		// add_filter( 'woocommerce_default_address_fields',				[ $this, 'default_address_fields' ], 	10, 1 );
+		add_filter( 'woocommerce_states', 								[ $this, 'custom_woocommerce_state' ], 	10, 1 );
 	}
 
+	/**
+	 * 1 City/State delivery
+	 *
+	 * @since	1.0
+	 * @version	1.0
+	 *
+	 * @return 	void
+	 */
 	public function custom_woocommerce_state( $states ) {
 		return array( 'RO' => array( 'GJ' => 'Gorj' ) );
 	}
 
 	public function change_default_checkout_state() {
-		return 'GJ'; // state code
-	}
-		
-	public function default_address_fields( $states ) {
-		unset( $fields['state'] );
-
-		return $fields;
+		return 'GJ';
 	}
 
 	public function custom_checkout_fields( $fields ) {
-		// unset( $fields['billing']['billing_country'] );
-		// unset( $fields['billing']['billing_state'] );
-
 		$fields['billing']['billing_city']['custom_attributes']['readonly'] = 'true';
-		$fields['billing']['billing_city']['value'] = 'Targu Jiu';
-		$fields['billing']['billing_city']['options'] = array( 'Targu Jiu' => 'Targu Jiu' );
+		$fields['billing']['billing_city']['custom_attributes']['value'] = 'Targu Jiu';
 		$fields['shipping']['shipping_city']['custom_attributes']['readonly'] = 'true';
-		$fields['shipping']['shipping_city']['value'] = 'Targu Jiu';
-		$fields['shipping']['shipping_city']['options'] = array( 'Targu Jiu' => 'Targu Jiu' );
+		$fields['shipping']['shipping_city']['custom_attributes']['value'] = 'Targu Jiu';
 
 		return $fields;
 	}
