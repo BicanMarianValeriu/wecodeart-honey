@@ -60,7 +60,7 @@ class WooCommerce {
 	}
 
 	public function custom_woocommerce_state( $states ) {
-		return array( 'GJ' => array( 'GJ' => 'Gorj' ) );
+		return array( 'RO' => array( 'GJ' => 'Gorj' ) );
 	}
 
 	public function change_default_checkout_state() {
