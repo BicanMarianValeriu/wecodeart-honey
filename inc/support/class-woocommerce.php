@@ -77,9 +77,9 @@ class WooCommerce {
 
 	public function custom_checkout_fields( $fields ) {
 		$fields['billing']['billing_city']['custom_attributes']['readonly'] = 'true';
-		$fields['billing']['billing_city']['custom_attributes']['value'] = 'Targu Jiu';
+		$fields['billing']['billing_city']['custom_attributes']['value'] = 'Târgu Jiu';
 		$fields['shipping']['shipping_city']['custom_attributes']['readonly'] = 'true';
-		$fields['shipping']['shipping_city']['custom_attributes']['value'] = 'Targu Jiu';
+		$fields['shipping']['shipping_city']['custom_attributes']['value'] = 'Târgu Jiu';
 
 		return $fields;
 	}
