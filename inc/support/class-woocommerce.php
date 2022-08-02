@@ -36,7 +36,7 @@ class WooCommerce {
 		add_filter( 'woocommerce_output_related_products_args', 		[ $this, 'similar_products_args' 	], 20 );
 		add_filter( 'woocommerce_upsell_display_args', 					[ $this, 'similar_products_args' 	], 20 );
 		add_filter( 'woocommerce_cross_sells_columns', 					[ $this, 'cross_sells_columns' 		], 20 );
-		add_filter( 'woocommerce_single_product_image_gallery_classes', [ $this, 'single_product_image_gallery' ] );
+		add_filter( 'woocommerce_product_thumbnails_columns', 			[ $this, 'product_thumbnails_columns' ] );
 		
 		// Breadcrumbs
 		remove_action( 'woocommerce_before_main_content', 	'woocommerce_breadcrumb', 20 );
@@ -203,18 +203,17 @@ class WooCommerce {
 	}
 
 	/**
-	 * Remove Default Styles
+	 * Gallery Classes
 	 *
 	 * @since	1.0
 	 * @version	1.0
 	 *
-	 * @return 	string
+	 * @return 	array
 	 */
-	public function single_product_image_gallery( $wrapper_classes ) {
-		$columns = 5; // change this to 2, 3, 5, etc. Default is 4.
-		$wrapper_classes[2] = 'woocommerce-product-gallery--columns-' . absint( $columns );
+	public function product_thumbnails_columns( $columns ) {
+		$columns = 5;
 
-		return $wrapper_classes;
+		return $columns;
 	}
 
 	/**
