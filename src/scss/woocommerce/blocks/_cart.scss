@@ -239,12 +239,6 @@
         position: relative;
         border-top: 1px solid var(--wp--preset--color--light);
         vertical-align: top;
-
-        &.is-disabled {
-            .wc-block-cart-item__product {
-                @include loader();
-            }
-        }
     }
 }
 
@@ -261,6 +255,10 @@
 
     &__product {
         padding: .5rem 1rem;
+
+        .is-disabled & {
+            @include loader();
+        }
 
         .wc-block-components-product-name {
             display: block;
