@@ -3407,7 +3407,7 @@ html[dir=rtl] .wc-block-mini-cart__icon {
   border-top: 1px solid var(--wp--preset--color--light);
   vertical-align: top;
 }
-.wc-block-cart-items__row.is-disabled::before {
+.wc-block-cart-items__row.is-disabled .wc-block-cart-item__product::before {
   content: "";
   position: absolute;
   z-index: 50;

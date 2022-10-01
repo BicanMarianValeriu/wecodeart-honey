@@ -241,7 +241,9 @@
         vertical-align: top;
 
         &.is-disabled {
-            @include loader();
+            .wc-block-cart-item__product {
+                @include loader();
+            }
         }
     }
 }
