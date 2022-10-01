@@ -2759,6 +2759,7 @@ p.stars a:before {
 }
 .wc-block-price-filter--has-input-fields .wc-block-price-filter__controls {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 .wc-block-price-filter__range-input {
@@ -2858,6 +2859,10 @@ p.stars a:before {
   -webkit-appearance: none;
           appearance: none;
 }
+.wc-block-price-filter__range-input-wrapper {
+  width: 100%;
+  order: 99;
+}
 .wc-block-price-filter__range-input-wrapper > div {
   position: relative;
   display: flex;
@@ -2885,7 +2890,7 @@ p.stars a:before {
   background: var(--track-background);
 }
 .wc-block-price-filter__amount {
-  flex: 1 1 auto;
+  flex: 1 0 0%;
   width: 100%;
   padding: 0.375rem 0.75rem 0.375rem 0.75rem;
   font-size: 1rem;

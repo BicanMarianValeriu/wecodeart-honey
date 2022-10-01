@@ -3764,46 +3764,6 @@ exports.aliases = aliases;
 
 /***/ }),
 
-/***/ "./node_modules/@fortawesome/free-solid-svg-icons/faPlane.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-solid-svg-icons/faPlane.js ***!
-  \*******************************************************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-var prefix = 'fas';
-var iconName = 'plane';
-var width = 576;
-var height = 512;
-var aliases = [];
-var unicode = 'f072';
-var svgPathData = 'M482.3 192C516.5 192 576 221 576 256C576 292 516.5 320 482.3 320H365.7L265.2 495.9C259.5 505.8 248.9 512 237.4 512H181.2C170.6 512 162.9 501.8 165.8 491.6L214.9 320H112L68.8 377.6C65.78 381.6 61.04 384 56 384H14.03C6.284 384 0 377.7 0 369.1C0 368.7 .1818 367.4 .5398 366.1L32 256L.5398 145.9C.1818 144.6 0 143.3 0 142C0 134.3 6.284 128 14.03 128H56C61.04 128 65.78 130.4 68.8 134.4L112 192H214.9L165.8 20.4C162.9 10.17 170.6 0 181.2 0H237.4C248.9 0 259.5 6.153 265.2 16.12L365.7 192H482.3z';
-
-exports.definition = {
-  prefix: prefix,
-  iconName: iconName,
-  icon: [
-    width,
-    height,
-    aliases,
-    unicode,
-    svgPathData
-  ]};
-
-exports.faPlane = exports.definition;
-exports.prefix = prefix;
-exports.iconName = iconName;
-exports.width = width;
-exports.height = height;
-exports.ligatures = aliases;
-exports.unicode = unicode;
-exports.svgPathData = svgPathData;
-exports.aliases = aliases;
-
-/***/ }),
-
 /***/ "./node_modules/@fortawesome/free-solid-svg-icons/faShoppingCart.js":
 /*!**************************************************************************!*\
   !*** ./node_modules/@fortawesome/free-solid-svg-icons/faShoppingCart.js ***!
@@ -7196,18 +7156,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_free_solid_svg_icons_faChevronRight__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faChevronRight */ "./node_modules/@fortawesome/free-solid-svg-icons/faChevronRight.js");
 /* harmony import */ var _fortawesome_free_solid_svg_icons_faDownload__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faDownload */ "./node_modules/@fortawesome/free-solid-svg-icons/faDownload.js");
 /* harmony import */ var _fortawesome_free_solid_svg_icons_faCloudDownloadAlt__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faCloudDownloadAlt */ "./node_modules/@fortawesome/free-solid-svg-icons/faCloudDownloadAlt.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faList__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faList */ "./node_modules/@fortawesome/free-solid-svg-icons/faList.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faPlane__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faPlane */ "./node_modules/@fortawesome/free-solid-svg-icons/faPlane.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faCartPlus__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faCartPlus */ "./node_modules/@fortawesome/free-solid-svg-icons/faCartPlus.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faCartArrowDown__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faCartArrowDown */ "./node_modules/@fortawesome/free-solid-svg-icons/faCartArrowDown.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faShoppingCart__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faShoppingCart */ "./node_modules/@fortawesome/free-solid-svg-icons/faShoppingCart.js");
-/* harmony import */ var _fortawesome_free_regular_svg_icons_faGrinHearts__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons/faGrinHearts */ "./node_modules/@fortawesome/free-regular-svg-icons/faGrinHearts.js");
-/* harmony import */ var _fortawesome_free_regular_svg_icons_faPaperPlane__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons/faPaperPlane */ "./node_modules/@fortawesome/free-regular-svg-icons/faPaperPlane.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faList__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faList */ "./node_modules/@fortawesome/free-solid-svg-icons/faList.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faCartPlus__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faCartPlus */ "./node_modules/@fortawesome/free-solid-svg-icons/faCartPlus.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faCartArrowDown__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faCartArrowDown */ "./node_modules/@fortawesome/free-solid-svg-icons/faCartArrowDown.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faShoppingCart__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faShoppingCart */ "./node_modules/@fortawesome/free-solid-svg-icons/faShoppingCart.js");
+/* harmony import */ var _fortawesome_free_regular_svg_icons_faGrinHearts__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons/faGrinHearts */ "./node_modules/@fortawesome/free-regular-svg-icons/faGrinHearts.js");
+/* harmony import */ var _fortawesome_free_regular_svg_icons_faPaperPlane__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons/faPaperPlane */ "./node_modules/@fortawesome/free-regular-svg-icons/faPaperPlane.js");
 /* harmony import */ var _fortawesome_free_regular_svg_icons_faClock__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons/faClock */ "./node_modules/@fortawesome/free-regular-svg-icons/faClock.js");
-/* harmony import */ var _fortawesome_free_regular_svg_icons_faThumbsUp__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons/faThumbsUp */ "./node_modules/@fortawesome/free-regular-svg-icons/faThumbsUp.js");
-/* harmony import */ var _fortawesome_free_regular_svg_icons_faThumbsDown__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons/faThumbsDown */ "./node_modules/@fortawesome/free-regular-svg-icons/faThumbsDown.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faPen__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faPen */ "./node_modules/@fortawesome/free-solid-svg-icons/faPen.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons_faExternalLinkAlt__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faExternalLinkAlt */ "./node_modules/@fortawesome/free-solid-svg-icons/faExternalLinkAlt.js");
+/* harmony import */ var _fortawesome_free_regular_svg_icons_faThumbsUp__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons/faThumbsUp */ "./node_modules/@fortawesome/free-regular-svg-icons/faThumbsUp.js");
+/* harmony import */ var _fortawesome_free_regular_svg_icons_faThumbsDown__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons/faThumbsDown */ "./node_modules/@fortawesome/free-regular-svg-icons/faThumbsDown.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faPen__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faPen */ "./node_modules/@fortawesome/free-solid-svg-icons/faPen.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons_faExternalLinkAlt__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faExternalLinkAlt */ "./node_modules/@fortawesome/free-solid-svg-icons/faExternalLinkAlt.js");
 
 
 
@@ -7225,8 +7184,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ([_fortawesome_free_solid_svg_icons_faEnvelope__WEBPACK_IMPORTED_MODULE_0__.faEnvelope, _fortawesome_free_solid_svg_icons_faPhone__WEBPACK_IMPORTED_MODULE_1__.faPhone, _fortawesome_free_regular_svg_icons_faUserCircle__WEBPACK_IMPORTED_MODULE_2__.faUserCircle, _fortawesome_free_solid_svg_icons_faChevronRight__WEBPACK_IMPORTED_MODULE_3__.faChevronRight, _fortawesome_free_solid_svg_icons_faDownload__WEBPACK_IMPORTED_MODULE_4__.faDownload, _fortawesome_free_solid_svg_icons_faCloudDownloadAlt__WEBPACK_IMPORTED_MODULE_5__.faCloudDownloadAlt, _fortawesome_free_regular_svg_icons_faClock__WEBPACK_IMPORTED_MODULE_6__.faClock, _fortawesome_free_solid_svg_icons_faPlane__WEBPACK_IMPORTED_MODULE_7__.faPlane, _fortawesome_free_solid_svg_icons_faCartPlus__WEBPACK_IMPORTED_MODULE_8__.faCartPlus, _fortawesome_free_regular_svg_icons_faPaperPlane__WEBPACK_IMPORTED_MODULE_9__.faPaperPlane, _fortawesome_free_solid_svg_icons_faList__WEBPACK_IMPORTED_MODULE_10__.faList, _fortawesome_free_solid_svg_icons_faExternalLinkAlt__WEBPACK_IMPORTED_MODULE_11__.faExternalLinkAlt, _fortawesome_free_solid_svg_icons_faShoppingCart__WEBPACK_IMPORTED_MODULE_12__.faShoppingCart, _fortawesome_free_regular_svg_icons_faThumbsUp__WEBPACK_IMPORTED_MODULE_13__.faThumbsUp, _fortawesome_free_regular_svg_icons_faThumbsDown__WEBPACK_IMPORTED_MODULE_14__.faThumbsDown, _fortawesome_free_solid_svg_icons_faPen__WEBPACK_IMPORTED_MODULE_15__.faPen, _fortawesome_free_solid_svg_icons_faCartArrowDown__WEBPACK_IMPORTED_MODULE_16__.faCartArrowDown, _fortawesome_free_regular_svg_icons_faGrinHearts__WEBPACK_IMPORTED_MODULE_17__.faGrinHearts]);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ([_fortawesome_free_solid_svg_icons_faEnvelope__WEBPACK_IMPORTED_MODULE_0__.faEnvelope, _fortawesome_free_solid_svg_icons_faPhone__WEBPACK_IMPORTED_MODULE_1__.faPhone, _fortawesome_free_regular_svg_icons_faUserCircle__WEBPACK_IMPORTED_MODULE_2__.faUserCircle, _fortawesome_free_solid_svg_icons_faChevronRight__WEBPACK_IMPORTED_MODULE_3__.faChevronRight, _fortawesome_free_solid_svg_icons_faDownload__WEBPACK_IMPORTED_MODULE_4__.faDownload, _fortawesome_free_solid_svg_icons_faCloudDownloadAlt__WEBPACK_IMPORTED_MODULE_5__.faCloudDownloadAlt, _fortawesome_free_regular_svg_icons_faClock__WEBPACK_IMPORTED_MODULE_6__.faClock, _fortawesome_free_solid_svg_icons_faCartPlus__WEBPACK_IMPORTED_MODULE_7__.faCartPlus, _fortawesome_free_regular_svg_icons_faPaperPlane__WEBPACK_IMPORTED_MODULE_8__.faPaperPlane, _fortawesome_free_solid_svg_icons_faList__WEBPACK_IMPORTED_MODULE_9__.faList, _fortawesome_free_solid_svg_icons_faExternalLinkAlt__WEBPACK_IMPORTED_MODULE_10__.faExternalLinkAlt, _fortawesome_free_solid_svg_icons_faShoppingCart__WEBPACK_IMPORTED_MODULE_11__.faShoppingCart, _fortawesome_free_regular_svg_icons_faThumbsUp__WEBPACK_IMPORTED_MODULE_12__.faThumbsUp, _fortawesome_free_regular_svg_icons_faThumbsDown__WEBPACK_IMPORTED_MODULE_13__.faThumbsDown, _fortawesome_free_solid_svg_icons_faPen__WEBPACK_IMPORTED_MODULE_14__.faPen, _fortawesome_free_solid_svg_icons_faCartArrowDown__WEBPACK_IMPORTED_MODULE_15__.faCartArrowDown, _fortawesome_free_regular_svg_icons_faGrinHearts__WEBPACK_IMPORTED_MODULE_16__.faGrinHearts]);
 
 /***/ }),
 
