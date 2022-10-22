@@ -226,9 +226,11 @@
     }
 
     img {
+        position: relative;
+        top: -.1em;
         display: block;
         float: left;
-        width: 50px;
+        width: 30px;
         margin-right: 1rem;
     }
 }
