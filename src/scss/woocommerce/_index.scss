@@ -86,12 +86,12 @@
 
 // Components
 @import 'components/buttons';
-@import 'components/checkbox';
 @import 'components/chips';
 @import 'components/drawer';
 @import 'components/dropdown';
 @import 'components/forms';
 @import 'components/notifications';
+@import 'components/panel';
 @import 'components/product-price';
 @import 'components/product-badge';
 @import 'components/product-details';
@@ -102,6 +102,7 @@
 @import 'components/tables';
 @import 'components/tabs';
 @import 'components/totals';
+@import 'components/slider';
 
 // Blocks
 @import 'blocks/general';
@@ -112,7 +113,5 @@
 
 // // Pages
 @import 'pages/archive';
-@import 'pages/cart';
 @import 'pages/product';
-@import 'pages/checkout';
 @import 'pages/account';

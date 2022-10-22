@@ -5,6 +5,10 @@
     padding: 0;
     background-color: white;
     border: 1px solid var(--wp--gray-300);
+
+    &--radius-large {
+        border-radius: 15px;
+    }
     
     &__text {
         padding: 5px 8px;
@@ -17,6 +21,7 @@
         padding: 6px;
         margin: -1px;
         border: inherit;
+        border-radius: inherit;
         background: transparent;
 
         &:hover,

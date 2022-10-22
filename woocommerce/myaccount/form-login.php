@@ -126,7 +126,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 			<p><?php esc_html_e( 'A link to set a new password will be sent to your email address.', 'woocommerce' ); ?></p>
 			<?php endif; ?>
 			
-			<div class="has-text-align-right"><?php
+			<div class="has-text-align-right wp-block-button"><?php
 			
 				wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' );
 			

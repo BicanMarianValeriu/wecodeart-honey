@@ -1,13 +1,177 @@
-// Filters
-.wc-block-attribute-filter,
-.wc-block-price-filter,
-.wc-block-stock-filter {
-    margin-bottom: 3rem;
+%loading__element {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 1.5em;
+    max-width: 100%;
+    margin-top: 1rem;
+    line-height: 1;
+    background-color: #ebebeb;
+    color: transparent;
+    border: 0;
+    border-radius: var(--wp--border-radius, .25rem);
+    box-shadow: none;
+    outline: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
 
+    &::after {
+        content: " ";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(90deg,#ebebeb,#f5f5f5,#ebebeb);
+        background-repeat: no-repeat;
+        animation: loading__animation 1.5s ease-in-out infinite;
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes loading__animation {
+    to{
+        transform: translateX(100%);
+    }
+};
+
+// Filters
+.wc-block-price-filter,
+.wc-block-stock-filter,
+.wc-block-active-filters,
+.wc-block-attribute-filter {
     &__title {
         text-transform: uppercase;
+        padding-bottom: 1rem;
         margin-bottom: 1rem;
+        border-bottom: 1px solid var(--wp--gray-300);
         @include font-size(1.25rem);
+    }
+
+    &__actions {
+        margin-top: var(--wp--style--block-gap);
+
+        &:empty {
+            display: none;
+        }
+    }
+}
+
+// Attribute Filter
+.wc-block-attribute-filter {
+    .is-loading {
+        @extend %loading__element;
+    }
+}
+
+// Stock Filter
+.wc-block-stock-filter {
+    &.is-loading {
+        @extend %loading__element;
+    }
+}
+
+// Price Filter
+.wc-block-price-filter {
+    &__range-input {
+        &-wrapper {
+            &.is-loading {
+                @extend %loading__element;
+                height: .5em;
+            }
+        }
+    }
+
+    &__controls {
+        .input-loading {
+            @extend %loading__element;
+            flex: 1 0 0%;
+            height: 2em;
+        }
+    }
+}
+
+// Active Filters
+.wp-block-woocommerce-active-filters {
+    padding: 1rem;
+    margin-bottom: 3rem;
+    border: 1px solid var(--wp--gray-300);
+    @include border-radius();
+    
+    &:empty {
+        display: none;
+
+        + * {
+            margin-top: 0;
+        }
+    }
+}
+
+.wc-block-active-filters {
+    margin: 0;
+
+    &--loading {
+        .show-loading-state-list,
+        .show-loading-state-chips {
+            @extend %loading__element;
+        }
+
+        .show-loading-state-chips {
+            display: inline-block;
+            margin-right: 1rem;
+
+            &:not(:first-of-type) {
+                max-width: 150px;
+            }
+        }
+    }
+
+    &__list {
+        @include list-unstyled();
+        margin-bottom: 0;
+        
+        ul {
+            @include list-unstyled();
+
+            li {
+                display: inline-block;
+            }
+        }
+
+        &-item {
+            display: block;
+            overflow: hidden;
+            margin-bottom: .5rem;
+
+            &-type {
+                display: block;
+                margin-right: .5rem;
+                margin-bottom: 5px;
+            }
+
+            &-remove {
+                margin-right: 1rem;
+                color: var(--wp--preset--color--danger);
+            }
+        }
+    }
+
+    &__clear-all {
+        float: right;
+        margin-top: -30px;
+        font-size: .8rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: var(--wp--gray-100);
+        border: 1px solid var(--wp--gray-300);
+        border-radius: .25rem;
+        color: var(--wp--gray-800);
+
+        &:hover {
+            background-color: var(--wp--gray-200);
+        }
     }
 }
 
@@ -40,197 +204,6 @@
         color: white;
         border-radius: .25rem;
         margin-left: .5rem;
-    }
-}
-
-// Price Filter
-.wc-block-price-filter {
-    --wp--slider-height: 7px;
-    --wp--slider-color: var(--wp--gray-100);
-    --wp--thumb-size: 1rem;
-    --wp--border-radius: .25rem;
-
-    &--has-input-fields {
-        .wc-block-price-filter__controls {
-            display: flex;
-            flex-wrap: wrap;
-            gap: .5rem;
-        }
-    }
-
-    &__range-input {
-        position: absolute;
-        display: block;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 0;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        background: transparent;
-        pointer-events: none;
-        appearance: none;
-        outline: none;
-
-        &:focus {
-            outline: 0;
-            
-            &::-moz-range-thumb {
-                box-shadow: 0 0 0 1px white, 0 0 0 2px var(--wp--preset--color--primary);
-            }
-
-            &::-webkit-slider-thumb {
-                box-shadow: 0 0 0 1px white, 0 0 0 2px var(--wp--preset--color--primary);
-            }
-        }
-
-        &::-moz-focus-outer {
-            border: 0;
-        }
-        
-        &::-moz-range-track {
-            @include range-track-styles();
-        }
-
-        &::-webkit-slider-runnable-track {
-            @include range-track-styles();
-        }
-
-        &::-moz-range-thumb {
-            @include range-thumb-styles();
-        }
-
-        &::-webkit-slider-thumb {
-            @include range-thumb-styles();
-        }
-
-        &::-moz-range-progress {
-            @include range-progress-styles();
-        }
-
-        &:-webkit-slider-progress {
-            @include range-progress-styles();
-        }
-
-        &-wrapper {
-            width: 100%;
-            order: 99;
-
-            > div {
-                position: relative;
-                display: flex;
-                height: var(--wp--slider-height);
-                padding: 0!important;
-                border: 0!important;
-                border-radius: var(--wp--border-radius);
-                margin: 15px 0;
-                background: var(--wp--slider-color);
-                box-shadow: inset 0 0 0 1px rgb(0 0 0 / 5%);
-                appearance: none;
-                outline: none;
-                clear: both;
-            }
-        }
-
-        &-progress {
-            --range-color: var(--wp--preset--color--primary);
-            --track-background: linear-gradient(90deg,transparent var(--low),var(--range-color) 0,var(--range-color) var(--high),transparent 0) no-repeat 0 100%/100% 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: inherit;
-            border-radius: inherit;
-            background: var(--track-background);
-        }
-    }
-
-    &__amount {
-        flex: 1 0 0%;
-        width: 100%;
-        padding: 0.375rem 0.75rem 0.375rem 0.75rem;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5;
-        color: #212529;
-        border: 1px solid #ced4da;
-        border-radius: 0.25rem;
-        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-        appearance: none;
-        outline: none;
-    }
-}
-
-// Active Filters
-.wp-block-woocommerce-active-filters {
-    padding: 1rem;
-    margin-bottom: 3rem;
-    border: 1px solid var(--wp--gray-300);
-    @include border-radius();
-    
-    &.is-loading,
-    &:empty {
-        display: none;
-    }
-}
-
-.wc-block-active-filters {
-    margin: 0;
-
-    &__title {
-        padding-bottom: 1rem;
-        margin-bottom: 1rem;
-        border-bottom: 1px solid var(--wp--gray-300);
-        text-transform: uppercase;
-        @include font-size(1.5rem);
-    }
-
-    &__list {
-        @include list-unstyled();
-        margin-bottom: 0;
-        
-        ul {
-            @include list-unstyled();
-        }
-
-        &-item {
-            display: inline-block;
-            overflow: hidden;
-
-            &-type {
-                display: inline-block;
-                margin-right: .5rem;
-                margin-bottom: 5px;
-            }
-
-            &-remove {
-                margin-left: 1rem;
-                color: var(--wp--preset--color--danger);
-            }
-        }
-    }
-
-    &__clear-all {
-        float: right;
-        margin-top: -30px;
-        font-size: .8rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        background-color: var(--wp--gray-100);
-        border: 1px solid var(--wp--gray-300);
-        border-radius: .25rem;
-        color: var(--wp--gray-800);
-
-        &:hover {
-            background-color: var(--wp--gray-200);
-        }
-    }
-}
-
-.wc-block-active-product-filters {
-    &__placeholder {
-        display: none;
     }
 }
 
