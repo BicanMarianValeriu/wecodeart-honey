@@ -8,6 +8,13 @@
         overflow: hidden;
         text-align: center;
 
+        &.added {
+            &::after {
+                content: "\2713";
+                right: 13px;
+            }
+        } 
+
         &.loading {
             &::after {
                 position: absolute;
@@ -23,13 +30,6 @@
                 animation: pulse .6s infinite;
             }
         }
-    
-        &.added {
-            &::after {
-                content: "\2713";
-                right: 13px;
-            }
-        } 
     
         &:before {
             content: '';
