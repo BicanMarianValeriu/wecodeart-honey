@@ -17,6 +17,7 @@
 
         &.loading {
             &::after {
+                content: '';
                 position: absolute;
                 display: block;
                 right: 10px;
