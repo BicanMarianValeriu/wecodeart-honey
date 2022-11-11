@@ -62,15 +62,17 @@ class WooCommerce {
 		// Fragment Cache
 		add_filter( 'render_block', function( $content, $data ) {
 			if( get_prop( $data, [ 'blockName' ] ) === 'woocommerce/mini-cart' ) {
-				$content = apply_filters( 'litespeed_esi_url', function() use ( $content ) {
-					do_action( 'litespeed_control_set_nocache' );
-
-					return $content;
-				}, 'WooCommerce Mini Cart ESI block' );
+				$content = apply_filters( 'litespeed_esi_url', 'wecodeart/esi/woo/mini-cart', 'WooCommerce Mini Cart ESI block' );
 			}
 
 			return $content;
 		}, 10, 2 );
+
+		add_action( 'litespeed_esi_load-wecodeart/esi/woo/mini-cart', function( $content ) {
+			do_action( 'litespeed_control_set_nocache' );
+
+			echo $content; // WP CS Ok
+		} );
 	}
 
 	/**
