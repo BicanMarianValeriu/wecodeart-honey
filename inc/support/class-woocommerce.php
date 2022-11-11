@@ -60,10 +60,10 @@ class WooCommerce {
 		add_filter( 'woocommerce_states', 								[ $this, 'custom_woocommerce_state' ], 	10, 1 );
 
 		// Fragment Cache
-		add_filter( 'litespeed_esi_load-my_esi_block', function() {
+		add_filter( 'litespeed_esi_load-my_esi_block', function( $content ) {
 			do_action( 'litespeed_control_set_nocache' );
 
-			echo "Hello world".rand (1,99999);
+			echo $content;
 		} );
 
 		add_filter( 'render_block', function( $content, $data ) {
