@@ -74,7 +74,10 @@ class WooCommerce {
 		}, 10, 2 );
 		
 		add_action( 'litespeed_esi_load-woo-mini-cart', function( $params ) {
-			do_action( 'litespeed_control_set_nocache' );
+			do_action( 'litespeed_control_set_private', 'cache cart' );
+			do_action( 'litespeed_vary_no' );
+			do_action( 'litespeed_tag_add_private_esi', 'woo-mini-cart' );
+
 
 			echo $params['content'];
 		} );
