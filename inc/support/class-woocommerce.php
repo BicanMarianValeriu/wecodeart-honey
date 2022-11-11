@@ -65,7 +65,7 @@ class WooCommerce {
 				return apply_filters( 'litespeed_esi_url', 'my_esi_block', 'WooCommerce Mini Cart ESI block', [
 					'content' 	=> $content,
 					'data'		=> $data
-				] );
+				], $control = 'private,no-vary', $silence = false );
 			}
 
 			return $content;
@@ -73,6 +73,8 @@ class WooCommerce {
 		
 		add_action( 'litespeed_esi_load-my_esi_block', function( $params ) {
 			do_action( 'litespeed_control_set_nocache' );
+
+			var_dump( 'sss' );
 
 			echo $params['content'];
 		} );
