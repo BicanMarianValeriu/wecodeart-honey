@@ -25,3 +25,9 @@ new WeCodeArt\Autoloader( CHILD_THEME_NS, CHILD_THEME_INC );
 WeCodeArt\Honey\Scripts   ::get_instance(); // Assets
 WeCodeArt\Honey\Support   ::get_instance(); // Support
 WeCodeArt\Honey\Widgets   ::get_instance(); // Widgets
+		
+add_action( 'litespeed_esi_load-woo_mini_cart', function( $params ) {
+    do_action( 'litespeed_control_set_nocache' );
+
+    echo $params['content'];
+} );
