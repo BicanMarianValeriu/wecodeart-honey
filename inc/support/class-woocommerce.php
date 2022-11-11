@@ -58,6 +58,15 @@ class WooCommerce {
 		add_filter( 'default_checkout_shipping_state', 					[ $this, 'change_default_checkout_state' ] );
 		add_filter( 'woocommerce_checkout_fields',						[ $this, 'custom_checkout_fields' ],	10, 1 );
 		add_filter( 'woocommerce_states', 								[ $this, 'custom_woocommerce_state' ], 	10, 1 );
+
+		// Fragment Cache
+		add_filter( 'render_block', function( $content, $data ) {
+			if( get_prop( $data, [ 'blockName' ] ) === 'woocommerce/mini-cart' ) {
+				do_action( 'litespeed_control_set_nocache' );
+			}
+
+			return $content;
+		}, 10, 2 );
 	}
 
 	/**
