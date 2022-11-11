@@ -63,7 +63,7 @@ class WooCommerce {
 		add_filter( 'render_block', function( $content, $data ) {
 			if( get_prop( $data, [ 'blockName' ] ) === 'woocommerce/mini-cart' ) {
 				if ( apply_filters( 'litespeed_esi_status', false ) ) {
-					return apply_filters( 'litespeed_esi_url', 'woo-mini-cart', 'WooCommerce Mini Cart ESI block', [
+					return apply_filters( 'litespeed_esi_url', 'woo-mini-cart', 'WECODEART_WOO_ESI_CART', [
 						'content' 	=> $content,
 						'data'		=> $data
 					] );
