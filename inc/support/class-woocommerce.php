@@ -62,10 +62,12 @@ class WooCommerce {
 		// Fragment Cache
 		add_filter( 'render_block', function( $content, $data ) {
 			if( get_prop( $data, [ 'blockName' ] ) === 'woocommerce/mini-cart' ) {
-				return apply_filters( 'litespeed_esi_url', 'my_esi_block', 'WooCommerce Mini Cart ESI block', [
-					'content' 	=> $content,
-					'data'		=> $data
-				], $control = 'private,no-vary', $silence = false );
+				if ( apply_filters( 'litespeed_esi_status', false ) ) {
+					return apply_filters( 'litespeed_esi_url', 'my_esi_block', 'WooCommerce Mini Cart ESI block', [
+						'content' 	=> $content,
+						'data'		=> $data
+					], $control = 'private,no-vary', $silence = false );
+				}
 			}
 
 			return $content;
