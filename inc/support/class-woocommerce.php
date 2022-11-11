@@ -68,10 +68,10 @@ class WooCommerce {
 			return $content;
 		}, 10, 2 );
 
-		add_filter( 'litespeed_esi_load-wecodeart/esi/woo/mini-cart', function( $content ) {
+		add_filter( 'litespeed_esi_load-wecodeart/esi/woo/mini-cart', function() {
 			do_action( 'litespeed_control_set_nocache' );
 
-			echo $content;
+			echo "Hello world".rand (1,99999);
 		} );
 	}
 
