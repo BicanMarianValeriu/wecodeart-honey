@@ -62,7 +62,7 @@ class WooCommerce {
 		// Fragment Cache
 		add_filter( 'render_block', function( $content, $data ) {
 			if( get_prop( $data, [ 'blockName' ] ) === 'woocommerce/mini-cart' ) {
-				$content = apply_filters( 'litespeed_esi_url', 'my_esi_block', 'WooCommerce Mini Cart ESI block', $content );
+				return apply_filters( 'litespeed_esi_url', 'my_esi_block', 'WooCommerce Mini Cart ESI block', $content );
 			}
 
 			return $content;
