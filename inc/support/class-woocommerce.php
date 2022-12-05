@@ -72,11 +72,11 @@ class WooCommerce {
 				return $content;
 			}, 10, 2 );
 
-			add_action( 'litespeed_esi_load-woo_mini_cart', [ __CLASS__, 'load_mini_cart' ] );
+			add_action( 'litespeed_esi_load-woo_mini_cart', __CLASS__ . '::load_mini_cart' );
 		}
 	}
 
-	public static function load_mini_cart() {
+	public static function load_mini_cart( $params ) {
 		echo 'Hello world: ' . rand(1, 10);
 		
 		// do_action( 'litespeed_control_set_nocache' );
