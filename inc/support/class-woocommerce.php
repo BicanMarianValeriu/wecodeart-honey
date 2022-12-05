@@ -72,7 +72,7 @@ class WooCommerce {
 				return $content;
 			}, 10, 2 );
 
-			add_action( 'litespeed_esi_load-woo_mini_cart', __NAMESPACE__ '::load_mini_cart' );
+			add_action( 'litespeed_esi_load-woo_mini_cart', [ __CLASS__, 'load_mini_cart' ] );
 		}
 	}
 
