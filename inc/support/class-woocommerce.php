@@ -60,22 +60,28 @@ class WooCommerce {
 		add_filter( 'woocommerce_states', 								[ $this, 'custom_woocommerce_state' ], 	10, 1 );
 
 		// Fragment Cache
-		add_action( 'render_block', function( $content, $data ) {
-			if( get_prop( $data, [ 'blockName' ] ) === 'woocommerce/mini-cart' ) {				
-				return apply_filters( 'litespeed_esi_url', 'woo-mini-cart', 'WOO_ESI_BLOCK', [
-					'content' 	=> $content,
-					'data'		=> $data
-				] );
-			}
+		if ( apply_filters( 'litespeed_esi_status', false ) ) {
+			add_action( 'render_block', function( $content, $data ) {
+				if( get_prop( $data, [ 'blockName' ] ) === 'woocommerce/mini-cart' ) {
+					return apply_filters( 'litespeed_esi_url', 'woo_mini_cart', 'WOO_ESI_BLOCK', [
+						'content' 	=> $content,
+						'data'		=> $data
+					] );
+				}
 
-			return $content;
-		}, 10, 2 );
+				return $content;
+			}, 10, 2 );
 
-		add_action( 'litespeed_esi_load-woo-mini-cart', function( $params ) {
-			do_action( 'litespeed_control_set_nocache' );
+			add_action( 'litespeed_esi_load-woo_mini_cart', __CLASS__ '::load_mini_cart' );
+		}
+	}
 
-			echo 'Hello world: ' . rand(1, 10);
-		} );
+	public static function load_mini_cart() {
+		echo 'Hello world: ' . rand(1, 10);
+		
+		// do_action( 'litespeed_control_set_nocache' );
+		do_action( 'litespeed_control_set_private', 'woo mini cart' );
+		do_action( 'litespeed_vary_no' );
 	}
 
 	/**

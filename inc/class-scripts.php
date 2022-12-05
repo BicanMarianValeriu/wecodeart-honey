@@ -28,8 +28,7 @@ class Scripts {
 	 * Send Construtor
 	 */
 	public function init() {
-		// add_action( 'after_setup_theme', 	[ $this, 'admin_fonts' 		] );
-		add_action( 'admin_init', 			[ $this, 'admin_fonts' 		] );
+		add_action( 'after_setup_theme', 	[ $this, 'admin_fonts' 		] );
 		add_action( 'wp_enqueue_scripts',	[ $this, 'enqueue_assets'	] );
 		
 		add_filter( 'wecodeart/filter/scripts/localize', [ $this, 'localize' ] );
@@ -97,7 +96,7 @@ class Scripts {
 	 * Admin Fonts
 	 */
 	public function admin_fonts() {
-		// add_editor_style( self::get_fonts_url() );
+		wp_enqueue_style( 'wp-block-library' );
 		wp_add_inline_style( 'wp-block-library', self::load_font_styles() );
 	}
 
