@@ -25,7 +25,7 @@ if ( ! comments_open() ) {
 
 wp_enqueue_style( 'wp-block-separator' );
 
-wecodeart( 'styles' )->Utilities->load( [ 'position-sticky', 'col-md-7', 'my-3', 'mb-3' ] );
+wecodeart( 'styles' )->Utilities->load( [ 'position-sticky', 'col-md-7', 'my-3', 'mb-3', 'me-1' ] );
 
 ?>
 <div id="reviews" class="woocommerce-Reviews grid" style="--wp--columns:3;--wp--style--block-gap:2.5rem;">
@@ -90,8 +90,10 @@ wecodeart( 'styles' )->Utilities->load( [ 'position-sticky', 'col-md-7', 'my-3',
 				'comment_notes_after' 	=> '',
 				'label_submit'        	=> esc_html__( 'Submit', 'woocommerce' ),
 				'class_submit'			=> 'comment-form-submit wp-block-button__link',
-				'submit_field'			=> '<div class="comment-form-field">%1$s %2$s</div>',
-				'submit_button'			=> '<button name="%1$s" type="submit" id="%2$s" class="%3$s">' . wecodeart( 'markup' )->SVG::compile( 'comment-dots' ) . '<span>%4$s</span></button>',
+				'submit_field'			=> '<div class="comment-form-field wp-block-button">%1$s %2$s</div>',
+				'submit_button'			=> '<button name="%1$s" type="submit" id="%2$s" class="%3$s">' . wecodeart( 'markup' )->SVG::compile( 'comment-dots', [
+					'class' => 'me-1'
+				] ) . '<span>%4$s</span></button>',
 				'logged_in_as'        	=> '',
 				'comment_field'       	=> '',
 			];

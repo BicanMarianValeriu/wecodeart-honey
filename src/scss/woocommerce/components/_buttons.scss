@@ -85,3 +85,19 @@
 .wc-block-components-button {
     display: inline-block;
 }
+
+.wc-block-components-filter-reset-button,
+.wc-block-active-filters__clear-all {
+    font-size: var(--wp--preset--font-size--small);
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: var(--wp--gray-100);
+    border: 1px solid var(--wp--gray-300);
+    border-radius: 0.25rem;
+    color: var(--wp--gray-800);
+
+    &:hover,
+    &:focus {
+        background-color: var(--wp--gray-200);
+    }
+}

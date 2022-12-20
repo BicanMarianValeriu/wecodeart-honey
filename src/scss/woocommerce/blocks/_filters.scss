@@ -161,17 +161,6 @@
     &__clear-all {
         float: right;
         margin-top: -30px;
-        font-size: .8rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        background-color: var(--wp--gray-100);
-        border: 1px solid var(--wp--gray-300);
-        border-radius: .25rem;
-        color: var(--wp--gray-800);
-
-        &:hover {
-            background-color: var(--wp--gray-200);
-        }
     }
 }
 

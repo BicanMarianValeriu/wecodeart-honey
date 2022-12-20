@@ -3,11 +3,11 @@
    ========================================================================== */
 .single-product {
     .woocommerce-breadcrumb {
-        margin-bottom: var(--wp--custom--spacers--3);
+        margin-bottom: var(--wp--preset--spacing--md);
     }
 
     .woocommerce-notices-wrapper {
-        margin-bottom: var(--wp--custom--spacers--3);
+        margin-bottom: var(--wp--preset--spacing--md);
 
         &:empty {
             display: none;
@@ -37,7 +37,7 @@
     }
 
     .woocommerce-variation {
-        margin-bottom: var(--wp--custom--spacers--3);
+        margin-bottom: var(--wp--preset--spacing--md);
     }
 
     form.cart {
@@ -59,7 +59,7 @@
     table.variations,
     table.shop_attributes, 
     .woocommerce-grouped-product-list {
-        margin-bottom: var(--wp--custom--spacers--3);
+        margin-bottom: var(--wp--preset--spacing--md);
     
         td {
             label {
@@ -130,7 +130,7 @@
         border: 3px solid white;
         border-radius: .25rem;
         outline: 1px solid var(--wp--gray-100);
-        box-shadow: var(--wp--custom--shadows--lg);
+        box-shadow: var(--wp--preset--spacing--md);
 
         img {
             width: 100%;
