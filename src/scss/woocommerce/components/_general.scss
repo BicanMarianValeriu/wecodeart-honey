@@ -155,6 +155,12 @@
     }
 }
 
+ul li.type-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 ul li.type-product,
 .wc-block-grid__product,
 .cross-sells-product {
