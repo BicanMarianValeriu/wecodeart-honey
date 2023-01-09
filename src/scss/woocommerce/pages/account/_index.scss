@@ -61,26 +61,6 @@
     }
 }
 
-// Password Strength
-.woocommerce-password-strength {
-    margin-top: .5rem;
-    font-weight: bold;
-    font-style: italic; 
-
-    &.short,
-    &.bad {
-        color: var(--wp--preset--color--danger);
-    }
-
-    &.good {
-        color: var(--wp--preset--color--warning);
-    }
-
-    &.strong {
-        color: var(--wp--preset--color--success);
-    } 
-}
-
 // Order Updates
 .woocommerce-OrderUpdate {
     &__meta {

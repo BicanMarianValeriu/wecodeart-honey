@@ -3,115 +3,26 @@
 @import "~bootstrap/scss/mixins";
 @import 'helpers';
 
-.woocommerce {
-    .clear {
-        @include clearfix();
-    }
-    
-    .processing {
-		position: relative;
-		@include loader();
-	}
-
-	.loader {
-		@include loader();
-    }
-    
-	.col2-set {
-		display: grid;
-        grid-gap: 1rem;
-        grid-template-columns: 1fr;
-
-        @include media-breakpoint-up( 'md' ) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    } 
-
-    ul.products {
-        display: grid;
-        grid-gap: 1rem;
-        grid-template-columns: 1fr;
-        list-style: none;
-        padding: 0;
-
-        &.columns-6,
-        &.columns-5 {
-            @include media-breakpoint-up( 'md' ) {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        &.columns-6 {
-            @include media-breakpoint-up( 'lg' ) {
-                grid-template-columns: repeat(6, 1fr);
-            }
-        }
-
-        &.columns-5 {
-            @include media-breakpoint-up( 'lg' ) {
-                grid-template-columns: repeat(5, 1fr);
-            }
-        }
-
-        &.columns-4,
-        &.columns-3,
-        &.columns-2 {
-            @include media-breakpoint-up( 'md' ) {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        &.columns-4 {
-            @include media-breakpoint-up( 'lg' ) {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-
-        &.columns-3 {
-            @include media-breakpoint-up( 'lg' ) {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-    }
-}
-
-.fadeIn {
-    opacity: 0;
-    transition: opacity 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-
-    &.animated {
-        opacity: 1;
-    }
-}
-
 // Components
+@import 'components/general';
+@import 'components/layout';
+
 @import 'components/buttons';
-@import 'components/chips';
-@import 'components/drawer';
-@import 'components/dropdown';
+@import 'components/cart';
+@import 'components/checkout';
+@import 'components/containers';
+@import 'components/featured';
+@import 'components/filters';
 @import 'components/forms';
+@import 'components/gallery';
 @import 'components/notifications';
-@import 'components/panel';
-@import 'components/product-price';
-@import 'components/product-badge';
-@import 'components/product-details';
-@import 'components/product-meta';
+@import 'components/product';
 @import 'components/quantity';
 @import 'components/rating';
 @import 'components/reviews';
 @import 'components/tables';
 @import 'components/tabs';
-@import 'components/totals';
-@import 'components/slider';
 
-// Blocks
-@import 'blocks/general';
-@import 'blocks/filters';
-@import 'blocks/featured';
-@import 'blocks/reviews';
-@import 'blocks/cart';
-
-// // Pages
-@import 'pages/archive';
+// Pages
 @import 'pages/product';
 @import 'pages/account';

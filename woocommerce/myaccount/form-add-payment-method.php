@@ -12,7 +12,7 @@
  *
  * @see https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 4.3.0
+ * @version 7.0.1
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -55,13 +55,16 @@ $available_gateways = WC()->payment_gateways->get_available_payment_gateways();
 			
 				wp_nonce_field( 'woocommerce-add-payment-method', 'woocommerce-add-payment-method-nonce' );
 
+				$classes = [ 'wp-block-button__link', 'has-secondary-background-color', 'has-dark-color' ];
+				$classes[] = wc_wp_theme_get_element_class_name( 'button' );
+
 				wecodeart_input( 'button', [
 					'type'	=> 'submit',
 					'label' => esc_html__( 'Add payment method', 'woocommerce' ),
 					'attrs' => [
 						'id'	=> 'place_order',
 						'value'	=> esc_attr__( 'Add payment method', 'woocommerce' ),
-						'class'	=> 'wp-block-button__link has-dark-color has-secondary-background-color'
+						'class'	=> join( ' ', array_filter( $classes ) )
 					]
 				] );
 			

@@ -175,6 +175,10 @@
 					"fontSize": "var:preset|font-size|small"
 				}
 			}
+		},
+		"typography": {
+			"fontSize": "var:preset|font-size|normal",
+			"fontFamily": "var:preset|font-family|base"
 		}
 	}
 }

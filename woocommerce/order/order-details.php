@@ -103,9 +103,7 @@ if ( $show_downloads ) {
 			<?php endif; ?>
 		</tfoot>
 	</table>
-	<div class="card-footer">
-		<?php do_action( 'woocommerce_order_details_after_order_table', $order ); ?>
-	</div>
+	<div class="card-footer"><?php do_action( 'woocommerce_order_details_after_order_table', $order ); ?></div>
 </section>
 
 <?php

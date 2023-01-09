@@ -12,7 +12,7 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 4.1.0
+ * @version 7.0.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -129,6 +129,9 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 			<div class="has-text-align-right wp-block-button"><?php
 			
 				wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' );
+
+				$classes = [ 'woocommerce-form-register__submit', 'wp-block-button__link', 'has-primary-background-color' ];
+				$classes[] = wc_wp_theme_get_element_class_name( 'button' );
 			
 				wecodeart_input( 'button', [
 					'type'	=> 'submit',
@@ -136,7 +139,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 					'attrs' => [
 						'name'	=> 'register',
 						'value'	=> esc_attr__( 'Register', 'woocommerce' ),
-						'class'	=> 'woocommerce-form-register__submit wp-block-button__link has-primary-background-color'
+						'class'	=> join( ' ', array_filter( $classes ) )
 					]
 				] );
 			

@@ -1,56 +1,12 @@
-%loading__element {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 1.5em;
-    max-width: 100%;
-    margin-top: 1rem;
-    line-height: 1;
-    background-color: #ebebeb;
-    color: transparent;
-    border: 0;
-    border-radius: var(--wp--border-radius, .25rem);
-    box-shadow: none;
-    outline: 0;
-    overflow: hidden;
-    pointer-events: none;
-    z-index: 1;
-
-    &::after {
-        content: " ";
-        position: absolute;
-        display: block;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: linear-gradient(90deg,#ebebeb,#f5f5f5,#ebebeb);
-        background-repeat: no-repeat;
-        animation: loading__animation 1.5s ease-in-out infinite;
-        transform: translateX(-100%);
-    }
-}
-
-@keyframes loading__animation {
-    to{
-        transform: translateX(100%);
-    }
-};
-
 // Filters
-.wc-block-price-filter,
-.wc-block-stock-filter,
-.wc-block-active-filters,
-.wc-block-attribute-filter {
-    &__title {
-        text-transform: uppercase;
+.wc-blocks-filter-wrapper {
+    h1, h2, h3, h4, h5, h6 {
         padding-bottom: 1rem;
         margin-bottom: 1rem;
         border-bottom: 1px solid var(--wp--gray-300);
-        @include font-size(1.25rem);
     }
 
-    &__actions {
+    *[class*="filter__actions"] {
         margin-top: var(--wp--style--block-gap);
 
         &:empty {
@@ -62,14 +18,14 @@
 // Attribute Filter
 .wc-block-attribute-filter {
     .is-loading {
-        @extend %loading__element;
+        @include loading-element();
     }
 }
 
 // Stock Filter
 .wc-block-stock-filter {
     &.is-loading {
-        @extend %loading__element;
+        @include loading-element();
     }
 }
 
@@ -78,7 +34,7 @@
     &__range-input {
         &-wrapper {
             &.is-loading {
-                @extend %loading__element;
+                @include loading-element();
                 height: .5em;
             }
         }
@@ -86,9 +42,27 @@
 
     &__controls {
         .input-loading {
-            @extend %loading__element;
+            @include loading-element();
             flex: 1 0 0%;
             height: 2em;
+        }
+    }
+}
+
+// Rating
+.wc-block-rating-filter {
+    .wc-block-components-product-rating {
+        display: flex;
+
+        &-count {
+            margin-left: .5rem;
+        }
+    }
+
+    .is-loading {
+        li {
+            @include loading-element();
+            height: 1.25em;
         }
     }
 }
@@ -115,7 +89,7 @@
     &--loading {
         .show-loading-state-list,
         .show-loading-state-chips {
-            @extend %loading__element;
+            @include loading-element();
         }
 
         .show-loading-state-chips {
@@ -241,5 +215,22 @@
 
     &::after {
         content: ')';
+    }
+}
+
+// Reset Buttons
+.wc-block-components-filter-reset-button,
+.wc-block-active-filters__clear-all {
+    font-size: var(--wp--preset--font-size--small);
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: var(--wp--gray-100);
+    border: var(--wc--input--border);
+    border-radius: var(--wc--input--radius);
+    color: var(--wp--gray-800);
+
+    &:hover,
+    &:focus {
+        background-color: var(--wp--gray-200);
     }
 }

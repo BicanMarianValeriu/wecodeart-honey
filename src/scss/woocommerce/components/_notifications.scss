@@ -1,3 +1,12 @@
+.wc-block-components-notices {
+    &__snackbar {
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+        width: auto;
+    }
+}
+
 .woocommerce-notices-wrapper {
     margin: 10px 0 10px;
 
@@ -15,9 +24,10 @@
     border-left: 4px solid rgba( #000000, .15 );
     padding: 15px 20px;
 
-    a {
+    .wp-element-button {
         float: right;
         padding: 2px 8px;
+        color: white;
     }
 
     & + * {
@@ -29,10 +39,6 @@
 .woocommerce-notice--info,
 .woocommerce-message {
     background-color: var(--wp--preset--color--light);
-
-    .button {
-        color: inherit;
-    }
 }
 
 .woocommerce-error {

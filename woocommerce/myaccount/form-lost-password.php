@@ -12,7 +12,7 @@
  *
  * @see https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 3.5.2
+ * @version 7.0.1
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -58,11 +58,14 @@ do_action( 'woocommerce_before_lost_password_form' );
 		<input type="hidden" name="wc_reset_password" value="true" />
 		<?php
 
+		$classes = [ 'wp-block-button__link', 'has-primary-background-color', 'woocommerce-Button' ];
+		$classes[] = wc_wp_theme_get_element_class_name( 'button' );
+
 		wecodeart_input( 'button', [
 			'type'	=> 'submit',
 			'label' => esc_html__( 'Reset password', 'woocommerce' ),
 			'attrs' => [
-				'class'	=> 'wp-block-button__link has-primary-background-color woocommerce-Button button',
+				'class'	=> join( ' ', array_filter( $classes ) ),
 				'value'	=> esc_html__( 'Reset password', 'woocommerce' )
 			]
 		] );

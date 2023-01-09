@@ -14,7 +14,6 @@ import helperGetParents from './helpers/getParents';
 // Common JS
 import common from './routes/common';
 import woocommerceJs from './routes/pages/woocommerceJs';
-import woocommerceCheckout from './routes/pages/woocommerceCheckout';
 import singleProduct from './routes/pages/product';
 
 // Attach Some Required Plugins
@@ -48,7 +47,6 @@ wecodeart = {
 			 */
 			...wecodeart.routes,
 			woocommerceJs,
-			woocommerceCheckout,
 			singleProduct,
 		}
 	}

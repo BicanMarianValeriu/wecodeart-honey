@@ -38,6 +38,7 @@
 		.wp-block-post-title {
 			margin-bottom: 0;
 			font-size: 1rem;
+			overflow: hidden;
 
 			a {
 				color: var(--wp--preset--color--dark);

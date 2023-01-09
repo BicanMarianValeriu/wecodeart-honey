@@ -48,3 +48,10 @@
         }
     }
 }
+
+.card-header,
+.card-footer {
+    &:empty {
+        display: none;
+    }
+}

@@ -12,7 +12,7 @@
  *
  * @see https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 6.5.0
+ * @version 7.0.1
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -102,7 +102,7 @@ wecodeart( 'styles' )->Utilities->load( [
 				'attrs' => [
 					'name'	=> 'track',
 					'value'	=> esc_attr__( 'Track', 'woocommerce' ),
-					'class'	=> 'wp-block-button__link has-primary-background-color'
+					'class'	=> 'wp-block-button__link has-primary-background-color' . wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : ''
 				]
 			] );
 

@@ -17,11 +17,9 @@ if( ! empty( $prp ) ) :
 
 	$message = esc_html__( 'Acesta este prețul recomandat de producător. Prețul de vânzare al produsului este afișat mai jos.', 'wecodeart-honey' );
 
-	if( function_exists( 'wecodeart' ) ) {
-		wecodeart( 'styles' )->Utilities->load( [
-			'm-0',
-		] );
-	}
+	wecodeart( 'styles' )->Utilities->load( [
+		'm-0',
+	] );
 
 ?>
 <p class="woocommerce-product-prp has-small-font-size has-cyan-bluish-gray-color m-0">

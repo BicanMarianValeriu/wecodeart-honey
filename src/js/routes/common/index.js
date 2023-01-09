@@ -1,6 +1,5 @@
 // Deps
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
-import Tooltip from 'bootstrap/js/dist/tooltip';
 
 // Common JS
 import icons from './icons';
@@ -16,7 +15,11 @@ export default {
 	complete: () => {
 		// Tooltips
 		const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-		tooltipTriggerList.map((tooltipTriggerEl) => new Tooltip(tooltipTriggerEl));
+		if (tooltipTriggerList.length) {
+			import( /* webpackChunkName: "bootstrap/tooltip" */ "bootstrap/js/dist/tooltip").then(({ default: Tooltip }) => {
+				tooltipTriggerList.map((tooltipTriggerEl) => new Tooltip(tooltipTriggerEl));
+			});
+		}
 
 		// Icons
 		dom.watch();

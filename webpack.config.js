@@ -25,8 +25,7 @@ module.exports = {
 		rules,
 	},
     output: {
-        path: path.resolve(process.cwd(), `assets/${devMode ? 'unminified' : 'minified'}`),
-        publicPath: path.resolve(process.cwd(), `/assets/${devMode ? 'unminified' : 'minified'}/`),
+        path: path.resolve(process.cwd(), 'assets', `${devMode ? 'unminified' : 'minified'}`),
         filename: devMode ? 'js/[name].js' : 'js/[name].min.js',
     },
     externals: wplib.reduce((externals, lib) => {

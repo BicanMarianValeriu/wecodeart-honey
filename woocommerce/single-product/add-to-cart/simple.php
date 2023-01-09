@@ -12,7 +12,7 @@
  *
  * @see https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 3.4.0
+ * @version 7.0.1
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -55,13 +55,16 @@ wecodeart( 'styles' )->Utilities->load( [ 'mt-3', 'mb-5' ] );
 
 		<div class="wp-block-button"><?php
 
+		$classes = [ 'wp-block-button__link', 'has-secondary-background-color', 'has-dark-color', 'single_add_to_cart_button', 'mt-3' ];
+		$classes[] = wc_wp_theme_get_element_class_name( 'button' );
+
 		wecodeart_input( 'button', [
 			'label' => $product->single_add_to_cart_text(),
 			'attrs' => [
 				'type'	=> 'submit',
 				'name'	=> 'add-to-cart',
 				'value'	=> $product->get_id(),
-				'class' => 'wp-block-button__link has-secondary-background-color has-dark-color single_add_to_cart_button mt-3'
+				'class' => join( ' ', array_filter( $classes ) )
 			]
 		] );
 		

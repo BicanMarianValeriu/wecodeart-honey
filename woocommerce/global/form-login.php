@@ -12,7 +12,7 @@
  *
  * @see         https://docs.woocommerce.com/document/template-structure/
  * @package     WooCommerce\Templates
- * @version     3.6.0
+ * @version     7.0.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -89,13 +89,16 @@ wecodeart( 'styles' )->Utilities->load( [
 
 	<div class="wp-block-button"><?php
 
+		$classes = [ 'woocommerce-form-login__submit', 'wp-block-button__link', 'has-primary-background-color' ];
+		$classes[] = wc_wp_theme_get_element_class_name( 'button' );
+
 		wecodeart_input( 'button', [
 			'type'	=> 'submit',
 			'label' => esc_html__( 'Login', 'woocommerce' ),
 			'attrs' => [
 				'name'	=> 'login',
 				'value'	=> esc_attr__( 'Login', 'woocommerce' ),
-				'class'	=> 'woocommerce-form-login__submit wp-block-button__link has-primary-background-color'
+				'class'	=> join( ' ', array_filter( $classes ) )
 			]
 		] );
 		

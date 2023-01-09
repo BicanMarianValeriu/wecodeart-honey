@@ -1,6 +1,7 @@
 @import "~animate.css/source/fading_entrances/fadeIn";
 @import "~animate.css/source/sliding_exits/slideOutLeft";
 
+/* Drawer */
 .wc-block-components-drawer {
     --wp--drawer--width: 100%;
     position: fixed;
@@ -56,6 +57,58 @@
     }
 }
 
+/* Panel */
+.wc-block-components-panel {
+    position: relative;
+
+    h2 {
+        margin: 0;
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        font-style: inherit;
+        font-weight: inherit;
+        letter-spacing: inherit;
+        line-height: inherit;
+        text-decoration: inherit;
+        text-transform: inherit;
+    }
+
+    &__button {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        font-style: inherit;
+        font-weight: inherit;
+        letter-spacing: inherit;
+        line-height: inherit;
+        text-decoration: inherit;
+        text-transform: inherit;
+
+        svg {
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    &__content {
+        margin-top: .5rem;
+    }
+}
+
+/* Mask */
+.wc-block-components-loading-mask {
+    opacity: .5;
+
+    @include loader();
+}
+
+/* PRP Tooltip */
 .prp-tooltip {
     .tooltip {
         &-inner {

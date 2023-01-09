@@ -1,26 +1,5 @@
 /* Cart */
 .wc-block-cart {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    gap: calc(2 * var(--wp--custom--gutter));
-
-    &__main,
-    &__sidebar {
-        flex: 1 0 100%;
-        width: 100%;
-
-        .is-large & {
-            flex: 1 0 0%;
-        }
-    }
-
-    &__sidebar {
-        .is-large & {
-            flex: 0 0 30%
-        }
-    }
-
     &__totals {
         &-title {
             margin-top: 1rem;
@@ -45,19 +24,15 @@
             }
         }
     }
-
-    .wc-block-components-totals-wrapper {
-        &:not(:empty) {
-            padding: .5rem 0;
-            border-top: 1px solid var(--wp--preset--color--light);
-            border-bottom: 1px solid var(--wp--preset--color--light);
-        }
-    }
 }
 
 /* Cart Items */
 .wc-block-cart-items {
     width: 100%;
+
+    > :not(caption) > * > * {
+        border-bottom: 1px solid var(--wp--gray-300);
+    }
 
     &__header {
         &-image,
@@ -77,7 +52,6 @@
 
     &__row {
         position: relative;
-        border-top: 1px solid var(--wp--preset--color--light);
         vertical-align: top;
     }
 }
@@ -86,7 +60,11 @@
 .wc-block-cart-item {
     &__image {
         padding: .5rem 0;
-        width: 100px;
+        width: 65px;
+
+        @include media-breakpoint-up( 'sm' ) {
+            width: 100px;
+        }
 
         img {
             margin-top: 5px;
@@ -104,7 +82,6 @@
             display: block;
             color: var(--wp--preset--color--black);
             font-weight: bold;
-            max-width: max-content;
         }
 
         .wc-block-components-product-metadata {
@@ -113,6 +90,10 @@
                     margin-bottom: .5rem;
                 }
             }
+        }
+
+        .wc-block-components-sale-badge {
+            color: var(--wp--preset--color--danger);
         }
         
         .wc-block-components-product-badge ~ .wc-block-components-product-badge {
@@ -173,7 +154,6 @@
         color: inherit;
         font-size: inherit;
         font-family: inherit;
-        font-weight: 400;
         padding: .5em 0;
     
         &:hover:not([disabled]) {
@@ -203,12 +183,12 @@
     &__badge {
         display: flex;
         align-items: center;
-        background: var(--wp--preset--color--danger);
-        border: 0.2em solid var(--wp--preset--color--danger);
-        border-radius: 1em;
-        color: var(--wp--preset--color--white);
         justify-content: center;
-        font-size: .7em;
+        background: var(--wp--preset--color--danger);
+        border: 1px solid var(--wp--preset--color--danger);
+        border-radius: .2em;
+        color: var(--wp--preset--color--white);
+        font-size: var(--wp--preset--font-size--small);
         font-weight: 600;
         height: 1.2em;
         min-width: 1em;
@@ -306,7 +286,7 @@
     }
 
     &__footer {
-        border-top: 1px solid var(--wp--preset--color--light);
+        border-top: 1px solid var(--wp--gray-300);
         padding: var(--wp--custom--gutter, 1rem) var(--wp--custom--gutter, 1rem);
     
         &-subtotal {
@@ -393,7 +373,54 @@
 	justify-content: space-between;
 }
 
-/* Components */
+/* Totals */
+.wc-block-components-totals-wrapper {
+    position: relative;
+    padding: 1rem 0;
+
+    &:empty {
+        display: none;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-style: solid;
+        border-width: 1px 0 0;
+        border-color: var(--wp--gray-300);
+        display: block;
+        pointer-events: none;
+    }
+}
+
+.wc-block-components-totals-item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &__label {
+        flex-grow: 1;
+    }
+
+    &__value {
+        font-weight: 700;
+    }
+}
+
+.wc-block-components-totals-footer-item {
+    font-size: var(--wp--preset--font-size--large);
+
+    .wc-block-components-totals-item {
+        &__label {
+            font-weight: 700;
+        }
+    }
+}
+
 .wc-block-components-totals-coupon {
     &__form {
         display: flex;
@@ -401,11 +428,12 @@
 
     &__input {
         flex: 1 1 100%;
-        margin-top: 0;
+        margin-top: 0!important;
     }
 
     &__button {
         margin-left: 1rem;
+        background-color: var(--wp--preset--color--primary);
 
         &:disabled {
             opacity: .5;

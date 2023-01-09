@@ -12,7 +12,7 @@
  *
  * @see https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 3.6.0
+ * @version 7.0.1
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -49,13 +49,16 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 		<div class="wp-block-button">
 			<?php			
 			
+				$classes = [ 'wp-block-button__link', 'has-primary-background-color' ];
+				$classes[] = wc_wp_theme_get_element_class_name( 'button' );
+
 				wecodeart_input( 'button', [
 					'type'	=> 'submit',
 					'label' => esc_html__( 'Save address', 'woocommerce' ),
 					'attrs' => [
 						'name'	=> 'save_address',
 						'value'	=> esc_attr__( 'Save address', 'woocommerce' ),
-						'class'	=> 'wp-block-button__link has-primary-background-color'
+						'class'	=> join( ' ', array_filter( $classes ) )
 					]
 				] );
 			

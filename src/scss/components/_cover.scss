@@ -8,7 +8,7 @@
             content: '';
             position: absolute;
             width: 100%;
-            max-width: calc(1320px - 2rem);
+            max-width: var(--wp--style--global--content-size);
             bottom: 0;
             left: 0;
             right: 0;

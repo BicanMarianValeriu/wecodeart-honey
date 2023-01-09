@@ -29,13 +29,9 @@ class WooCommerce {
 		add_filter( 'woocommerce_enqueue_styles',						'__return_empty_array' );
 		add_action( 'wp_enqueue_scripts',								[ $this, 'manage_assets' 			] );
 
-		// Title
-		add_filter( 'wecodeart/filter/wrappers/wp-block-post-title', 	[ $this, 'title_wrappers' 			] );
-
 		// Columns
 		add_filter( 'woocommerce_output_related_products_args', 		[ $this, 'similar_products_args' 	], 20 );
 		add_filter( 'woocommerce_upsell_display_args', 					[ $this, 'similar_products_args' 	], 20 );
-		add_filter( 'woocommerce_cross_sells_columns', 					[ $this, 'cross_sells_columns' 		], 20 );
 		add_filter( 'woocommerce_product_thumbnails_columns', 			[ $this, 'product_thumbnails_columns' ] );
 		
 		// Breadcrumbs
@@ -54,26 +50,25 @@ class WooCommerce {
 		add_filter( 'woocommerce_available_variation', 					[ $this, 'available_variation' 			] );
 
 		// 1 City/State delivery
+		add_filter( 'woocommerce_states', 								[ $this, 'custom_woocommerce_state' ], 	10, 1 );
 		add_filter( 'default_checkout_billing_state', 					[ $this, 'change_default_checkout_state' ] );
 		add_filter( 'default_checkout_shipping_state', 					[ $this, 'change_default_checkout_state' ] );
-		add_filter( 'woocommerce_checkout_fields',						[ $this, 'custom_checkout_fields' ],	10, 1 );
-		add_filter( 'woocommerce_states', 								[ $this, 'custom_woocommerce_state' ], 	10, 1 );
 
 		// Fragment Cache
-		if ( apply_filters( 'litespeed_esi_status', false ) ) {
-			add_action( 'render_block', function( $content, $data ) {
-				if( get_prop( $data, [ 'blockName' ] ) === 'woocommerce/mini-cart' ) {
-					return apply_filters( 'litespeed_esi_url', 'woo_mini_cart', 'WOO_ESI_BLOCK', [
-						'content' 	=> $content,
-						'data'		=> $data
-					] );
-				}
+		// if ( apply_filters( 'litespeed_esi_status', false ) ) {
+		// 	add_action( 'render_block', function( $content, $data ) {
+		// 		if( get_prop( $data, [ 'blockName' ] ) === 'woocommerce/mini-cart' ) {
+		// 			return apply_filters( 'litespeed_esi_url', 'woo_mini_cart', 'WOO_ESI_BLOCK', [
+		// 				'content' 	=> $content,
+		// 				'data'		=> $data
+		// 			] );
+		// 		}
 
-				return $content;
-			}, 10, 2 );
+		// 		return $content;
+		// 	}, 10, 2 );
 
-			add_action( 'litespeed_esi_load-woo_mini_cart', __CLASS__ . '::load_mini_cart' );
-		}
+		// 	add_action( 'litespeed_esi_load-woo_mini_cart', __CLASS__ . '::load_mini_cart' );
+		// }
 	}
 
 	public static function load_mini_cart( $params ) {
@@ -98,15 +93,6 @@ class WooCommerce {
 
 	public function change_default_checkout_state() {
 		return 'GJ';
-	}
-
-	public function custom_checkout_fields( $fields ) {
-		$fields['billing']['billing_city']['custom_attributes']['readonly'] = 'true';
-		$fields['billing']['billing_city']['custom_attributes']['value'] = 'Târgu Jiu';
-		$fields['shipping']['shipping_city']['custom_attributes']['readonly'] = 'true';
-		$fields['shipping']['shipping_city']['custom_attributes']['value'] = 'Târgu Jiu';
-
-		return $fields;
 	}
 
 	/**
@@ -241,18 +227,6 @@ class WooCommerce {
 	}
 
 	/**
-	 * Cross sells Columns Args
-	 *
-	 * @since	1.0
-	 * @version	1.0
-	 *
-	 * @return 	string
-	 */
-	public function cross_sells_columns( $args ) {
-		return 3;
-	}
-
-	/**
 	 * Similar Products Args
 	 *
 	 * @since	1.0
@@ -265,23 +239,5 @@ class WooCommerce {
 			'posts_per_page' 	=> 4,
 			'columns' 			=> 4,
 		], $args );
-	}
-
-	/**
-	 * Title Wrappers
-	 *
-	 * @since	1.0
-	 * @version	1.0
-	 *
-	 * @return 	string
-	 */
-	public function title_wrappers( $wrappers ) {
-		wecodeart( 'styles' )->Utilities->load( 'overflow-hidden' );
-
-		if( isset( $wrappers[0] ) && isset( $wrappers[0]['attrs'] ) ) {
-			$wrappers[0]['attrs']['class'] .= ' overflow-hidden';
-		}
-
-		return $wrappers;
 	}
 }
