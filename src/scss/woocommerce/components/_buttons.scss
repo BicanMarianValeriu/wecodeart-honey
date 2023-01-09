@@ -1,5 +1,5 @@
 // Add to Cart
-:is(.add_to_cart_button,.wp-element-button.product_type_simple,.wp-element-button.single_add_to_cart_button,.wc-block-components-product-button__button) {
+:is(.add_to_cart_button,.wp-element-button.product_type_simple,.wp-element-button.single_add_to_cart_button,.wc-block-components-product-button__button,.wc-block-components-product-add-to-cart) {
     position: relative;
     padding-left: 5.5rem;
     font-size: var(--wp--preset--font-size--small);
