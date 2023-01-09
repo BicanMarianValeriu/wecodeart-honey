@@ -175,6 +175,8 @@ wecodeart( 'styles' )->Utilities->load( [ 'position-sticky', 'col-md-7', 'my-3',
 		</div>
 	</div>
 	<?php else : ?>
-	<p class="span-3 woocommerce-verification-required"><?php esc_html_e( 'Only logged in customers who have purchased this product may leave a review.', 'woocommerce' ); ?></p>
+	<div class="span-3 span-lg-1">
+		<p class="woocommerce-verification-required"><?php esc_html_e( 'Only logged in customers who have purchased this product may leave a review.', 'woocommerce' ); ?></p>
+	</div>
 	<?php endif; ?>
 </div>
