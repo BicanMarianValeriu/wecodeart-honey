@@ -96,13 +96,16 @@ wecodeart( 'styles' )->Utilities->load( [
 		?>
 		<div class="wp-block-button"><?php
 
+			$classes = [ 'wp-block-button__link', 'has-primary-background-color' ];
+			$classes[] = wc_wp_theme_get_element_class_name( 'button' );
+
 			wecodeart_input( 'button', [
 				'type'	=> 'submit',
 				'label' => esc_html__( 'Track', 'woocommerce' ),
 				'attrs' => [
 					'name'	=> 'track',
 					'value'	=> esc_attr__( 'Track', 'woocommerce' ),
-					'class'	=> 'wp-block-button__link has-primary-background-color' . wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : ''
+					'class'	=> join( ' ', array_filter( $classes ) )
 				]
 			] );
 
