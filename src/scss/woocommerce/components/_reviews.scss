@@ -218,6 +218,7 @@ p.stars {
     }
 
     .review {
+        --wc--avatar-size: 60px;
         margin-bottom: 1rem;
 
         @include media-breakpoint-down( 'sm' ) {
@@ -235,9 +236,9 @@ p.stars {
         .comment-text {
             position: relative;
             float: right;
-            width: calc( 100% - 60px );
+            width: calc( 100% - var(--wc--avatar-size) );
             padding-left: 10px;
-            font-size: .75rem;
+            font-size: var(--wp--preset--font-size--small);
 
             @include media-breakpoint-up( 'sm' ) { 
                 font-size: .9rem;
@@ -245,6 +246,7 @@ p.stars {
         }
 
         .avatar {
+            max-width: var(--wc--avatar-size);
             float: left;
             border: 4px solid var(--wp--gray-100);
             border-radius: 100%;
