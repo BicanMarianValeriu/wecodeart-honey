@@ -24,6 +24,12 @@ export default {
 		// Icons
 		dom.watch();
 
+		// Mini Cart
+		const miniCartButton = document.querySelector('.wc-block-mini-cart__button');
+		if (miniCartButton) {
+			miniCartButton.dispatchEvent(new Event('mouseover'));
+		}
+
 		// Select2
 		// const { fn: { requireJs }, lazyJs } = wecodeart;
 		// requireJs(lazyJs, ['select2'], () => jQuery('select').select2());
