@@ -64,6 +64,10 @@ ul.products .star-rating,
     }
 }
 
+.wc-block-components-sale-badge {
+    color: var(--wp--preset--color--danger);
+}
+
 .wc-block-components-product-sale-badge {
     &--align-left {
         left: -10px;

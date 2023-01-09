@@ -81,7 +81,8 @@
         .wc-block-components-product-name {
             display: block;
             color: var(--wp--preset--color--black);
-            font-weight: bold;
+            font-weight: 700;
+            width: max-content;
         }
 
         .wc-block-components-product-metadata {
@@ -90,10 +91,6 @@
                     margin-bottom: .5rem;
                 }
             }
-        }
-
-        .wc-block-components-sale-badge {
-            color: var(--wp--preset--color--danger);
         }
         
         .wc-block-components-product-badge ~ .wc-block-components-product-badge {

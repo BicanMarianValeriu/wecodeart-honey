@@ -59,10 +59,9 @@
 }
 
 // Cart & Checkout
-.wc-block-mini-cart__footer-checkout,
 .wc-block-cart__submit-button,
-.wc-block-components-checkout-place-order-button,
-.woocommerce-checkout-payment__pay .button {
+.wc-block-mini-cart__footer-checkout,
+.wc-block-components-checkout-place-order-button {
     position: relative;
     font-size: var(--wp--preset--font-size--small);
 
