@@ -55,7 +55,6 @@ do_action( 'woocommerce_before_lost_password_form' );
 	?>
 	<?php do_action( 'woocommerce_lostpassword_form' ); ?>
 	<div class="wp-block-button">
-		<input type="hidden" name="wc_reset_password" value="true" />
 		<?php
 
 		$classes = [ 'wp-block-button__link', 'has-primary-background-color', 'woocommerce-Button' ];
@@ -71,6 +70,7 @@ do_action( 'woocommerce_before_lost_password_form' );
 		] );
 
 		?>
+		<input type="hidden" name="wc_reset_password" value="true" />
 		<?php wp_nonce_field( 'lost_password', 'woocommerce-lost-password-nonce' ); ?>
 	</div>
 </form>
