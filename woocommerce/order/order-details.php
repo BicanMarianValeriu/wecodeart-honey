@@ -24,7 +24,6 @@ if ( ! $order ) {
 }
 
 wecodeart( 'styles' )->Utilities->load( [
-	'w-100',
 	'mb-5',
 	'mb-0',
 ] );
@@ -51,7 +50,7 @@ if ( $show_downloads ) {
 		<h5 class="woocommerce-order-details__title mb-0"><?php esc_html_e( 'Order details', 'woocommerce' ); ?></h5>
 		<?php do_action( 'woocommerce_order_details_before_order_table', $order ); ?>
 	</div>
-	<table class="woocommerce-table woocommerce-table--order-details shop_table order_details w-100">
+	<table class="woocommerce-table woocommerce-table--order-details">
 
 		<thead>
 			<tr>

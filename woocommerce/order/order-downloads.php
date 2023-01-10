@@ -29,7 +29,7 @@ wecodeart( 'styles' )->Utilities->load( [ 'mb-0' ] );
 		<?php if ( isset( $show_title ) ) : ?>
 		<h3 class="woocommerce-order-downloads__title has-black-color"><?php esc_html_e( 'Downloads', 'woocommerce' ); ?></h3>
 		<?php endif; ?>
-		<table class="woocommerce-table woocommerce-table--order-downloads shop_table shop_table_responsive order_details mb-0">
+		<table class="woocommerce-table woocommerce-table--order-downloads mb-0">
 			<thead>
 				<tr>
 					<?php foreach ( wc_get_account_downloads_columns() as $column_id => $column_name ) : ?>
