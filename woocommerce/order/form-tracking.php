@@ -37,7 +37,7 @@ wecodeart( 'styles' )->Utilities->load( [
 			
 		?></p>
 	</div>
-	<form action="<?php echo esc_url( get_permalink( $post->ID ) ); ?>" method="post" class="woocommerce-form woocommerce-form-track-order track_order card-body needs-validation" novalidate="">
+	<form action="<?php echo esc_url( get_permalink( $post->ID ) ); ?>" method="post" class="woocommerce-form woocommerce-form-track-order card-body needs-validation" novalidate="">
 		<?php
 
 		/**
