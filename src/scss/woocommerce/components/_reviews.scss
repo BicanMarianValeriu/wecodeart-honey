@@ -54,12 +54,14 @@ p.stars {
 
     span {
         display: block;
+        line-height: 1;
     }
 
     a {
         position: relative;
         display: inline-block;
         width: 1em;
+        height: 1em;
         font-size: 1.5rem;
         text-indent: -999em;
         text-decoration: none;
@@ -79,8 +81,16 @@ p.stars {
 
 // Blocks
 .wc-block-all-reviews,
+.wc-block-review-list,
 .wc-block-reviews-by-product,
 .wc-block-reviews-by-category {
+    --wc--avatar--size: 60px;
+    --wc--avatar--radius: .25rem;
+
+    @include media-breakpoint-up( 'sm' ) {
+        --wc--avatar--size: 80px;
+    }
+
     .wc-block-sort-select,
     .wc-block-order-select {
         text-align: left;
@@ -126,14 +136,28 @@ p.stars {
         &__item {
             &.is-loading {
                 position: relative;
-                min-height: 80px;
-                background-color: var(--wp--gray-200);
-                @include loader();
-                @include border-radius();
-    
-                .wc-block-review-list-item__info,
+                
+                .wc-block-review-list-item__image,
+                .wc-block-review-list-item__author,
+                // .wc-block-review-list-item__rating,
+                .wc-block-review-list-item__published-date,
                 .wc-block-review-list-item__text {
-                    display: none;
+                    @include loading-element();
+                }
+
+                .wc-block-review-list-item__author {
+                    max-width: calc(var(--wc--avatar--size) * 2);
+                }
+
+                // .wc-block-review-list-item__rating,
+                .wc-block-review-list-item__published-date {
+                    max-width: var(--wc--avatar--size);
+                }
+
+                .wc-block-review-list-item__image {
+                    max-width: var(--wc--avatar--size);
+                    min-height: var(--wc--avatar--size);
+                    border-radius: var(--wc--avatar--radius);
                 }
             }
 
@@ -148,9 +172,11 @@ p.stars {
         }
 
         &__image {
+            position: relative;
+
             img {
-                width: 80px;
-                @include border-radius( 100% );
+                width: var(--wc--avatar--size);
+                border-radius: var(--wc--avatar--radius);
             }
         }
 
@@ -161,8 +187,6 @@ p.stars {
         }
 
         &__rating {
-            float: right;
-
             > * {
                 font-size: 1rem;
             }
@@ -173,11 +197,6 @@ p.stars {
                 font-weight: bold;
                 text-decoration: none;
             }
-        }
-
-        &__author,
-        &__published-date {
-            display: inline-block;
         }
 
         &__published-date {
@@ -200,7 +219,17 @@ p.stars {
         }
 
         &__verified {
-            display: none;
+            position: absolute;
+            top: -0.5em;
+            right: -0.5em;
+            width: 1rem;
+            height: 1rem;
+            background-image: var(--wc--verified);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            text-indent: -9999px;
         }
     }
 }

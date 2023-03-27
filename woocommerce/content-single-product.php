@@ -14,6 +14,7 @@
  * @package WooCommerce\Templates
  * @version 3.6.0
  */
+use WeCodeArt\Honey\Support\WooCommerce;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -89,6 +90,9 @@ wecodeart( 'styles' )->Utilities->load( [
 	 * @hooked woocommerce_output_related_products - 20
 	 */
 	do_action( 'woocommerce_after_single_product_summary' );
+
+	WooCommerce::render_viewed_products( [] );
+	
 	?>
 </div>
 

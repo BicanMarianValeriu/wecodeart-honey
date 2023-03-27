@@ -26,28 +26,29 @@ class WooCommerce {
 	 * Send Construtor
 	 */
 	public function init() {
+		// Assets
 		add_filter( 'woocommerce_enqueue_styles',						'__return_empty_array' );
 		add_action( 'wp_enqueue_scripts',								[ $this, 'manage_assets' 			] );
+
+		// Breadcrumbs
+		remove_action( 'woocommerce_before_main_content', 				'woocommerce_breadcrumb', 20 );
+		add_action( 'woocommerce_single_product_summary', 				'woocommerce_breadcrumb', -10 );
+
 
 		// Columns
 		add_filter( 'woocommerce_output_related_products_args', 		[ $this, 'similar_products_args' 	], 20 );
 		add_filter( 'woocommerce_upsell_display_args', 					[ $this, 'similar_products_args' 	], 20 );
 		add_filter( 'woocommerce_product_thumbnails_columns', 			[ $this, 'product_thumbnails_columns' ] );
 		
-		// Breadcrumbs
-		remove_action( 'woocommerce_before_main_content', 	'woocommerce_breadcrumb', 20 );
-		add_action( 'woocommerce_single_product_summary', 	'woocommerce_breadcrumb', -10 );
-
 		// Custom PRP
 		add_action( 'woocommerce_product_options_general_product_data', [ $this, 'product_options_general_product_data' ] );
 		add_action( 'woocommerce_process_product_meta', 				[ $this, 'process_product_meta' 		] );
-		remove_action( 'woocommerce_single_product_summary', 			'woocommerce_template_single_price', 10 );
 		add_action( 'woocommerce_single_product_summary', 				[ $this, 'manufacturer_price_template'	], 10 );
-		add_action( 'woocommerce_single_product_summary', 				'woocommerce_template_single_price', 10 );
-
 		add_action( 'woocommerce_variation_options_pricing', 			[ $this, 'variation_options_pricing' 	], 10, 3 );
 		add_action( 'woocommerce_save_product_variation', 				[ $this, 'save_product_variation' 		], 10, 2 );
 		add_filter( 'woocommerce_available_variation', 					[ $this, 'available_variation' 			] );
+		remove_action( 'woocommerce_single_product_summary', 			'woocommerce_template_single_price', 10 );
+		add_action( 'woocommerce_single_product_summary', 				'woocommerce_template_single_price', 10 );
 
 		// 1 City/State delivery
 		add_filter( 'woocommerce_states', 								[ $this, 'custom_woocommerce_state' ], 	10, 1 );
@@ -55,20 +56,20 @@ class WooCommerce {
 		add_filter( 'default_checkout_shipping_state', 					[ $this, 'change_default_checkout_state' ] );
 
 		// Fragment Cache
-		// if ( apply_filters( 'litespeed_esi_status', false ) ) {
-		// 	add_action( 'render_block', function( $content, $data ) {
-		// 		if( get_prop( $data, [ 'blockName' ] ) === 'woocommerce/mini-cart' ) {
-		// 			return apply_filters( 'litespeed_esi_url', 'woo_mini_cart', 'WOO_ESI_BLOCK', [
-		// 				'content' 	=> $content,
-		// 				'data'		=> $data
-		// 			] );
-		// 		}
+		if ( apply_filters( 'litespeed_esi_status', false ) ) {
+			add_action( 'render_block', function( $content, $data ) {
+				if( get_prop( $data, [ 'blockName' ] ) === 'woocommerce/mini-cart' ) {
+					return apply_filters( 'litespeed_esi_url', 'woo_mini_cart', 'WOO_ESI_BLOCK', [
+						'content' 	=> $content,
+						'data'		=> $data
+					] );
+				}
 
-		// 		return $content;
-		// 	}, 10, 2 );
+				return $content;
+			}, 10, 2 );
 
-		// 	add_action( 'litespeed_esi_load-woo_mini_cart', __CLASS__ . '::load_mini_cart' );
-		// }
+			add_action( 'litespeed_esi_load-woo_mini_cart', __CLASS__ . '::load_mini_cart' );
+		}
 	}
 
 	public static function load_mini_cart( $params ) {
@@ -88,7 +89,11 @@ class WooCommerce {
 	 * @return 	void
 	 */
 	public function custom_woocommerce_state( $states ) {
-		return array( 'RO' => array( 'GJ' => 'Gorj' ) );
+		return [
+			'RO' => [
+				'GJ' => 'Gorj'
+			]
+		];
 	}
 
 	public function change_default_checkout_state() {
@@ -239,5 +244,48 @@ class WooCommerce {
 			'posts_per_page' 	=> 4,
 			'columns' 			=> 4,
 		], $args );
+	}
+	
+	/**
+	 * Similar Products Args
+	 *
+	 * @since	1.0
+	 * @version	1.0
+	 *
+	 * @return 	string
+	 */
+	public static function render_viewed_products( $args ) {
+		$args = [
+			'orderby'		=> 'menu_order',
+			'columns'		=> 4,
+			'products'		=> [ 1056, 464 ],
+			'alignButtons'	=> true,
+			'contentVisibility' => [
+				'image' => true,
+				'title' => true,
+				'price' => true,
+				'rating' => true,
+				'button' => true,
+			],
+		];
+
+		$template .= '<!-- wp:group {"className":"products-viewed","tagName":"section"} -->';
+		$template .= '<section class="wp-block-group products-viewed">';
+		$template .= '<!-- wp:heading {"textAlign":"center","level":2,"textColor":"dark","className":"mt-5"} -->';
+		$template .= '<h2 class="has-text-align-center mt-5 has-dark-color has-text-color">Produse văzute recent</h2>';
+		$template .= '<!-- /wp:heading -->';
+		$template .= '<!-- wp:separator {"color":"primary","className":"mb-5 is-style-faded"} -->';
+		$template .= '<hr class="wp-block-separator has-text-color has-background has-primary-background-color has-primary-color mb-5 is-style-faded" />';
+		$template .= '<!-- /wp:separator -->';
+		$template .= '<!-- wp:woocommerce/handpicked-products ' . wp_json_encode( $args ) . ' /-->';
+		$template .= '</section>';
+		$template .= '<!-- /wp:group -->';
+
+		$blocks = new \WP_Block_List( parse_blocks( $template ), $args );
+
+		$content = '';
+		foreach( $blocks as $block ) $content .= $block->render( $block );
+
+		echo $content;
 	}
 }

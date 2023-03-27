@@ -4045,9 +4045,16 @@ __webpack_require__.r(__webpack_exports__);
     } // Icons
 
 
-    _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__.dom.watch(); // Select2
+    _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__.dom.watch(); // Mini Cart
+
+    const miniCartButton = document.querySelector('.wc-block-mini-cart__button');
+
+    if (miniCartButton) {
+      miniCartButton.dispatchEvent(new Event('mouseover'));
+    } // Select2
     // const { fn: { requireJs }, lazyJs } = wecodeart;
     // requireJs(lazyJs, ['select2'], () => jQuery('select').select2());
+
   }
 });
 

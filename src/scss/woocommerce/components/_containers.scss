@@ -1,5 +1,31 @@
 @import "~animate.css/source/fading_entrances/fadeIn";
 @import "~animate.css/source/sliding_exits/slideOutLeft";
+/* Layout */
+.wc-block-components-sidebar-layout {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(2 * var(--wp--custom--gutter));
+}
+
+.wc-block-components-main,
+.wc-block-components-sidebar {
+    flex: 1 0 100%;
+    width: 100%;
+
+    .is-large & {
+        flex: 1 0 0%;
+    }
+}
+
+.wc-block-components-sidebar {
+    .is-large & {
+        position: sticky;
+        top: 80px;
+        align-self: flex-start;
+        flex: 0 0 30%
+    }
+}
 
 /* Drawer */
 .wc-block-components-drawer {
@@ -103,6 +129,8 @@
 
 /* Mask */
 .wc-block-components-loading-mask {
+    position: relative;
+    pointer-events: none;
     opacity: .5;
 
     @include loader();

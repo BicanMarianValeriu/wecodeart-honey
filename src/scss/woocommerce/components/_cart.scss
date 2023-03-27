@@ -316,6 +316,7 @@
             @media only screen and (min-width: 480px) {
                 display: block;
                 background-color: transparent;
+                border-width: 1px;
                 border-color: currentColor;
                 color: var(--wp--preset--color--primary);
             }

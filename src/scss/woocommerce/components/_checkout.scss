@@ -5,12 +5,15 @@
     }
 
     &__actions {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         padding-top: 1rem;
         margin-top: 1rem;
         border-top: 1px solid var(--wp--gray-300);
+
+        &_row {  
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
         .is-mobile & {
             .wc-block-components-checkout-return-to-cart-button {
@@ -91,7 +94,7 @@
     &__title {
         font-size: var(--wp--preset--font-size--large);
         color: var(--wp--preset--color--dark);
-        margin-bottom: 0;
+        margin: 0;
     }
 
     &__description {
