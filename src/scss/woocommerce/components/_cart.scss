@@ -137,7 +137,6 @@
 /* Mini Cart */
 .wc-block-mini-cart {
 	display: inline-block;
-    color: var(--wp--preset--color--primary);
 
     &[aria-hidden="true"] {
         display: none;
@@ -167,7 +166,6 @@
 
         @media screen and (min-width: 768px) {
             display: initial;
-            font-weight: 600;
             margin-right: .75em;
         }
     }

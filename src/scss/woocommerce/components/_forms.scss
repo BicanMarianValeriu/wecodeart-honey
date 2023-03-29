@@ -383,18 +383,22 @@
 
     .components-form-token-field {
         &__label {
-            display: none;
+            &:empty {
+                display: none;
+            }
         }
 
         &__input-container {
+            --wp--input-padding-y: .75em;
             position: relative;
             @extend %basic__input;
-            padding: .75em 0;
-            min-height: 50px;
+            padding: var(--wp--input-padding-y) 0;
             text-indent: 0;
 
-            &.is-active {
-                border: var(--wc--input--border);
+            &:not(.is-active) {
+                .components-form-token-field__token + input {
+                    display: none;
+                }
             }
 
             &:focus,
@@ -403,30 +407,18 @@
                 border-color: var(--wc--input--border-focus);
 
                 input {
-                    position: relative;
-                    border-left: 0;
-                    border-right: 0;
-                    border-radius: 0;
-                    border-color: inherit;
+                    display: block;
                     
                     &:not(:first-child) {
-                        margin-top: .75em;
+                        margin-top: var(--wp--input-padding-y);
                     }
                 }
             }
 
-            &:not(.is-active) {
-                input {
-                    border: 0;
-                }
-            }
-
             input {
-                position: absolute;
-                top: 0;
-                left: 0;
                 @extend %basic__input;
-                padding: inherit;
+                padding: 0;
+                border: 0;
             }
         }
 

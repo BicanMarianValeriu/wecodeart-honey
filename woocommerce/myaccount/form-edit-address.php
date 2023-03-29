@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 use function WeCodeArt\Functions\get_prop;
 
 wecodeart( 'styles' )->Utilities->load( [
-	'mt-5',
+	'my-0',
 	'mb-0',
 ] );
 
@@ -33,7 +33,7 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 <?php else : ?>
 <form method="post" class="card needs-validation" novalidate="">
 	<div class="card-header">
-		<h5 class="mb-0"><?php echo apply_filters( 'woocommerce_my_account_edit_address_title', $page_title, $load_address ); ?></h5><?php // @codingStandardsIgnoreLine ?>
+		<h5 class="my-0"><?php echo apply_filters( 'woocommerce_my_account_edit_address_title', $page_title, $load_address ); ?></h5><?php // @codingStandardsIgnoreLine ?>
 	</div>
 	<div class="card-body woocommerce-address-fields">
 		<?php do_action( "woocommerce_before_edit_address_form_{$load_address}" ); ?>

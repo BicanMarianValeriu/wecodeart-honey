@@ -2054,6 +2054,27 @@ ul li.type-product.is-loading .wc-block-grid__product-title,
   margin-bottom: 0;
 }
 
+.wp-block-woocommerce-customer-account {
+  display: inline-block;
+}
+.wp-block-woocommerce-customer-account a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: currentColor;
+}
+.wp-block-woocommerce-customer-account .icon {
+  display: block;
+  width: 1.25em;
+  height: 1.25em;
+}
+.wp-block-woocommerce-customer-account .icon + .label {
+  margin-left: 0.5em;
+}
+.wp-block-woocommerce-customer-account .label:empty {
+  display: none;
+}
+
 /* Cart */
 .wc-block-cart__totals-title {
   margin-top: 1rem;
@@ -2172,7 +2193,6 @@ ul li.type-product.is-loading .wc-block-grid__product-title,
 /* Mini Cart */
 .wc-block-mini-cart {
   display: inline-block;
-  color: var(--wp--preset--color--primary);
 }
 .wc-block-mini-cart[aria-hidden=true] {
   display: none;
@@ -2199,7 +2219,6 @@ ul li.type-product.is-loading .wc-block-grid__product-title,
 @media screen and (min-width: 768px) {
   .wc-block-mini-cart__amount {
     display: initial;
-    font-weight: 600;
     margin-right: 0.75em;
   }
 }
@@ -3478,39 +3497,30 @@ html[dir=rtl] .wc-block-mini-cart__icon {
 .wc-blocks-components-form-token-field-wrapper.is-loading .components-form-token-field {
   display: none;
 }
-.wc-blocks-components-form-token-field-wrapper .components-form-token-field__label {
+.wc-blocks-components-form-token-field-wrapper .components-form-token-field__label:empty {
   display: none;
 }
 .wc-blocks-components-form-token-field-wrapper .components-form-token-field__input-container {
+  --wp--input-padding-y: .75em;
   position: relative;
-  padding: 0.75em 0;
-  min-height: 50px;
+  padding: var(--wp--input-padding-y) 0;
   text-indent: 0;
 }
-.wc-blocks-components-form-token-field-wrapper .components-form-token-field__input-container.is-active {
-  border: var(--wc--input--border);
+.wc-blocks-components-form-token-field-wrapper .components-form-token-field__input-container:not(.is-active) .components-form-token-field__token + input {
+  display: none;
 }
 .wc-blocks-components-form-token-field-wrapper .components-form-token-field__input-container:focus, .wc-blocks-components-form-token-field-wrapper .components-form-token-field__input-container:focus-within, .wc-blocks-components-form-token-field-wrapper .components-form-token-field__input-container.is-active {
   border-color: var(--wc--input--border-focus);
 }
 .wc-blocks-components-form-token-field-wrapper .components-form-token-field__input-container:focus input, .wc-blocks-components-form-token-field-wrapper .components-form-token-field__input-container:focus-within input, .wc-blocks-components-form-token-field-wrapper .components-form-token-field__input-container.is-active input {
-  position: relative;
-  border-left: 0;
-  border-right: 0;
-  border-radius: 0;
-  border-color: inherit;
+  display: block;
 }
 .wc-blocks-components-form-token-field-wrapper .components-form-token-field__input-container:focus input:not(:first-child), .wc-blocks-components-form-token-field-wrapper .components-form-token-field__input-container:focus-within input:not(:first-child), .wc-blocks-components-form-token-field-wrapper .components-form-token-field__input-container.is-active input:not(:first-child) {
-  margin-top: 0.75em;
-}
-.wc-blocks-components-form-token-field-wrapper .components-form-token-field__input-container:not(.is-active) input {
-  border: 0;
+  margin-top: var(--wp--input-padding-y);
 }
 .wc-blocks-components-form-token-field-wrapper .components-form-token-field__input-container input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: inherit;
+  padding: 0;
+  border: 0;
 }
 .wc-blocks-components-form-token-field-wrapper .components-form-token-field__token {
   position: relative;

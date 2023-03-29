@@ -30,7 +30,7 @@ $show_shipping = ! wc_ship_to_billing_address_only() && $order->needs_shipping_a
 	<?php endif; ?>
 		<div class="card">
 			<div class="card-header">
-				<h6 class="woocommerce-column__title mb-0"><?php esc_html_e( 'Billing address', 'woocommerce' ); ?></h6>
+				<h6 class="woocommerce-column__title my-0"><?php esc_html_e( 'Billing address', 'woocommerce' ); ?></h6>
 			</div>
 			<div class="card-body">
 				<address>

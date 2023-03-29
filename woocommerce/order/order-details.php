@@ -26,6 +26,7 @@ if ( ! $order ) {
 wecodeart( 'styles' )->Utilities->load( [
 	'mb-5',
 	'mb-0',
+	'my-0',
 ] );
 
 $order_items           = $order->get_items( apply_filters( 'woocommerce_purchase_order_item_types', 'line_item' ) );
@@ -47,7 +48,7 @@ if ( $show_downloads ) {
 ?>
 <section class="woocommerce-order-details card mb-5">
 	<div class="card-header">
-		<h5 class="woocommerce-order-details__title mb-0"><?php esc_html_e( 'Order details', 'woocommerce' ); ?></h5>
+		<h5 class="woocommerce-order-details__title my-0"><?php esc_html_e( 'Order details', 'woocommerce' ); ?></h5>
 		<?php do_action( 'woocommerce_order_details_before_order_table', $order ); ?>
 	</div>
 	<table class="woocommerce-table woocommerce-table--order-details">

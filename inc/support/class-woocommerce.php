@@ -59,7 +59,7 @@ class WooCommerce {
 		if ( apply_filters( 'litespeed_esi_status', false ) ) {
 			add_action( 'render_block', function( $content, $data ) {
 				if( get_prop( $data, [ 'blockName' ] ) === 'woocommerce/mini-cart' ) {
-					return apply_filters( 'litespeed_esi_url', 'woo_mini_cart', 'WOO_ESI_BLOCK', [
+					return apply_filters( 'litespeed_esi_url', 'woo-mini-cart', 'WOO_ESI_BLOCK', [
 						'content' 	=> $content,
 						'data'		=> $data
 					] );
@@ -68,7 +68,7 @@ class WooCommerce {
 				return $content;
 			}, 10, 2 );
 
-			add_action( 'litespeed_esi_load-woo_mini_cart', __CLASS__ . '::load_mini_cart' );
+			add_action( 'litespeed_esi_load-woo-mini-cart', __CLASS__ . '::load_mini_cart' );
 		}
 	}
 

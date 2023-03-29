@@ -26,6 +26,7 @@ wecodeart( 'styles' )->Utilities->load( [
 	'rounded',
 	'mb-3',
 	'mb-0',
+	'mt-0',
 	'p-3',
 	'p-md-5',
 	'g-5',
@@ -43,7 +44,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 		<div class="has-secondary-background-color p-3 p-md-5 rounded">
 			<span class="has-small-font-size has-dark-color text-uppercase opacity-50"><?php esc_html_e( 'Already a member?', 'woocommerce' ); ?></span>
-			<h2 class="has-dark-color"><?php esc_html_e( 'Login', 'woocommerce' ); ?></h2>
+			<h2 class="has-dark-color mt-0"><?php esc_html_e( 'Login', 'woocommerce' ); ?></h2>
 
 			<?php
 
@@ -62,7 +63,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 	<div class="span-6 span-md-3 span-lg-4 align-self-center">
 		<span class="has-small-font-size has-primary-color text-uppercase"><?php esc_html_e( 'New User?', 'woocommerce' ); ?></span>
 
-		<h3><?php esc_html_e( 'Don`t have an account? Register Now!', 'woocommerce' ); ?></h3>
+		<h3 class="mt-0"><?php esc_html_e( 'Don`t have an account? Register Now!', 'woocommerce' ); ?></h3>
 		
 		<form method="post" class="woocommerce-form woocommerce-form-register register needs-validation" <?php do_action( 'woocommerce_register_form_tag' ); ?> novalidate>
 			

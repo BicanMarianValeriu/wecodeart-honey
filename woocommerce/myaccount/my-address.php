@@ -59,7 +59,7 @@ $col    = 1;
 
 	<div class="card u-column<?php echo $col < 0 ? 1 : 2; ?> col-<?php echo $oldcol < 0 ? 1 : 2; ?> woocommerce-Address mb-0">
 		<header class="card-header woocommerce-Address-title title">
-			<h6 class="mb-0"><?php echo esc_html( $address_title ); ?></h6>
+			<h6 class="my-0"><?php echo esc_html( $address_title ); ?></h6>
 		</header>
 		<address class="card-body mb-0">
 			<?php echo $address ? wp_kses_post( $address ) : esc_html_e( 'You have not set up this type of address yet.', 'woocommerce' ); ?>

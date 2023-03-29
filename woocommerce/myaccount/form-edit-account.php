@@ -19,14 +19,14 @@ defined( 'ABSPATH' ) || exit;
 
 wecodeart( 'styles' )->Utilities->load( [
 	'fw-700',
-	'mb-0',
+	'my-0',
 ] );
 
 do_action( 'woocommerce_before_edit_account_form' ); ?>
 
 <form class="woocommerce-EditAccountForm edit-account card needs-validation" action="" method="post" <?php do_action( 'woocommerce_edit_account_form_tag' ); ?> novalidate="">
 	<div class="card-header">
-		<h5 class="mb-0"><?php esc_html_e( 'Your details', 'woocommerce' ); ?></h5>
+		<h5 class="my-0"><?php esc_html_e( 'Your details', 'woocommerce' ); ?></h5>
 		<?php do_action( 'woocommerce_edit_account_form_start' ); ?>
 	</div>
 	<div class="card-body grid" style="--wp--columns:2;">
