@@ -5,19 +5,8 @@
  */
 import './../scss/frontend.scss';
 
-// Core
-import 'bootstrap/js/dist/collapse';
-
-// Helpers
-import helperGetParents from './helpers/getParents';
-
 // Common JS
 import common from './routes/common';
-import woocommerceJs from './routes/pages/woocommerceJs';
-import singleProduct from './routes/pages/product';
-
-// Attach Some Required Plugins
-wecodeart.fn.getParents = helperGetParents;
 
 const { hooks: { addAction } } = wp;
 
@@ -28,26 +17,3 @@ function extendCommon(route, func) {
 		common['complete']();
 	}
 }
-
-// Attach Specific Route JS
-wecodeart = {
-	...wecodeart,
-	...{
-		lazyJs: {
-			...wecodeart.lazyJs,
-			...{
-				'select2': [
-					'//cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js',
-				],
-			}
-		},
-		routes: {
-			/** 
-			 * This prop includes the global JS fired on every page
-			 */
-			...wecodeart.routes,
-			woocommerceJs,
-			singleProduct,
-		}
-	}
-};

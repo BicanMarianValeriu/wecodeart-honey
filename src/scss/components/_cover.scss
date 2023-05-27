@@ -1,23 +1,21 @@
-.wp-block-cover {
-    .blog &,
-    &:first-child {
-        border-bottom: 1px solid var(--wp--preset--color--secondary);
-        overflow: visible;
+.wp-block-cover.is-style-top {
+    border-bottom: 1px solid var(--wp--preset--color--secondary);
+    padding: 3rem var(--wp--custom--gutter);
+    overflow: visible;
 
-        &::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            max-width: var(--wp--style--global--content-size);
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            height: 6px;
-            transform: translateY(50%);
-            border-radius: 4px;
-            background: var(--wp--preset--color--secondary);
-            z-index: 5;
-        }
+    &::after {
+        content: '';
+        position: absolute;
+        width: calc(100% - 2 * var(--wp--custom--gutter));
+        max-width: var(--wp--style--global--content-size);
+        bottom: 0;
+        left: var(--wp--custom--gutter);
+        right: var(--wp--custom--gutter);
+        margin: 0 auto;
+        height: 6px;
+        transform: translateY(50%);
+        border-radius: 4px;
+        background: var(--wp--preset--color--secondary);
+        z-index: 5;
     }
 }

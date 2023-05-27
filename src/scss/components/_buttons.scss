@@ -1,8 +1,29 @@
+// General
 .wc-block-components-button,
 .wp-block-button__link {
     box-shadow: 0 5px 10px rgba( black, .05 );
 
     &:hover {
         box-shadow: none;
+    }
+}
+
+// Cart & Checkout
+.wc-block-cart__submit-button,
+.wc-block-mini-cart__footer-checkout,
+.wc-block-components-checkout-place-order-button {
+    position: relative;
+    font-size: var(--wp--preset--font-size--small);
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 1.125em;
+        height: 1.125em;
+        background-image: var(--wc--checkout);
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: .5rem;
+        vertical-align: -.125em;
     }
 }

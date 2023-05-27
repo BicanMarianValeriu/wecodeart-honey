@@ -1,5 +1,5 @@
-<!-- wp:template-part {"slug":"top-bar","layout":{"inherit":true}} /-->
-<!-- wp:template-part {"slug":"header","tagName":"header","className":"wp-site-header sticky-top","layout":{"inherit":true}} /-->
+<!-- wp:template-part {"slug":"top-bar"} /-->
+<!-- wp:template-part {"slug":"header","tagName":"header","className":"wp-site-header sticky-top"} /-->
 <!-- wp:template-part {"slug":"shop-banner"} /-->
 <!-- wp:group {"layout":{"inherit":true},"className":"py-5"} -->
 <div class="wp-block-group py-5">
@@ -12,21 +12,10 @@
         <!-- /wp:column -->
         <!-- wp:column {"verticalAlignment":"top","className":"col-12 col-lg"} -->
         <div class="wp-block-column is-vertically-aligned-top col-12 col-lg">
+            <!-- wp:woocommerce/breadcrumbs /-->
             <!-- wp:group {"tagName":"main","layout":{"inherit":false}} -->
             <main class="wp-block-group">
-                <!-- wp:woocommerce/filter-wrapper {"filterType":"active-filters","heading":"Filtre active"} -->
-                <div class="wp-block-woocommerce-filter-wrapper">
-                    <!-- wp:heading {"level":3} -->
-                    <h3>Filtre active</h3>
-                    <!-- /wp:heading -->
-                    <!-- wp:woocommerce/active-filters {"displayStyle":"chips","heading":""} -->
-                    <div class="wp-block-woocommerce-active-filters is-loading" data-display-style="chips" data-heading="" data-heading-level="3"><span aria-hidden="true" class="wc-block-active-filters__placeholder"></span></div>
-                    <!-- /wp:woocommerce/active-filters -->
-                </div>
-                <!-- /wp:woocommerce/filter-wrapper -->
-                <!-- wp:woocommerce/all-products {"columns":3,"rows":3,"alignButtons":true,"contentVisibility":{"orderBy":false},"orderby":"date","layoutConfig":[["woocommerce/product-image",{"imageSizing":"cropped","saleBadgeAlign":"left"}],["woocommerce/product-title"],["woocommerce/product-price"],["woocommerce/product-rating"],["woocommerce/product-button"]]} -->
-                <div class="wp-block-woocommerce-all-products wc-block-all-products" data-attributes="{&quot;alignButtons&quot;:true,&quot;columns&quot;:3,&quot;contentVisibility&quot;:{&quot;orderBy&quot;:false},&quot;customCSS&quot;:null,&quot;isPreview&quot;:false,&quot;layoutConfig&quot;:[[&quot;woocommerce/product-image&quot;,{&quot;imageSizing&quot;:&quot;cropped&quot;,&quot;saleBadgeAlign&quot;:&quot;left&quot;}],[&quot;woocommerce/product-title&quot;],[&quot;woocommerce/product-price&quot;],[&quot;woocommerce/product-rating&quot;],[&quot;woocommerce/product-button&quot;]],&quot;orderby&quot;:&quot;date&quot;,&quot;rows&quot;:3}"></div>
-                <!-- /wp:woocommerce/all-products -->
+                <!-- wp:pattern {"slug":"wecodeart/query-products"} /-->
             </main>
             <!-- /wp:group -->
         </div>
@@ -35,4 +24,4 @@
     <!-- /wp:columns -->
 </div>
 <!-- /wp:group -->
-<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"wp-site-footer","layout":{"inherit":true}} /-->
+<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"wp-site-footer"} /-->

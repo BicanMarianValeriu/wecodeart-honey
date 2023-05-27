@@ -9,19 +9,19 @@ return [
     | Milascenous options.
     |
     */
+    'fonts' => [
+        'google' => [
+            'signika' => [
+                'family' 	=> 'Signika',
+                'variants' 	=> [ 700, 900 ]
+            ]
+        ]
+    ],
     'support' => [
         'custom-logo'   => [
             'width'     => 235,
             'height'    => 50
         ],
-        // 'fonts' => [
-        //     'google' => [
-        //         [
-        //             'family' 	=> 'Signika',
-        //             'variants' 	=> [ 700, 900 ]
-        //         ]
-        //     ]
-        // ],
     ],
     'header'    => [
         'clean' => true

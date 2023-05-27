@@ -1,46 +1,44 @@
-:root {
-    .is-style-overlap {
-        position: relative;
-        background-color: transparent;
-        gap: 0;
+.wp-block-media-text.is-style-overlap {
+    position: relative;
+    background-color: transparent;
+    gap: 0;
 
-        @media (max-width: 991.7px) {
-            flex-direction: column;
+    @media (max-width: 991.7px) {
+        flex-direction: column;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 180px;
+        background-image: url('./../../images/honey-splash.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 2;
+        
+        @media (min-width: 992px) {
+            content: '';
+        }
+    }
+
+    .wp-block-media-text {
+        &__media {
+            @media (max-width: 991.7px) {
+                margin-bottom: 1.5rem;
+            }
         }
 
-        &::before {
-            position: absolute;
-            top: 0;
-            right: 0;
-            height: 100%;
-            width: 180px;
-            background-image: url('./../../images/honey-splash-2.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            z-index: 2;
-            
+        &__content {
+            border-radius: 10px;
+            padding: 2rem 1.5rem 1.5rem;
+            background-color: var(--wp--preset--color--light);
+            z-index: 1;
+
             @media (min-width: 992px) {
-                content: '';
-            }
-        }
-    
-        .wp-block-media-text {
-            &__media {
-                @media (max-width: 991.7px) {
-                    margin-bottom: 1.5rem;
-                }
-            }
-
-            &__content {
-                border-radius: 10px;
-                padding: 2rem 1.5rem 1.5rem;
-                background-color: var(--wp--preset--color--light);
-                z-index: 1;
-    
-                @media (min-width: 992px) {
-                    padding: 2rem 2.5rem 1.5rem;
-                    transform: translateX(-2.5rem);
-                }
+                padding: 2rem 2.5rem 1.5rem;
+                transform: translateX(-2.5rem);
             }
         }
     }

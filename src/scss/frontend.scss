@@ -21,30 +21,15 @@ Text Domain: wecodeart-honey
 @import "./abstracts/root";
 
 // BS Layout & components
-@import "~bootstrap/scss/accordion";
 @import "~bootstrap/scss/card";
-@import "~bootstrap/scss/spinners";
-@import "~bootstrap/scss/popover";
-@import "~bootstrap/scss/tooltip";
-@import "~bootstrap/scss/toasts";
-@import "~bootstrap/scss/list-group";
-
-
-/* Vendors */
-@import 'vendor/select2';
 
 /* Custom Components */
 @import 'components/header';
 @import 'components/buttons';
-@import 'components/misc';
-@import 'components/forms';
 @import 'components/cover';
 @import 'components/media-text';
-@import 'components/yoast';
+@import 'components/misc';
 @import 'components/footer';
 
 /* Pages */
 @import 'pages/blog';
-
-/* WooCommerce */
-@import 'woocommerce/index';

@@ -1,40 +1,10 @@
 [
     {
-        "slug": "header-default",
-        "title": "Header (default)",
-        "description": "WeCodeArt Framework default header.",
-        "blockTypes": [
-            "core/template-part/header"
-        ]
-    },
-    {
-        "slug": "footer-default",
-        "title": "Footer (default)",
-        "description": "WeCodeArt Framework default footer.",
-        "blockTypes": [
-            "core/template-part/footer"
-        ]
-    },
-    {
-        "slug": "query-blog",
-        "title": "Query (Blog)",
-        "description": "Blog listing.",
-        "blockTypes": [
-            "core/query"
-        ],
-        "categories": [
-            "wecodeart", "query"
-        ]
-    },
-    {
-        "slug": "query-latest",
-        "title": "Query (Latest Posts)",
-        "description": "Show latest 3 posts in a section.",
-        "blockTypes": [
-            "core/query"
-        ],
-        "categories": [
-            "wecodeart", "query"
+        "slug": "el-product-loop",
+        "title": "Product Item",
+        "description": "WeCodeArt Framework default product item.",
+        "categories": [ 
+            "wecodeart", "wecodeart-elements"
         ]
     }
 ]
