@@ -10,6 +10,10 @@
     padding-left: 0;
 
     li {
+        .is-root-container & {
+            display: flex;
+        }
+        
         &::before {
             content: '';
             display: inline-block;
@@ -51,15 +55,8 @@
     }
 }
 
-// Other
-.card-header,
-.card-footer {
-    &:empty {
-        display: none;
-    }
-}
-
-// Yoast
+// Crumbs
+.woocommerce-breadcrumb a:not(:hover),
 .yoast-breadcrumbs {
     color: var(--wp--gray-600);
 }

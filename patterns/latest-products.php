@@ -18,7 +18,7 @@
     <!-- /wp:separator -->
     <!-- wp:query {"queryId":1,"query":{"perPage":9,"pages":0,"offset":0,"postType":"product","order":"desc","orderBy":"popularity","author":"","search":"","exclude":[],"sticky":"","inherit":false,"__woocommerceAttributes":[],"__woocommerceStockStatus":["instock","outofstock","onbackorder"]},"displayLayout":{"type":"flex","columns":4},"namespace":"woocommerce/product-query"} -->
     <div class="wp-block-query">
-        <!-- wp:post-template {"__woocommerceNamespace":"woocommerce/product-query/product-template"} -->
+        <!-- wp:post-template {"className":"wp-block-query__products","__woocommerceNamespace":"woocommerce/product-query/product-template"} -->
         <!-- wp:pattern {"slug":"wecodeart/el-product-loop"} /-->
         <!-- /wp:post-template -->
     </div>
@@ -27,7 +27,7 @@
     <div class="wp-block-buttons">
         <!-- wp:button {"backgroundColor":"primary","className":"is-style-fill"} -->
         <div class="wp-block-button is-style-fill">
-            <a class="wp-block-button__link has-primary-background-color has-background" href="http://localhost/wecodeart-honey/magazin/">Vezi Mai Multe</a>
+            <a class="wp-block-button__link has-primary-background-color has-background" href="#">Vezi Mai Multe</a>
         </div>
         <!-- /wp:button -->
     </div>

@@ -28,22 +28,14 @@ class Scripts {
 	 * Send Construtor
 	 */
 	public function init() {
-		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_assets' ], PHP_INT_MAX );
+		add_action( 'wp_enqueue_scripts', 	[ $this, 'enqueue_assets' ], PHP_INT_MAX );
+		add_action( 'after_setup_theme', 	[ $this, 'editor_style'	] );
 	}
 
     /**
 	 * Skin Assets
 	 */
 	public function enqueue_assets() {
-		wecodeart( 'styles' )->Utilities->load( [
-			'position-fixed',
-			'bottom-0',
-			'start-0',
-			'me-auto',
-			'p-3',
-			'm-0'
-		] );
-		
 		$path = wecodeart_if( 'is_dev_mode' ) ? 'unminified' : 'minified';
 		$name = wecodeart_if( 'is_dev_mode' ) ? 'frontend' : 'frontend.min';
 
@@ -72,11 +64,21 @@ class Scripts {
 		wp_register_script( 
 			$this->make_handle(),
 			get_stylesheet_directory_uri() . '/assets/' . $path . '/js/' . $name . '.js',
-			array_merge( $data['dependencies'], [ 'moment', 'lodash' ] ), 
+			$data['dependencies'], 
 			current( $data['version'] ), 
 			true 
 		);
 
 		wp_enqueue_script( $this->make_handle() );
+	}
+
+	/**
+	 * Editor Assets
+	 */
+	public function editor_style() {
+		$path = wecodeart_if( 'is_dev_mode' ) ? 'unminified' : 'minified';
+		$name = wecodeart_if( 'is_dev_mode' ) ? 'frontend' : 'frontend.min';
+
+		add_editor_style( get_stylesheet_directory_uri() . '/assets/' . $path . '/css/' . $name . '.css' );
 	}
 }

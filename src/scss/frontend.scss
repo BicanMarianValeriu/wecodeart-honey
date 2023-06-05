@@ -15,13 +15,9 @@ Text Domain: wecodeart-honey
 
 // Required
 @import "~bootstrap/scss/functions";
-@import "./abstracts/variables";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 @import "./abstracts/root";
-
-// BS Layout & components
-@import "~bootstrap/scss/card";
 
 /* Custom Components */
 @import 'components/header';
