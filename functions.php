@@ -44,7 +44,7 @@ Scripts::get_instance(); // Assets
 
 // Maskot
 \add_shortcode( 'wecodeart-decoration', __NAMESPACE__ . '\\maskot' );
-function maskot() {
+function maskot( $attrs ) {
     $attrs = shortcode_atts( [
     ], $attrs, 'wecodeart-decoration' );
 
@@ -59,7 +59,7 @@ function maskot() {
  *
  * @return 	void
  */
-// \add_filter( 'woocommerce_states', __NAMESPACE__ . '\\filter_states', 20, 1 );
+\add_filter( 'woocommerce_states', __NAMESPACE__ . '\\filter_states', 20, 1 );
 function filter_states( $states ) {
     return [
         'RO' => [
@@ -76,7 +76,7 @@ function filter_states( $states ) {
  *
  * @return 	string
  */
-// \add_filter( 'default_checkout_billing_state', __NAMESPACE__ . '\\filter_default_state' );
+\add_filter( 'default_checkout_billing_state', __NAMESPACE__ . '\\filter_default_state' );
 function filter_default_state() {
     return 'GJ';
 }
