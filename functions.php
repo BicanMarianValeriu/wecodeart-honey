@@ -42,14 +42,10 @@ Scripts::get_instance(); // Assets
     'label'	=> esc_html__( 'Top', 'wecodeart-honey' ),
 ] );
 
-// Maskot
-\add_shortcode( 'wecodeart-decoration', __NAMESPACE__ . '\\maskot' );
-function maskot( $attrs ) {
-    $attrs = shortcode_atts( [
-    ], $attrs, 'wecodeart-decoration' );
-
-    return wecodeart_template( 'bee-maskot', $attrs, false );
-}
+\register_block_style( 'woocommerce/all-reviews', [
+    'name'	=> 'horizontal',
+    'label'	=> esc_html__( 'Horizontal', 'wecodeart-honey' ),
+] );
 
 /**
  * City/State delivery
@@ -77,6 +73,7 @@ function filter_states( $states ) {
  * @return 	string
  */
 \add_filter( 'default_checkout_billing_state', __NAMESPACE__ . '\\filter_default_state' );
+\add_filter( 'default_checkout_shipping_state', __NAMESPACE__ . '\\filter_default_state' );
 function filter_default_state() {
     return 'GJ';
 }

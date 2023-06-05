@@ -8,10 +8,10 @@
 <!-- wp:group {"className":"py-5","layout":{"inherit":true}} -->
 <div class="wp-block-group py-5">
     <!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary","className":"mb-0"} -->
-    <h4 class="has-text-align-center mb-0 has-primary-color has-text-color" id="blog-ul-nostru">Blog-ul nostru</h4>
+    <h4 class="has-text-align-center mb-0 has-primary-color has-text-color" id="our-block">Blog-ul nostru</h4>
     <!-- /wp:heading -->
     <!-- wp:heading {"textAlign":"center","style":{"spacing":{"margin":{"top":"0"}}},"textColor":"dark","className":"h1"} -->
-    <h2 class="wp-block-heading has-text-align-center h1 has-dark-color has-text-color" id="ultimele-postari" style="margin-top:0">Ultimele postări</h2>
+    <h2 class="wp-block-heading has-text-align-center h1 has-dark-color has-text-color" id="latest-posts" style="margin-top:0">Ultimele postări</h2>
     <!-- /wp:heading -->
     <!-- wp:separator {"color":"primary","className":"is-style-dots"} -->
     <hr class="wp-block-separator has-text-color has-background has-primary-background-color has-primary-color is-style-dots" />
