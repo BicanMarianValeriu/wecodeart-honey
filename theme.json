@@ -23,11 +23,6 @@
 			"area": "header"
 		},
 		{
-			"title": "Header (with Topbar)",
-			"name": "header-top",
-			"area": "header"
-		},
-		{
 			"title": "Footer",
 			"name": "footer",
 			"area": "footer"
@@ -49,7 +44,7 @@
 		},
 		{
 			"title": "Header: Top",
-			"name": "header-topr",
+			"name": "header-top",
 			"area": "header"
 		}
 	],
