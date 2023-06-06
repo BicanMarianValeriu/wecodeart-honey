@@ -1,15 +1,10 @@
 [
     {
-        "slug": "banner-sale",
-        "title": "Sale Banner",
+        "slug": "banner",
+        "title": "Banner (Sale)",
         "description": "A sample banner for sales.",
         "categories": [ 
             "wecodeart", "wecodeart-honey"
         ]
-    },
-    {
-        "slug": "footer-top",
-        "title": "Footer: Top",
-        "inserter": false
     }
 ]
