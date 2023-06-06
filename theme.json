@@ -46,6 +46,11 @@
 			"title": "Header: Top",
 			"name": "header-top",
 			"area": "header"
+		},
+		{
+			"title": "Footer: Top",
+			"name": "footer-top",
+			"area": "footer"
 		}
 	],
 	"settings": {
