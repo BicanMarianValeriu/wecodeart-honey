@@ -43,13 +43,13 @@
 			"area": "uncategorized"
 		},
 		{
-			"title": "Shop: Banner - Top",
-			"name": "shop-banner",
+			"title": "Banner: Shop",
+			"name": "banner",
 			"area": "uncategorized"
 		},
 		{
-			"title": "Header: Top Bar",
-			"name": "top-bar",
+			"title": "Header: Top",
+			"name": "header-topr",
 			"area": "header"
 		}
 	],
