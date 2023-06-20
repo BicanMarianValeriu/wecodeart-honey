@@ -1,5 +1,5 @@
 .wp-block-cover.is-style-top {
-    border-bottom: 1px solid var(--wp--preset--color--secondary);
+    border-bottom: 1px solid var(--wp--preset--color--warning);
     padding: 3rem var(--wp--custom--gutter);
     overflow: visible;
 
@@ -15,7 +15,7 @@
         height: 6px;
         transform: translateY(50%);
         border-radius: 4px;
-        background: var(--wp--preset--color--secondary);
+        background: var(--wp--preset--color--warning);
         z-index: 5;
     }
 }
