@@ -55,7 +55,7 @@ Scripts::get_instance(); // Assets
  *
  * @return 	void
  */
-\add_filter( 'woocommerce_states', __NAMESPACE__ . '\\filter_states', 20, 1 );
+// \add_filter( 'woocommerce_states', __NAMESPACE__ . '\\filter_states', 20, 1 );
 function filter_states( $states ) {
     return [
         'RO' => [
@@ -72,8 +72,8 @@ function filter_states( $states ) {
  *
  * @return 	string
  */
-\add_filter( 'default_checkout_billing_state', __NAMESPACE__ . '\\filter_default_state' );
-\add_filter( 'default_checkout_shipping_state', __NAMESPACE__ . '\\filter_default_state' );
+// \add_filter( 'default_checkout_billing_state', __NAMESPACE__ . '\\filter_default_state' );
+// \add_filter( 'default_checkout_shipping_state', __NAMESPACE__ . '\\filter_default_state' );
 function filter_default_state() {
     return 'GJ';
 }
