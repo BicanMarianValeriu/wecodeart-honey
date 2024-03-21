@@ -2,7 +2,6 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
 import { faUserCircle } from '@fortawesome/free-regular-svg-icons/faUserCircle';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons/faChevronRight';
-
 import { faDownload } from '@fortawesome/free-solid-svg-icons/faDownload';
 import { faCloudDownloadAlt } from '@fortawesome/free-solid-svg-icons/faCloudDownloadAlt';
 import { faList } from '@fortawesome/free-solid-svg-icons/faList';
@@ -18,6 +17,21 @@ import { faPen } from '@fortawesome/free-solid-svg-icons/faPen';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons/faExternalLinkAlt';
 
 export default [
-	faEnvelope, faPhone, faUserCircle, faChevronRight, faDownload, faCloudDownloadAlt, faClock, faCartPlus,
-	faPaperPlane, faList, faExternalLinkAlt, faShoppingCart, faThumbsUp, faThumbsDown, faPen, faCartArrowDown, faGrinHearts,
+	faEnvelope,
+	faPhone,
+	faUserCircle, 
+	faChevronRight,
+	faDownload,
+	faCloudDownloadAlt,
+	faClock,
+	faCartPlus,
+	faPaperPlane,
+	faList,
+	faExternalLinkAlt,
+	faShoppingCart,
+	faThumbsUp,
+	faThumbsDown,
+	faPen,
+	faCartArrowDown,
+	faGrinHearts,
 ];

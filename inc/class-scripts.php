@@ -28,57 +28,39 @@ class Scripts {
 	 * Send Construtor
 	 */
 	public function init() {
-		add_action( 'wp_enqueue_scripts', 	[ $this, 'enqueue_assets' ], PHP_INT_MAX );
-		add_action( 'after_setup_theme', 	[ $this, 'editor_style'	] );
+		add_action( 'init', 				[ $this, 'enqueue_assets' 	] );
+		add_action( 'after_setup_theme', 	[ $this, 'editor_style'		] );
 	}
 
     /**
 	 * Skin Assets
 	 */
 	public function enqueue_assets() {
-		$path = wecodeart_if( 'is_dev_mode' ) ? 'unminified' : 'minified';
-		$name = wecodeart_if( 'is_dev_mode' ) ? 'frontend' : 'frontend.min';
-
-		$default = [
-			'version' 		=> wecodeart( 'version' ),
-			'dependencies'	=> [ 'wecodeart-support-assets' ],
-		];
-
-		wp_register_style(
-			$this->make_handle(), 
-			get_stylesheet_directory_uri() . '/assets/' . $path . '/css/' . $name . '.css',
-			[],
-			$default['version']
-		);
-
-		wp_enqueue_style( $this->make_handle() );
+		wecodeart( 'assets' )->add_script( $this->make_handle(), [
+			'path' => self::get_file( 'js', 'frontend' ),
+			'deps' => [ 'wecodeart-support-assets' ]
+		] );
 		
-		// JS
-		$deps = sprintf( '%s/assets/%s/js/%s.php', get_stylesheet_directory(), $path, '' . $name . '.asset' );
-		
-		if( is_readable( $deps ) ) {
-			$file = require $deps;
-			$data = array_merge_recursive( $file, $default );
-		}
-
-		wp_register_script( 
-			$this->make_handle(),
-			get_stylesheet_directory_uri() . '/assets/' . $path . '/js/' . $name . '.js',
-			$data['dependencies'], 
-			current( $data['version'] ), 
-			true 
-		);
-
-		wp_enqueue_script( $this->make_handle() );
+		wecodeart( 'assets' )->add_style( $this->make_handle(), [
+			'path' => self::get_file( 'css', 'frontend' )
+		] );
 	}
 
 	/**
 	 * Editor Assets
 	 */
 	public function editor_style() {
-		$path = wecodeart_if( 'is_dev_mode' ) ? 'unminified' : 'minified';
-		$name = wecodeart_if( 'is_dev_mode' ) ? 'frontend' : 'frontend.min';
+		add_editor_style( self::get_file( 'css', 'frontend' ) );
+	}
 
-		add_editor_style( get_stylesheet_directory_uri() . '/assets/' . $path . '/css/' . $name . '.css' );
+	/**
+	 * Get File
+	 */
+	public static function get_file( $type, $name ) {
+		$file_path = wecodeart_if( 'is_dev_mode' ) ? 'unminified' : 'minified';
+		$file_path .= '/' . strtolower( $type ) . '/';
+		$file_path .= wecodeart_if( 'is_dev_mode' ) ? $name . '.' . $type :  $name . '.min.' . $type;
+
+		return esc_url( get_stylesheet_directory_uri() . '/assets/' . $file_path );
 	}
 }
